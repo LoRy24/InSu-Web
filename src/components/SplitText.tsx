@@ -51,6 +51,7 @@ const SplitText: React.FC<SplitTextProps> = ({
 
   useEffect(() => {
     if (document.fonts.status === 'loaded') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFontsLoaded(true);
     } else {
       document.fonts.ready.then(() => {
@@ -71,6 +72,7 @@ const SplitText: React.FC<SplitTextProps> = ({
       if (el._rbsplitInstance) {
         try {
           el._rbsplitInstance.revert();
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (_) {}
         el._rbsplitInstance = undefined;
       }
@@ -136,6 +138,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         });
         try {
           splitInstance.revert();
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (_) {}
         el._rbsplitInstance = undefined;
       };
