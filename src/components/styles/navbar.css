@@ -1,0 +1,21 @@
+.navbar-button, .navbar-button:hover svg path {
+    transition: 0.5s;
+}
+
+.navbar-button:hover {
+    transition: 0.5s;
+    color: #cfffd2;
+    text-shadow: 0 0 30px 15px rgba(191,255,159,0.2);
+}
+
+.navbar-button:hover svg path {
+    transition: 0.5s;
+    stroke: #cfffd2;
+    text-shadow: 0 0 30px 15px rgba(191,255,159,0.2);
+}
+
+.navbar-button-selected, .navbar-button-selected svg path {
+    color: #aaffb0;
+    stroke: #aaffb0;
+    cursor: default;
+}
