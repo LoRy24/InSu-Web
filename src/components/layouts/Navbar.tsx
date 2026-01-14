@@ -1,62 +1,205 @@
 "use client"
 
-import "@/components/styles/navbar.css";
+import "@/styles/components/navbar.css";
+
 import ShinyText from "@/components/ShinyText";
+import {useState} from "react";
+
+enum DesktopNavBarExtendedPage {
+    NONE,
+    TOUR,
+    RESOURCES,
+    AI
+}
 
 export default function Navbar({ page } : Readonly<{ page: number }>) {
-    return (
-        <nav id={"navbar"} className={"w-full h-18 fixed flex items-center justify-center z-1 backdrop-blur-sm"}>
-            <div id={"navbar-container"} className={"w-full max-w-340 h-full flex items-center justify-start ml-8 mr-8"}>
-                {/* MOBILE PAGINATION */}
-                <div id={"navbar-mobile-content"} className={"w-full h-full flex items-center justify-center lg:hidden overflow-hidden"}>
-                    Mobile is coming soon!
-                </div>
 
-                {/* DESKTOP PAGINATION */}
-                <div id={"navbar-desktop-content"} className={"hidden w-full h-full lg:flex items-center justify-center"}>
-                    <div id={"navbar-desktop-left-content"} className={"w-full flex items-center justify-start font-custom-blinker text-[30px] cursor-default select-none"}>
-                        <ShinyText
-                            text={"INSU"}
-                            speed={3}
-                            delay={1}
-                            color="#f0f0f0"
-                            shineColor="#aaffb0"
-                            yoyo
-                            className={"font-bold"}
-                        />
-                        <div id={"navbar-desktop-left-content-buttons"} className={"w-full flex items-center justify-start ml-16 space-x-10"}>
-                            <button id={"home-button"} className={(page == 0 ? "navbar-button-selected " : "navbar-button ") + "flex flex-row items-center justify-start cursor-pointer select-none"}>
-                                <svg width="19" height="17" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.0001 14.3425V8.79451C17.0001 8.26017 16.9997 7.99286 16.9347 7.74422C16.8771 7.52387 16.7826 7.31535 16.6547 7.12693C16.5104 6.9143 16.3097 6.73797 15.9075 6.38611L11.1075 2.18611C10.3609 1.53283 9.98763 1.20635 9.5675 1.08211C9.19731 0.972631 8.80273 0.972631 8.43254 1.08211C8.01273 1.20626 7.63997 1.53242 6.89448 2.18472L2.0929 6.38611C1.69076 6.73798 1.49016 6.9143 1.34583 7.12693C1.21791 7.31536 1.12267 7.52387 1.06509 7.74422C1.00012 7.99286 1.00012 8.26017 1.00012 8.79451V14.3425C1.00012 15.2743 1.00012 15.7401 1.15236 16.1076C1.35535 16.5977 1.74444 16.9875 2.2345 17.1905C2.60204 17.3427 3.06798 17.3427 3.99986 17.3427C4.93175 17.3427 5.3982 17.3427 5.76575 17.1905C6.2558 16.9875 6.64479 16.5978 6.84778 16.1077C7.00002 15.7402 7.00012 15.2742 7.00012 14.3424V13.3424C7.00012 12.2378 7.89555 11.3424 9.00012 11.3424C10.1047 11.3424 11.0001 12.2378 11.0001 13.3424V14.3424C11.0001 15.2742 11.0001 15.7402 11.1524 16.1077C11.3554 16.5978 11.7444 16.9875 12.2345 17.1905C12.602 17.3427 13.068 17.3427 13.9999 17.3427C14.9317 17.3427 15.3982 17.3427 15.7657 17.1905C16.2558 16.9875 16.6448 16.5977 16.8478 16.1076C17 15.7401 17.0001 15.2743 17.0001 14.3425Z" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                                <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Home</p>
-                            </button>
-                            <button id={"overall-button"} className={"navbar-button flex flex-row items-center justify-start cursor-pointer select-none"}>
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19.0001 11L10.0001 17L1.00012 11M19.0001 7L10.0001 13L1.00012 7L10.0001 1L19.0001 7Z" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                                <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Panoramica</p>
-                            </button>
-                            <button id={"fablabs-button"} className={"navbar-button flex flex-row items-center justify-start cursor-pointer select-none"}>
-                                <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 17H3M3 17H11M3 17V4.2002C3 3.08009 3 2.51962 3.21799 2.0918C3.40973 1.71547 3.71547 1.40973 4.0918 1.21799C4.51962 1 5.08009 1 6.2002 1H7.8002C8.9203 1 9.48006 1 9.90788 1.21799C10.2842 1.40973 10.5905 1.71547 10.7822 2.0918C11 2.5192 11 3.07899 11 4.19691V7.24609M11 17H19M11 17V7.24609M19 17H21M19 17V11.3682C19 10.843 19 10.5799 18.937 10.335C18.8812 10.1178 18.7889 9.91184 18.6647 9.72518C18.5245 9.51456 18.3295 9.33881 17.9387 8.9877L15.6387 6.92139C14.8827 6.2422 14.5045 5.90275 14.0771 5.77393C13.7007 5.66045 13.299 5.66045 12.9226 5.77393C12.4953 5.90273 12.1173 6.24235 11.3614 6.92139L11 7.24609" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                                <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>FabLabs</p>
-                            </button>
-                            <button id={"resources-button"} className={"navbar-button flex flex-row items-center justify-start cursor-pointer select-none"}>
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                                <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Risorse</p>
-                            </button>
+    // region Desktop States
+
+    // Stati esplora navbar
+    const [ desktopNavExtended, setDesktopNavExtended ] = useState(false);
+    const [ desktopNavExtendedPage, setDesktopNavExtendedPage ] = useState(DesktopNavBarExtendedPage.NONE);
+    const [ subPagesVisible, setSubPagesVisible ] = useState(false);
+
+    // Funzioni di gestione
+
+    const scheduleSubPagesVisibilityToggle = () => {
+        setTimeout(() => {
+            setSubPagesVisible(true);
+        }, 250);
+    }
+
+    const showNavExtension = () => {
+        setDesktopNavExtended(true);
+        scheduleSubPagesVisibilityToggle();
+    }
+
+    const hideNavExtension = () => {
+        setSubPagesVisible(false);
+        setDesktopNavExtended(false);
+        setDesktopNavExtendedPage(DesktopNavBarExtendedPage.NONE);
+    }
+
+    // endregion
+
+    return (
+        <div id={"main-navbar-container"} className={"w-full h-full fixed z-100 pointer-events-none"}>
+            <nav id={"navbar"} className={"w-full fixed z-50 pointer-events-auto"}>
+                <div id={"navbar-desktop"} className={`hidden ${desktopNavExtended ? "bg-[#0a0a0a] h-92 border-b border-b-[#202020]" : "h-18"} backdrop-blur-lg h-18 lg:flex flex-col items-center justify-start pl-16 pr-16 transition-[height] duration-250 ease`}>
+                    <div id={"navbar-desktop-content"} className={"w-full h-18 flex items-center justify-center max-w-375"}>
+                        {/* PARTE SINISTRA */}
+                        <div id={"navbar-desktop-left-content"} className={"w-full flex items-center justify-start font-custom-blinker text-[30px] cursor-default select-none"}>
+                            <ShinyText text={"INSU"} speed={3} delay={1} color="#f0f0f0" shineColor="#aaffb0" yoyo className={"font-bold"}/>
+                            <div id={"navbar-desktop-left-content-buttons"} className={"w-full flex items-center justify-start ml-16 space-x-10"}>
+                                <button id={"home-button"}
+                                        className={`${page == 0 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        onClick={() => {
+                                            if (page != 0) {
+
+                                            }
+                                        }}
+                                >
+                                    <svg width="19" height="17" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.0001 14.3425V8.79451C17.0001 8.26017 16.9997 7.99286 16.9347 7.74422C16.8771 7.52387 16.7826 7.31535 16.6547 7.12693C16.5104 6.9143 16.3097 6.73797 15.9075 6.38611L11.1075 2.18611C10.3609 1.53283 9.98763 1.20635 9.5675 1.08211C9.19731 0.972631 8.80273 0.972631 8.43254 1.08211C8.01273 1.20626 7.63997 1.53242 6.89448 2.18472L2.0929 6.38611C1.69076 6.73798 1.49016 6.9143 1.34583 7.12693C1.21791 7.31536 1.12267 7.52387 1.06509 7.74422C1.00012 7.99286 1.00012 8.26017 1.00012 8.79451V14.3425C1.00012 15.2743 1.00012 15.7401 1.15236 16.1076C1.35535 16.5977 1.74444 16.9875 2.2345 17.1905C2.60204 17.3427 3.06798 17.3427 3.99986 17.3427C4.93175 17.3427 5.3982 17.3427 5.76575 17.1905C6.2558 16.9875 6.64479 16.5978 6.84778 16.1077C7.00002 15.7402 7.00012 15.2742 7.00012 14.3424V13.3424C7.00012 12.2378 7.89555 11.3424 9.00012 11.3424C10.1047 11.3424 11.0001 12.2378 11.0001 13.3424V14.3424C11.0001 15.2742 11.0001 15.7402 11.1524 16.1077C11.3554 16.5978 11.7444 16.9875 12.2345 17.1905C12.602 17.3427 13.068 17.3427 13.9999 17.3427C14.9317 17.3427 15.3982 17.3427 15.7657 17.1905C16.2558 16.9875 16.6448 16.5977 16.8478 16.1076C17 15.7401 17.0001 15.2743 17.0001 14.3425Z" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Home</p>
+                                </button>
+                                <button id={"tour-button"}
+                                        className={`${page == 1 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        onClick={() => {
+                                            if (page !== 1) {
+                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.TOUR) {
+                                                    hideNavExtension();
+                                                    return;
+                                                } else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                    showNavExtension();
+                                                }
+
+                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.TOUR);
+                                            }
+                                        }}
+                                >
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.0001 11L10.0001 17L1.00012 11M19.0001 7L10.0001 13L1.00012 7L10.0001 1L19.0001 7Z" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Tour</p>
+                                </button>
+                                <button id={"fab-labs-button"}
+                                        className={`${page == 2 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        onClick={() => {
+                                            if (page != 2) {
+
+                                            }
+                                        }}
+                                >
+                                    <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17H3M3 17H11M3 17V4.2002C3 3.08009 3 2.51962 3.21799 2.0918C3.40973 1.71547 3.71547 1.40973 4.0918 1.21799C4.51962 1 5.08009 1 6.2002 1H7.8002C8.9203 1 9.48006 1 9.90788 1.21799C10.2842 1.40973 10.5905 1.71547 10.7822 2.0918C11 2.5192 11 3.07899 11 4.19691V7.24609M11 17H19M11 17V7.24609M19 17H21M19 17V11.3682C19 10.843 19 10.5799 18.937 10.335C18.8812 10.1178 18.7889 9.91184 18.6647 9.72518C18.5245 9.51456 18.3295 9.33881 17.9387 8.9877L15.6387 6.92139C14.8827 6.2422 14.5045 5.90275 14.0771 5.77393C13.7007 5.66045 13.299 5.66045 12.9226 5.77393C12.4953 5.90273 12.1173 6.24235 11.3614 6.92139L11 7.24609" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>FabLabs</p>
+                                </button>
+                                <button id={"insulligence-button"}
+                                        className={`${page == 3 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        onClick={() => {
+                                            if (page != 3) {
+                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.AI) {
+                                                    hideNavExtension();
+                                                    return;
+                                                }
+                                                else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                    showNavExtension();
+                                                }
+                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.AI);
+                                            }
+                                        }}
+                                >
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 13V16C7 17.6569 5.65685 19 4 19C2.34315 19 1 17.6569 1 16C1 14.3431 2.34315 13 4 13H7ZM7 13H13M7 13V7M13 13V16C13 17.6569 14.3431 19 16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13H13ZM13 13V7M13 7H7M13 7V4C13 2.34315 14.3431 1 16 1C17.6569 1 19 2.34315 19 4C19 5.65685 17.6569 7 16 7H13ZM7 7V4C7 2.34315 5.65685 1 4 1C2.34315 1 1 2.34315 1 4C1 5.65685 2.34315 7 4 7H7Z" stroke="#D0D0D0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Insulligence</p>
+                                </button>
+                                <button id={"resources-button"}
+                                        className={`${page == 3 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        onClick={() => {
+                                            if (page != 3) {
+                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.RESOURCES) {
+                                                    hideNavExtension();
+                                                    return;
+                                                }
+                                                else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                    showNavExtension();
+                                                }
+                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.RESOURCES);
+                                            }
+                                        }}
+                                >
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 1H4.2002C3.08009 1 2.51962 1 2.0918 1.21799C1.71547 1.40973 1.40973 1.71547 1.21799 2.0918C1 2.51962 1 3.08009 1 4.2002V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H5M5 1H13.8002C14.9203 1 15.4796 1 15.9074 1.21799C16.2837 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V13.8036C17 14.9215 17 15.4805 16.7822 15.9079C16.5905 16.2842 16.2837 16.5905 15.9074 16.7822C15.48 17 14.921 17 13.8031 17H5M5 1V17M9 8H13M9 5H13" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Risorse</p>
+                                </button>
+                            </div>
+                        </div>
+                        {/* PARTE DESTRA */}
+                        <div id={"navbar-desktop-right-content"} className={"w-full flex items-center justify-end"}>
+                            Right
                         </div>
                     </div>
-
-                    <div id={"navbar-desktop-left-content"} className={"w-full flex items-center justify-end"}>
-                        Right
+                    <div id={"navbar-desktop-expanded-content"} className={`${subPagesVisible ? "" : "hidden"} w-full max-w-375 mt-10`}>
+                        <NavbarExpandedContent page={desktopNavExtendedPage}/>
                     </div>
                 </div>
-            </div>
-        </nav>
+                <div id={"navbar-mobile"} className={"lg:hidden h-18"}>
+                    <div id={"navbar-mobile-content"} className={"w-full h-full flex items-center justify-center overflow-hidden"}>
+                        Mobile is coming soon!
+                    </div>
+                </div>
+            </nav>
+            <div id={"navbar-extended-background-layer"}
+                 className={`hidden ${desktopNavExtended ? "opacity-80 pointer-events-auto" : "opacity-0 pointer-events-none"} lg:block fixed z-40 inset-0 bg-[#0a0a0a] transition-opacity duration-300 ease`}
+                 onClick={hideNavExtension}
+            ></div>
+        </div>
+    );
+}
+
+function NavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarExtendedPage }>) {
+    return (
+        <div id={"desktop-navbar-expanded-content-container"}
+            className={"w-full"}
+        >{
+            page == DesktopNavBarExtendedPage.TOUR ? (
+                <div className={"flex flex-row items-start justify-start"}>
+                    <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per i Turisti</h1>
+                        <a>Informazioni</a>
+                        <a>Visualizza tutti i Tour</a>
+                    </div>
+                    <div className={"w-full flex flex-col items-start justify-start"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per gli Organizzatori</h1>
+                        <a>Suggerisci un Tour</a>
+                    </div>
+                </div>
+            ) : page == DesktopNavBarExtendedPage.RESOURCES ? (
+                <div className={"flex flex-row items-center justify-start"}>
+                    <div>Risorse 1</div>
+                    <div>Risorse 2</div>
+                </div>
+            ) : (
+                <div className={"flex flex-row items-center justify-start"}>
+                    <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Scopri</h1>
+                        <a>Informazioni</a>
+                        <a>Prova subito</a>
+                        <a>Prezzi</a>
+                    </div>
+                    <div className={"w-full flex flex-col items-start justify-start"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per le Aziende</h1>
+                        <a>Scopri le funzionalità enterprise</a>
+                        <a>Applicazioni industriali</a>
+                        <a>Soluzioni personalizzate</a>
+                    </div>
+                </div>
+            )
+        }</div>
     );
 }

@@ -1,14 +1,12 @@
 import Navbar from "@/components/layouts/Navbar";
-import Plasma from "@/components/Plasma";
-import Aurora from '@/components/Aurora';
 import DotGrid from '@/components/DotGrid';
 import SplitText from "@/components/SplitText";
 import AnimatedContent from '@/components/AnimatedContent'
 import GlareHover from '@/components/GlareHover'
 import ShinyText from "@/components/ShinyText";
+import Footer from "@/components/layouts/Footer";
 
 // Icons
-import houseIcon from "@/../public/house.svg"
 
 export default function Home() {
     return (
@@ -17,7 +15,7 @@ export default function Home() {
             <div className={"w-full h-screen overflow-hidden flex items-center justify-center"}>
                 <div id={"home-page-head-content"} className={"relative z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="InSu Project"
+                        text="InSu Network"
                         className="text-[114px] font-black text-center select-none cursor-default"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
@@ -104,9 +102,67 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div id={"description"} className={"w-full flex items-center justify-center pt-43.75 pb-43.75 bg-[#0a0a0a]"}>
-                Descrizione progetto qui
+            <div id={"description"} className={"w-full flex items-center justify-center pt-[200px] pb-[200px] bg-[#0a0a0a] pl-16 pr-16"}>
+                <div className={"w-full max-w-375 flex flex-row items-start justify-start"}>
+                    <div className={"w-full flex flex-col items-start justify-center h-[550px]"}>
+                        <AnimatedContent
+                            distance={100}
+                            direction="vertical"
+                            reverse={false}
+                            duration={0.8}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity
+                            scale={1}
+                            threshold={0.1}
+                            delay={0}
+                        >
+                            <h1 className={"font-black text-[64px]"}>Chi Siamo</h1>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            distance={100}
+                            direction="vertical"
+                            reverse={false}
+                            duration={0.8}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.25}
+                        >
+                            <p className={"font-normal text-[20px] max-w-[750px]"}>
+                                Siamo un progetto nato con l&#39;obiettivo di portare, tramite le più moderne tecnologie, un radicale cambiamento all&#39;interno
+                                della regione <b>Insubrica</b>, in particolare fornendo servizi in ambito turistico, urbanistico, ed educativo con l&#39;integrazione
+                                dell&#39;intelligenza artificiale.
+                            </p>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            distance={100}
+                            direction="vertical"
+                            reverse={false}
+                            duration={0.8}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.5}
+                        >
+                            <button className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-[30px] p-0"}>
+                                <svg className={"mt-0"} width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                                <p className={"mt-0 ml-2.5 text-[16px]"}>Crediti</p>
+                            </button>
+                        </AnimatedContent>
+                    </div>
+                    <div className={"w-[750px] h-full"}>
+
+                    </div>
+                </div>
             </div>
+            <Footer/>
         </div>
     );
 }
