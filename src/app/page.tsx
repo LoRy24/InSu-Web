@@ -5,14 +5,16 @@ import AnimatedContent from '@/components/AnimatedContent'
 import GlareHover from '@/components/GlareHover'
 import ShinyText from "@/components/ShinyText";
 import Footer from "@/components/layouts/Footer";
+import ScrollFloat from "@/components/ScrollFloat";
+import SpotlightCard from "@/components/SpotlightCard";
 
 // Icons
 
 export default function Home() {
     return (
-        <div id="home-page">
+        <div>
             <Navbar page={0}/>
-            <div className={"w-full h-screen overflow-hidden flex items-center justify-center"}>
+            <div id={"head"} className={"w-full h-screen overflow-hidden flex items-center justify-center"}>
                 <div id={"home-page-head-content"} className={"relative z-1 flex flex-col items-center justify-center"}>
                     <SplitText
                         text="InSu Network"
@@ -28,7 +30,7 @@ export default function Home() {
                     <SplitText
                         text="Innovare insieme non è solo un obiettivo, bensì la missione alla quale rivolgiamo tutto il nostro impegno, il nostro lavoro e le nostre tecnologie."
                         className="text-[20px] font-regular text-center max-w-225 select-none cursor-default"
-                        delay={20}
+                        delay={10}
                         duration={0.3}
                         ease="power3.out"
                         splitType="chars"
@@ -49,7 +51,7 @@ export default function Home() {
                             animateOpacity
                             scale={1}
                             threshold={0.1}
-                            delay={2.5}>
+                            delay={1.5}>
                             <button id={"home-page-head-explore-button"} className={"text-[19px] font-medium text-[#0a0a0a] select-none"}>
                                 <GlareHover
                                     glareColor="#a0a0a0"
@@ -77,7 +79,7 @@ export default function Home() {
                             animateOpacity
                             scale={1}
                             threshold={0.1}
-                            delay={2.5}>
+                            delay={1.5}>
                             <button id={"home-page-head-ai-button"} className={"text-[20px] font-medium cursor-pointer select-none"}>
                                 <ShinyText
                                     text="✨ Prova la nostra AI"
@@ -102,7 +104,7 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div id={"description"} className={"w-full flex items-center justify-center pt-[200px] pb-[200px] bg-[#0a0a0a] pl-16 pr-16"}>
+            <div id={"description"} className={"w-full flex items-center justify-center pt-[100px] pb-[100px] bg-[#0a0a0a] pl-16 pr-16"}>
                 <div className={"w-full max-w-375 flex flex-row items-start justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-center h-[550px]"}>
                         <AnimatedContent
@@ -161,6 +163,68 @@ export default function Home() {
 
                     </div>
                 </div>
+            </div>
+            <div id={"launch-page"} className={"w-full flex flex-col items-center pt-[120px] pb-[120px] pl-16 pr-16"}>
+                <div className={"flex flex-col items-center"}>
+                    <ScrollFloat
+                        animationDuration={1}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                        containerClassName={"mb-2"}
+                        textClassName={"font-black text-[82px]"}
+                    >
+                        Scopri&nbsp;di&nbsp;più
+                    </ScrollFloat>
+                    <AnimatedContent
+                        duration={0.3}
+                        className={"mb-10"}
+                    >
+                        <p className={"max-w-[400px] text-center"}>Clicca su uno dei seguenti pulsanti per maggiori approfondimenti sui nostri servizi.</p>
+                    </AnimatedContent>
+                    <div className={"grid gap-6 grid-cols-[repeat(auto-fit,minmax(275px,1fr))]"}>
+                        <AnimatedContent
+                            duration={0.6}
+                            delay={0.15}
+                        >
+                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(102, 250, 219, 0.2)">
+                                <h1 className={"text-[24px] font-bold"}>Tour</h1>
+                                <p>Scopri il nostro servizio di tour sul territorio, completamente <b>gratis</b>!</p>
+                            </SpotlightCard>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            duration={0.6}
+                            delay={0.15}
+                        >
+                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(128, 211, 255, 0.2)">
+                                <h1 className={"text-[24px] font-bold"}>Insulligence</h1>
+                                <p>Alla base dei nostri servizi c'è proprio lei, la nostra AI. Provala subito!</p>
+                            </SpotlightCard>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            duration={0.6}
+                            delay={0.15}
+                        >
+                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(225, 161, 255, 0.2)">
+                                <h1 className={"text-[24px] font-bold"}>Progetti & Idee</h1>
+                                <p>Vedi tutti i progetti realizzati dalla community, e sopri tutte le idee ancora non realizzate.</p>
+                            </SpotlightCard>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            duration={0.6}
+                            delay={0.15}
+                        >
+                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(255, 161, 199, 0.2)">
+                                <h1 className={"text-[24px] font-bold"}>Fablabs</h1>
+                                <p>Vuoi condividere le tue capacità con tutta la comunità? Scopri tutti i Fablabs partner!</p>
+                            </SpotlightCard>
+                        </AnimatedContent>
+                    </div>
+                </div>
+            </div>
+            <div id={"contact-us"} className={"w-full flex flex-col items-center pt-[120px] pb-[120px] pl-16 pr-16"}>
+
             </div>
             <Footer/>
         </div>

@@ -172,11 +172,11 @@ function NavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarExtended
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per i Turisti</h1>
                         <a>Informazioni</a>
-                        <a>Visualizza tutti i Tour</a>
+                        <a>Visualizza la Mappa</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per gli Organizzatori</h1>
-                        <a>Suggerisci un Tour</a>
+                        <a>Suggerisci un itinerario</a>
                     </div>
                 </div>
             ) : page == DesktopNavBarExtendedPage.RESOURCES ? (
