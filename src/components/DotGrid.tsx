@@ -96,7 +96,7 @@ const DotGrid: React.FC<DotGridProps> = ({
     if (!wrap || !canvas) return;
 
     const { width, height } = wrap.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
+    const dpr = window.devicePixelRatio;
 
     canvas.width = width * dpr;
     canvas.height = height * dpr;
