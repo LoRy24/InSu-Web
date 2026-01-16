@@ -105,8 +105,8 @@ export default function Home() {
                 </div>
             </div>
             <div id={"description"} className={"w-full flex items-center justify-center pt-[100px] pb-[100px] bg-[#0a0a0a] pl-16 pr-16"}>
-                <div className={"w-full max-w-375 flex flex-row items-start justify-start"}>
-                    <div className={"w-full flex flex-col items-start justify-center h-[550px]"}>
+                <div className={"w-full max-w-375 flex flex-row items-start max-[1020px]:items-center justify-start"}>
+                    <div className={"w-full flex flex-col items-start max-[1020px]:items-center justify-center h-[550px] max-[1020px]:text-center"}>
                         <AnimatedContent
                             distance={100}
                             direction="vertical"
@@ -133,7 +133,7 @@ export default function Home() {
                             threshold={0.1}
                             delay={0.25}
                         >
-                            <p className={"font-normal text-[20px] max-w-[750px]"}>
+                            <p className={"font-normal text-[20px] max-w-[750px] max-[1020px]:text-center"}>
                                 Siamo un progetto nato con l&#39;obiettivo di portare, tramite le più moderne tecnologie, un radicale cambiamento all&#39;interno
                                 della regione <b>Insubrica</b>, in particolare fornendo servizi in ambito turistico, urbanistico, ed educativo con l&#39;integrazione
                                 dell&#39;intelligenza artificiale.
@@ -159,7 +159,7 @@ export default function Home() {
                             </button>
                         </AnimatedContent>
                     </div>
-                    <div className={"w-[750px] h-full"}>
+                    <div className={"max-[1020px]:hidden w-[750px] h-full"}>
 
                     </div>
                 </div>

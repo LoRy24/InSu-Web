@@ -4,12 +4,15 @@ import "@/styles/components/navbar.css";
 
 import ShinyText from "@/components/ShinyText";
 import {useState} from "react";
+import { redirect } from 'next/navigation'
+import GlareHover from "@/components/GlareHover";
 
 enum DesktopNavBarExtendedPage {
     NONE,
     TOUR,
     RESOURCES,
-    AI
+    AI,
+    ENVIRONMENT
 }
 
 export default function Navbar({ page } : Readonly<{ page: number }>) {
@@ -45,7 +48,7 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
     return (
         <div id={"main-navbar-container"} className={"w-full h-full fixed z-100 pointer-events-none"}>
             <nav id={"navbar"} className={"w-full fixed z-50 pointer-events-auto"}>
-                <div id={"navbar-desktop"} className={`hidden ${desktopNavExtended ? "bg-[#0a0a0a] h-92 border-b border-b-[#202020]" : "h-18"} backdrop-blur-lg h-18 lg:flex flex-col items-center justify-start pl-16 pr-16 transition-[height] duration-250 ease`}>
+                <div id={"navbar-desktop"} className={`hidden ${desktopNavExtended ? "bg-[#0a0a0a] h-92 border-b border-b-[#202020]" : "h-18"} backdrop-blur-lg h-18 min-[1220px]:flex flex-col items-center justify-start pl-16 pr-16 transition-[height] duration-250 ease`}>
                     <div id={"navbar-desktop-content"} className={"w-full h-18 flex items-center justify-center max-w-375"}>
                         {/* PARTE SINISTRA */}
                         <div id={"navbar-desktop-left-content"} className={"w-full flex items-center justify-start font-custom-blinker text-[30px] cursor-default select-none"}>
@@ -55,7 +58,7 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
                                         className={`${page == 0 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
                                             if (page != 0) {
-
+                                                redirect("/");
                                             }
                                         }}
                                 >
@@ -137,25 +140,45 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
                                     </svg>
                                     <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Risorse</p>
                                 </button>
+                                <button id={"environment-button"}
+                                        className={`${page == 4 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        onClick={() => {
+                                            if (page != 3) {
+                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.ENVIRONMENT) {
+                                                    hideNavExtension();
+                                                    return;
+                                                }
+                                                else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                    showNavExtension();
+                                                }
+                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.ENVIRONMENT);
+                                            }
+                                        }}
+                                >
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.8291 17.0806C13.9002 21.3232 19.557 15.6663 18.8499 5.0598C8.24352 4.35269 2.58692 10.0097 6.8291 17.0806ZM6.8291 17.0806C6.82902 17.0805 6.82918 17.0807 6.8291 17.0806ZM6.8291 17.0806L5 18.909M6.8291 17.0806L10.6569 13.2522" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Territorio</p>
+                                </button>
                             </div>
                         </div>
                         {/* PARTE DESTRA */}
                         <div id={"navbar-desktop-right-content"} className={"w-full flex items-center justify-end"}>
-                            Right
+                            <ProfileSlotDesktop/>
                         </div>
                     </div>
                     <div id={"navbar-desktop-expanded-content"} className={`${subPagesVisible ? "" : "hidden"} w-full max-w-375 mt-10`}>
                         <NavbarExpandedContent page={desktopNavExtendedPage}/>
                     </div>
                 </div>
-                <div id={"navbar-mobile"} className={"lg:hidden h-18"}>
+                <div id={"navbar-mobile"} className={"min-[1220px]:hidden h-18"}>
                     <div id={"navbar-mobile-content"} className={"w-full h-full flex items-center justify-center overflow-hidden"}>
                         Mobile is coming soon!
                     </div>
                 </div>
             </nav>
             <div id={"navbar-extended-background-layer"}
-                 className={`hidden ${desktopNavExtended ? "opacity-80 pointer-events-auto" : "opacity-0 pointer-events-none"} lg:block fixed z-40 inset-0 bg-[#0a0a0a] transition-opacity duration-300 ease`}
+                 className={`hidden ${desktopNavExtended ? "opacity-80 pointer-events-auto" : "opacity-0 pointer-events-none"} min-[1220px]:block fixed z-40 inset-0 bg-[#0a0a0a] transition-opacity duration-300 ease`}
                  onClick={hideNavExtension}
             ></div>
         </div>
@@ -168,38 +191,90 @@ function NavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarExtended
             className={"w-full"}
         >{
             page == DesktopNavBarExtendedPage.TOUR ? (
-                <div className={"flex flex-row items-start justify-start"}>
+                <div className={"grid grid-cols-2 items-start justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per i Turisti</h1>
-                        <a>Informazioni</a>
-                        <a>Visualizza la Mappa</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Informazioni</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Visualizza la Mappa</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per gli Organizzatori</h1>
-                        <a>Suggerisci un itinerario</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Suggerisci un itinerario</a>
                     </div>
                 </div>
             ) : page == DesktopNavBarExtendedPage.RESOURCES ? (
-                <div className={"flex flex-row items-center justify-start"}>
-                    <div>Risorse 1</div>
-                    <div>Risorse 2</div>
+                <div className={"grid grid-cols-2 items-start justify-start"}>
+                    <div className={"grid grid-rows-2 space-y-8"}>
+                        <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                            <h1 className={"font-medium text-[20px] mb-3 select-none"}>Informazioni</h1>
+                            <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Panoramica</a>
+                        </div>
+                        <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                            <h1 className={"font-medium text-[20px] mb-3 select-none"}>Contribuisci</h1>
+                            <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Idee & Bozze</a>
+                        </div>
+                    </div>
+                    <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Esplora</h1>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Progetti</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>School Bank</a>
+                    </div>
                 </div>
-            ) : (
-                <div className={"flex flex-row items-center justify-start"}>
+            ) : page == DesktopNavBarExtendedPage.AI ? (
+                <div className={"grid grid-cols-2 items-center justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Scopri</h1>
-                        <a>Informazioni</a>
-                        <a>Prova subito</a>
-                        <a>Prezzi</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Informazioni</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Prova subito</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Prezzi</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per le Aziende</h1>
-                        <a>Scopri le funzionalità enterprise</a>
-                        <a>Applicazioni industriali</a>
-                        <a>Soluzioni personalizzate</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Scopri le funzionalità enterprise</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Applicazioni industriali</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Soluzioni personalizzate</a>
+                    </div>
+                </div>
+            ) : (
+                <div className={"grid grid-cols-2 items-center justify-start"}>
+                    <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Ambiente</h1>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Coltivazione innovativa</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Meteo</a>
+                    </div>
+                    <div className={"w-full flex flex-col items-start justify-start"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Energia</h1>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Statistiche</a>
                     </div>
                 </div>
             )
         }</div>
+    );
+}
+
+function ProfileSlotDesktop() {
+    const logged = false; // TODO Da cambiare con lo stato
+
+    return logged ? (
+        <div>Bruh</div>
+    ) : (
+        <button id={"home-page-head-explore-button"}
+                className={"text-[16px] font-medium text-[#0a0a0a] select-none"}
+        >
+            <GlareHover
+                glareColor="#a0a0a0"
+                glareOpacity={0.3}
+                glareAngle={-30}
+                glareSize={300}
+                transitionDuration={800}
+                playOnce={false}
+                background={"#f0f0f0"}
+                borderColor={"#f0f0f0"}
+                width={"120px"}
+                height={"40px"}
+                borderRadius={"50px"}>
+                Accedi
+            </GlareHover>
+        </button>
     );
 }
