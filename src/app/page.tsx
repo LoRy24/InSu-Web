@@ -1,3 +1,4 @@
+// Importazioni per react
 import Navbar from "@/components/layouts/Navbar";
 import DotGrid from '@/components/DotGrid';
 import SplitText from "@/components/SplitText";

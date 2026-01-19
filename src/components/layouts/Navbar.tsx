@@ -1,12 +1,28 @@
+// Componente Client
 "use client"
 
+// CSS
 import "@/styles/components/navbar.css";
 
+// Import di React
 import ShinyText from "@/components/ShinyText";
 import {useState} from "react";
 import { redirect } from 'next/navigation'
 import GlareHover from "@/components/GlareHover";
 
+// Componente base della Navbar
+export default function Navbar({ page } : Readonly<{ page: number }>) {
+    return (
+        <div id={"navbar-block"} className={"w-full h-full fixed z-100 pointer-events-none"}>
+            <DesktopNavbar page={page}/>
+            <MobileNavbar page={page}/>
+        </div>
+    );
+}
+
+// Desktop
+
+// Estensione Pagine Desktop
 enum DesktopNavBarExtendedPage {
     NONE,
     TOUR,
@@ -15,11 +31,9 @@ enum DesktopNavBarExtendedPage {
     ENVIRONMENT
 }
 
-export default function Navbar({ page } : Readonly<{ page: number }>) {
-
-    // region Desktop States
-
+function DesktopNavbar({ page } : Readonly<{ page: number }>) {
     // Stati esplora navbar
+
     const [ desktopNavExtended, setDesktopNavExtended ] = useState(false);
     const [ desktopNavExtendedPage, setDesktopNavExtendedPage ] = useState(DesktopNavBarExtendedPage.NONE);
     const [ subPagesVisible, setSubPagesVisible ] = useState(false);
@@ -43,10 +57,8 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
         setDesktopNavExtendedPage(DesktopNavBarExtendedPage.NONE);
     }
 
-    // endregion
-
     return (
-        <div id={"main-navbar-container"} className={"w-full h-full fixed z-100 pointer-events-none"}>
+        <div id={"main-navbar-container"} className={"max-[1220px]:hidden w-full h-full"}>
             <nav id={"navbar"} className={"w-full fixed z-50 pointer-events-auto"}>
                 <div id={"navbar-desktop"} className={`hidden ${desktopNavExtended ? "bg-[#0a0a0a] h-92 border-b border-b-[#202020]" : "h-18"} backdrop-blur-lg h-18 min-[1220px]:flex flex-col items-center justify-start pl-16 pr-16 transition-[height] duration-250 ease`}>
                     <div id={"navbar-desktop-content"} className={"w-full h-18 flex items-center justify-center max-w-375"}>
@@ -91,7 +103,7 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
                                         className={`${page == 2 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
                                             if (page != 2) {
-
+                                                redirect("/fablabs");
                                             }
                                         }}
                                 >
@@ -164,16 +176,11 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
                         </div>
                         {/* PARTE DESTRA */}
                         <div id={"navbar-desktop-right-content"} className={"w-full flex items-center justify-end"}>
-                            <ProfileSlotDesktop/>
+                            <DesktopNavbarProfileSlot/>
                         </div>
                     </div>
                     <div id={"navbar-desktop-expanded-content"} className={`${subPagesVisible ? "" : "hidden"} w-full max-w-375 mt-10`}>
-                        <NavbarExpandedContent page={desktopNavExtendedPage}/>
-                    </div>
-                </div>
-                <div id={"navbar-mobile"} className={"min-[1220px]:hidden h-18"}>
-                    <div id={"navbar-mobile-content"} className={"w-full h-full flex items-center justify-center overflow-hidden"}>
-                        Mobile is coming soon!
+                        <DesktopNavbarExpandedContent page={desktopNavExtendedPage}/>
                     </div>
                 </div>
             </nav>
@@ -185,7 +192,7 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
     );
 }
 
-function NavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarExtendedPage }>) {
+function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarExtendedPage }>) {
     return (
         <div id={"desktop-navbar-expanded-content-container"}
             className={"w-full"}
@@ -252,7 +259,7 @@ function NavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarExtended
     );
 }
 
-function ProfileSlotDesktop() {
+function DesktopNavbarProfileSlot() {
     const logged = false; // TODO Da cambiare con lo stato
 
     return logged ? (
@@ -276,5 +283,21 @@ function ProfileSlotDesktop() {
                 Accedi
             </GlareHover>
         </button>
+    );
+}
+
+// Mobile
+
+function MobileNavbar({ page } : Readonly<{ page: number }>) {
+    return (
+        <div id={"main-navbar-container"} className={"min-[1220px]:hidden w-full h-full"}>
+            <nav id={"navbar"} className={"w-full fixed z-50 pointer-events-auto"}>
+                <div id={"navbar-mobile"} className={"h-18"}>
+                    <div id={"navbar-mobile-content"} className={"w-full h-full flex items-center justify-center overflow-hidden"}>
+                        Mobile is coming soon!
+                    </div>
+                </div>
+            </nav>
+        </div>
     );
 }
