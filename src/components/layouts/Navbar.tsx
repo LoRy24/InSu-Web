@@ -52,7 +52,7 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
                     <div id={"navbar-desktop-content"} className={"w-full h-18 flex items-center justify-center max-w-375"}>
                         {/* PARTE SINISTRA */}
                         <div id={"navbar-desktop-left-content"} className={"w-full flex items-center justify-start font-custom-blinker text-[30px] cursor-default select-none"}>
-                            <ShinyText text={"INSU"} speed={3} delay={1} color="#f0f0f0" shineColor="#aaffb0" yoyo className={"font-bold"}/>
+                            <ShinyText text={"InSu"} speed={3} delay={1} color="#f0f0f0" shineColor="#aaffb0" yoyo className={"font-bold"}/>
                             <div id={"navbar-desktop-left-content-buttons"} className={"w-full flex items-center justify-start ml-16 space-x-10"}>
                                 <button id={"home-button"}
                                         className={`${page == 0 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
