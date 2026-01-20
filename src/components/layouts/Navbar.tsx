@@ -200,12 +200,12 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
             page == DesktopNavBarExtendedPage.TOUR ? (
                 <div className={"grid grid-cols-2 items-start justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
-                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per i Turisti</h1>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Turisti</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Informazioni</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Visualizza la Mappa</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
-                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per gli Organizzatori</h1>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Organizzatori</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Suggerisci un itinerario</a>
                     </div>
                 </div>
@@ -228,7 +228,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                     </div>
                 </div>
             ) : page == DesktopNavBarExtendedPage.AI ? (
-                <div className={"grid grid-cols-2 items-center justify-start"}>
+                <div className={"grid grid-cols-2 items-start justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Scopri</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Informazioni</a>
@@ -236,22 +236,30 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Prezzi</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
-                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Per le Aziende</h1>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Aziende</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Scopri le funzionalità enterprise</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Applicazioni industriali</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Soluzioni personalizzate</a>
                     </div>
                 </div>
             ) : (
-                <div className={"grid grid-cols-2 items-center justify-start"}>
+                <div className={"grid grid-cols-3 items-start justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Ambiente</h1>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Coltivazione innovativa</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>TecnoColt</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Meteo</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Statistiche</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Energia</h1>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Cluster</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Cruscotto</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Statistiche</a>
+                    </div>
+                    <div className={"w-full flex flex-col items-start justify-start"}>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Urban</h1>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Quartieri</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Indice BQ</a>
                     </div>
                 </div>
             )
