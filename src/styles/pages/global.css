@@ -6,6 +6,36 @@
 
 @tailwind utilities;
 
+/* SCROLLBAR */
+
+body, div {
+    --sb-track-color: #101010;
+    --sb-thumb-color: #252525;
+    --sb-size: 6px;
+}
+
+body::-webkit-scrollbar, div::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body, div {
+        scrollbar-color: var(--sb-thumb-color)
+        var(--sb-track-color);
+    }
+}
+
 /* CODICE TEMA SHADCN */
 
 /*
