@@ -7,8 +7,11 @@ export class FabLab {
     state: string;
     zipcode: number;
     description: string;
-    topics_ids: string[];
+    complete_description: string;
+    tags: FabLabTag[];
     active: boolean;
+    photos_urls: string[];
+    files: FileReference[];
 
     // Images
     card_banner_url: string;
@@ -21,9 +24,12 @@ export class FabLab {
                 state: string,
                 zipcode: number,
                 description: string,
-                topics_ids: string[],
+                complete_description: string,
+                tags: FabLabTag[],
                 active: boolean,
-                card_banner_url: string) {
+                card_banner_url: string,
+                photos_urls: string[],
+                files: FileReference[]) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -31,15 +37,18 @@ export class FabLab {
         this.state = state;
         this.zipcode = zipcode;
         this.description = description;
-        this.topics_ids = topics_ids;
+        this.complete_description = complete_description;
+        this.tags = tags;
         this.active = active;
         this.card_banner_url = card_banner_url;
+        this.photos_urls = photos_urls;
+        this.files = files;
     }
 }
 
 export enum FabLabTag {
-    TECH_INFO,
-    TECH_NETWORKS,
+    TECH_INFO, // Informatica
+    TECH_NETWORKS, // Reti
     TECH_ELECTRONICS,
     TECH_MOBILE,
     TECH_WEB,
@@ -51,11 +60,11 @@ export enum FabLabTag {
     ART_WRITING,
     ART_MUSIC,
 
-    TEXTILE_ECOPRINT,
-    TEXTILE_TAILORING,
-    TEXTILE_EMBROIDERY,
-    TEXTILE_CROCHET,
-    TEXTILE_PRINTING,
+    TEXTILE_ECOPRINT, // EcoPrint
+    TEXTILE_TAILORING, // Rammendo
+    TEXTILE_EMBROIDERY, // Ricamato
+    TEXTILE_CROCHET, // Maglia
+    TEXTILE_PRINTING, // Serigrafia
 
     AGRICOLTURE_VEGETABLE_GARDENS,
     AGRICOLTURE_HYDROPONIC_GREENHOUSES,
@@ -71,4 +80,15 @@ export enum FabLabTag {
     CRAFTSMANSHIP_MECHANICS,
     CRAFTSMANSHIP_REPAIR,
     CRAFTSMANSHIP_SOAPS,
+}
+
+export enum FabLabState {
+    ALL,
+    ACTIVE,
+    INACTIVE
+}
+
+export type FabLabFiltersObject = {
+    state: FabLabState
+    tags: FabLabTag[];
 }

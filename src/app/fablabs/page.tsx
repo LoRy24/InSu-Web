@@ -9,11 +9,11 @@ export default function FabLabs() {
     return (
         <div>
             <Navbar page={2}/>
-            <div id={"head"} className={"w-full h-[50vh] flex flex-col items-center justify-center"}>
+            <div id={"head"} className={"fixed z-10 w-full h-[475px] flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
                         text="FabLabs"
-                        className="text-[114px] font-black text-center select-none cursor-default mb-0"
+                        className="text-[114px] font-black text-center select-none cursor-default mb-0 mt-18"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
                         from={{ opacity: 0, y: 40 }}
@@ -39,7 +39,9 @@ export default function FabLabs() {
                     />
                 </div>
             </div>
-            <FabLabsBrowser/>
+            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-[475px]"}>
+                <FabLabsBrowser/>
+            </div>
         </div>
     );
 }

@@ -1,3 +1,17 @@
 #fab-labs-browser-content {
     width: calc(100% - 275px);
 }
+
+#previous-page-button svg path, #next-page-button svg path {
+    stroke: white;
+    transition: stroke;
+    transition-duration: 250ms;
+}
+
+#previous-page-button:hover svg path, #next-page-button:hover svg path {
+    stroke: #202020;
+}
+
+#previous-page-button:disabled svg path, #next-page-button:disabled svg path {
+    stroke: #757575;
+}
