@@ -15,7 +15,7 @@ export default function Navbar({ page } : Readonly<{ page: number }>) {
     return (
         <div id={"navbar-block"} className={"w-full h-full fixed z-100 pointer-events-none"}>
             <DesktopNavbar page={page}/>
-            <MobileNavbar page={page}/>
+            <MobileNavbar/>
         </div>
     );
 }
@@ -296,7 +296,7 @@ function DesktopNavbarProfileSlot() {
 
 // Mobile
 
-function MobileNavbar({ page } : Readonly<{ page: number }>) {
+function MobileNavbar() {
     return (
         <div id={"main-navbar-container"} className={"min-[1220px]:hidden w-full h-full"}>
             <nav id={"navbar"} className={"w-full fixed z-50 pointer-events-auto"}>
