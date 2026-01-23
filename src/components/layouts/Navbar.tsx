@@ -5,10 +5,10 @@
 import "@/styles/components/navbar.css";
 
 // Import di React
-import ShinyText from "@/components/ShinyText";
+import ShinyText from "@/components/reactbits/ShinyText";
 import {useState} from "react";
 import { redirect } from 'next/navigation'
-import GlareHover from "@/components/GlareHover";
+import GlareHover from "@/components/reactbits/GlareHover";
 
 // Componente base della Navbar
 export default function Navbar({ page } : Readonly<{ page: number }>) {

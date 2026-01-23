@@ -1,13 +1,13 @@
 // Importazioni per react
 import Navbar from "@/components/layouts/Navbar";
-import DotGrid from '@/components/DotGrid';
-import SplitText from "@/components/SplitText";
-import AnimatedContent from '@/components/AnimatedContent'
-import GlareHover from '@/components/GlareHover'
-import ShinyText from "@/components/ShinyText";
+import DotGrid from '@/components/reactbits/DotGrid';
+import SplitText from "@/components/reactbits/SplitText";
+import AnimatedContent from '@/components/reactbits/AnimatedContent'
+import GlareHover from '@/components/reactbits/GlareHover'
+import ShinyText from "@/components/reactbits/ShinyText";
 import Footer from "@/components/layouts/Footer";
-import ScrollFloat from "@/components/ScrollFloat";
-import SpotlightCard from "@/components/SpotlightCard";
+import ScrollFloat from "@/components/reactbits/ScrollFloat";
+import SpotlightCard from "@/components/reactbits/SpotlightCard";
 
 // Icons
 
@@ -105,9 +105,9 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div id={"description"} className={"w-full flex items-center justify-center pt-[100px] pb-[100px] bg-[#0a0a0a] pl-16 pr-16"}>
+            <div id={"description"} className={"w-full flex items-center justify-center py-25 bg-[#0a0a0a] pl-16 pr-16"}>
                 <div className={"w-full max-w-375 flex flex-row items-start max-[1020px]:items-center justify-start"}>
-                    <div className={"w-full flex flex-col items-start max-[1020px]:items-center justify-center h-[550px] max-[1020px]:text-center"}>
+                    <div className={"w-full flex flex-col items-start max-[1020px]:items-center justify-center h-137.5 max-[1020px]:text-center"}>
                         <AnimatedContent
                             distance={100}
                             direction="vertical"
@@ -134,7 +134,7 @@ export default function Home() {
                             threshold={0.1}
                             delay={0.25}
                         >
-                            <p className={"font-normal text-[20px] max-w-[750px] max-[1020px]:text-center"}>
+                            <p className={"font-normal text-[20px] max-w-187.5 max-[1020px]:text-center"}>
                                 Siamo un progetto nato con l&#39;obiettivo di portare, tramite le più moderne tecnologie, un radicale cambiamento all&#39;interno
                                 della regione <b>Insubrica</b>, in particolare fornendo servizi in ambito turistico, urbanistico, ed educativo con l&#39;integrazione
                                 dell&#39;intelligenza artificiale.
@@ -152,7 +152,7 @@ export default function Home() {
                             threshold={0.1}
                             delay={0.5}
                         >
-                            <button className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-[30px] p-0"}>
+                            <button className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-7.5 p-0"}>
                                 <svg className={"mt-0"} width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
@@ -160,12 +160,12 @@ export default function Home() {
                             </button>
                         </AnimatedContent>
                     </div>
-                    <div className={"max-[1020px]:hidden w-[750px] h-full"}>
+                    <div className={"max-[1020px]:hidden w-187.5 h-full"}>
 
                     </div>
                 </div>
             </div>
-            <div id={"launch-page"} className={"w-full flex flex-col items-center pt-[120px] pb-[120px] pl-16 pr-16"}>
+            <div id={"launch-page"} className={"w-full flex flex-col items-center py-30 pl-16 pr-16"}>
                 <div className={"flex flex-col items-center"}>
                     <ScrollFloat
                         animationDuration={1}
@@ -209,7 +209,7 @@ export default function Home() {
                         >
                             <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(225, 161, 255, 0.2)">
                                 <h1 className={"text-[24px] font-bold"}>Progetti & Idee</h1>
-                                <p>Vedi tutti i progetti realizzati dalla community, e sopri tutte le idee ancora non realizzate.</p>
+                                <p>Vedi tutti i progetti realizzati dalla community, e scopri tutte le idee ancora non realizzate.</p>
                             </SpotlightCard>
                         </AnimatedContent>
                         <AnimatedContent

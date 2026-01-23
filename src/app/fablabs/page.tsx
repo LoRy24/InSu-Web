@@ -1,15 +1,15 @@
 // Importazioni per react
 import Navbar from "@/components/layouts/Navbar";
-import SplitText from "@/components/SplitText";
-import AnimatedContent from "@/components/AnimatedContent";
-import DotGrid from "@/components/DotGrid";
+import SplitText from "@/components/reactbits/SplitText";
+import AnimatedContent from "@/components/reactbits/AnimatedContent";
+import DotGrid from "@/components/reactbits/DotGrid";
 import FabLabsBrowser from "@/components/ui/fablabs/FabLabsBrowser";
 
 export default function FabLabs() {
     return (
         <div>
             <Navbar page={2}/>
-            <div id={"head"} className={"fixed z-10 w-full h-[475px] flex flex-col items-center justify-center"}>
+            <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
                         text="FabLabs"
@@ -27,7 +27,7 @@ export default function FabLabs() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-[400px] text-center mt-0"}>Esplora tutti i nostri FabLabs partner</p>
+                        <p className={"max-w-100 text-center mt-0"}>Esplora tutti i nostri FabLabs partner</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>
@@ -39,7 +39,7 @@ export default function FabLabs() {
                     />
                 </div>
             </div>
-            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-[475px]"}>
+            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75"}>
                 <FabLabsBrowser/>
             </div>
         </div>
