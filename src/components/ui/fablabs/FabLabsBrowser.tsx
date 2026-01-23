@@ -44,7 +44,7 @@ export default function FabLabsBrowser() {
     return (
         <div id={"browser"} className={"w-full flex flex-row items-start justify-center pr-16 pl-16 pt-24 pb-24"}>
             <div id={"browser-block"} className={"w-full max-w-375 flex flex-row items-start justify-start h-min-[72vh]"}>
-                <div id={"filters-block"} className={"w-[275px] flex flex-col pr-8 h-[72vh] overflow-y-scroll gap-y-10"}>
+                <div id={"filters-block"} className={"w-68.75 flex flex-col pr-8 h-[72vh] overflow-y-scroll gap-y-10"}>
                     <div id={"filters-state"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>STATO</h1>
                         <div className={"flex flex-col space-y-4"}>
@@ -169,7 +169,7 @@ export default function FabLabsBrowser() {
                         </div>
                     </div>
                 </div>
-                <div id={"fab-labs-browser-content"} className={"ml-10 max-h-[1200px]"}>
+                <div id={"fab-labs-browser-content"} className={"ml-10 max-h-300"}>
                     <BrowserContent filters={{state: stateFilter, tags: tagsFilter}} defaultItemsPerPage={8} />
                 </div>
             </div>
@@ -193,6 +193,10 @@ function FabLabsFilterButton({ children, selected, onClick } : { children: React
 }
 
 function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: FabLabFiltersObject, defaultItemsPerPage: number }>) {
+    // Stati
+    const [ itemsPerPage ] = useState(defaultItemsPerPage);
+    const [ page, setPage ] = useState(0);
+
     // Array filtrato
     const filtered: FabLab[] = applyFilters(filters, FabLabsTestArray);
 
@@ -209,9 +213,6 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
 
     // Altrimenti definisci gli stati per la selezione della pagina, items per pagina ecc.
 
-    const [ itemsPerPage, setItemsPerPage ] = useState(defaultItemsPerPage);
-    const [ page, setPage ] = useState(0);
-
     // Calcola alcuni valori
     const totalPages = Math.trunc((filtered.length / itemsPerPage) + 1);
 
@@ -221,13 +222,13 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
     }
 
     return (
-        <div className={"w-full grid grid-cols h-[72vh]"}>
+        <div className={"w-full grid grid-cols"}>
             <FabLabsGrid fabLabs={filtered} itemsPerPage={itemsPerPage} page={page} />
             <div className={"w-full h-14 bg-[#101010] rounded-2xl mt-8 flex flex-row items-center px-8"}>
                 <div className={"w-full flex flex-row items-center gap-3"}>
                     <button id={"previous-page-button"}
                             disabled={page == 0}
-                            className={`w-[36px] h-[36px] bg-[#303030] cursor-pointer disabled:bg-[#151515] hover:bg-[#f0f0f0] disabled:cursor-default flex flex-col items-center justify-center rounded-xl transition-all duration-250`}
+                            className={`w-9 h-9 bg-[#303030] cursor-pointer disabled:bg-[#151515] hover:bg-[#f0f0f0] disabled:cursor-default flex flex-col items-center justify-center rounded-xl transition-all duration-250`}
                             onClick={() => {
                                 setPage(page - 1);
                             }}
@@ -236,10 +237,10 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
                             <path d="M14 16L10 12L14 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </button>
-                    <span className={"select-none text-[13px] font-medium w-[36px] h-[36px] bg-[#202020] flex flex-col items-center justify-center rounded-xl"}>{page + 1}</span>
+                    <span className={"select-none text-[13px] font-medium w-9 h-9 bg-[#202020] flex flex-col items-center justify-center rounded-xl"}>{page + 1}</span>
                     <button id={"next-page-button"}
                             disabled={page == totalPages - 1}
-                            className={"w-[36px] h-[36px] bg-[#303030] cursor-pointer disabled:bg-[#151515] hover:bg-[#f0f0f0] disabled:cursor-default flex flex-col items-center justify-center rounded-xl transition-all duration-250"}
+                            className={"w-9 h-9 bg-[#303030] cursor-pointer disabled:bg-[#151515] hover:bg-[#f0f0f0] disabled:cursor-default flex flex-col items-center justify-center rounded-xl transition-all duration-250"}
                             onClick={() => {
                                 setPage(page + 1);
                             }}
@@ -259,7 +260,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
 
 function FabLabsGrid({ fabLabs, itemsPerPage, page } : Readonly<{ fabLabs: FabLab[], itemsPerPage: number, page: number }>) {
     return (
-        <div id={"fab-labs-grid-container"} className={"grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 h-min-[72vh]"}>
+        <div id={"fab-labs-grid-container"} className={"grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"}>
             {fabLabs.slice(page * itemsPerPage, (page + 1) * itemsPerPage).map(fabLabObject => (
                 <FabLabCard key={fabLabObject.id} fabLab={fabLabObject} />
             ))}
@@ -273,7 +274,7 @@ function applyFilters(filters: FabLabFiltersObject, labs: FabLab[]) : FabLab[] {
         .filter(lab => filters.state == FabLabState.ALL ? true : filters.state == FabLabState.INACTIVE ? !lab.active : lab.active)
         .filter(lab => {
             if (filters.tags.length == 0) return true;
-            for (let tag of filters.tags) {
+            for (const tag of filters.tags) {
                 if (lab.tags.includes(tag)) {
                     return true;
                 }

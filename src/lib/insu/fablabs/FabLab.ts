@@ -12,6 +12,8 @@ export class FabLab {
     active: boolean;
     photos_urls: string[];
     files: FileReference[];
+    latitude: number;
+    longitude: number;
 
     // Images
     card_banner_url: string;
@@ -29,7 +31,9 @@ export class FabLab {
                 active: boolean,
                 card_banner_url: string,
                 photos_urls: string[],
-                files: FileReference[]) {
+                files: FileReference[],
+                latitude: number,
+                longitude: number) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -43,6 +47,8 @@ export class FabLab {
         this.card_banner_url = card_banner_url;
         this.photos_urls = photos_urls;
         this.files = files;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }
 

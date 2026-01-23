@@ -1,5 +1,7 @@
 import React from "react";
+
 import "@/styles/pages/global.css"
+import "leaflet/dist/leaflet.css";
 
 export default function RootLayout({
   children,

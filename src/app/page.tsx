@@ -182,7 +182,7 @@ export default function Home() {
                         duration={0.3}
                         className={"mb-10"}
                     >
-                        <p className={"max-w-[400px] text-center"}>Clicca su uno dei seguenti pulsanti per maggiori approfondimenti sui nostri servizi.</p>
+                        <p className={"max-w-100 text-center"}>Clicca su uno dei seguenti pulsanti per maggiori approfondimenti sui nostri servizi.</p>
                     </AnimatedContent>
                     <div className={"grid gap-6 grid-cols-[repeat(auto-fit,minmax(275px,1fr))]"}>
                         <AnimatedContent
@@ -200,7 +200,7 @@ export default function Home() {
                         >
                             <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(128, 211, 255, 0.2)">
                                 <h1 className={"text-[24px] font-bold"}>Insulligence</h1>
-                                <p>Alla base dei nostri servizi c'è proprio lei, la nostra AI. Provala subito!</p>
+                                <p>Alla base dei nostri servizi c&#39;è proprio lei, la nostra AI. Provala subito!</p>
                             </SpotlightCard>
                         </AnimatedContent>
                         <AnimatedContent
@@ -224,7 +224,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div id={"contact-us"} className={"w-full flex flex-col items-center pt-[120px] pb-[120px] pl-16 pr-16"}>
+            <div id={"contact-us"} className={"w-full flex flex-col items-center pt-30 pb-30 pl-16 pr-16"}>
 
             </div>
             <Footer/>
