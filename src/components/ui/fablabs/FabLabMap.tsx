@@ -14,11 +14,11 @@ export default function FabLabMap({ latitude, longitude }: Readonly<{ latitude: 
     const center: [number, number] = [latitude, longitude];
 
     return (
-        <div className={"overflow-hidden rounded-2xl mt-10"}>
+        <div className={"overflow-hidden rounded-2xl"}>
             <MapContainer
                 center={center}
                 zoom={15}
-                className={"h-125 w-full"}>
+                className={"h-85 w-full"}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                     url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png"

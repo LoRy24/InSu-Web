@@ -9,7 +9,7 @@ export default function FabLabCard({ fabLab } : Readonly<{ fabLab: FabLab }>) {
         <div id={"fablab-card-" + fabLab.id} className={"rounded-2xl h-61 bg-[#101010] flex flex-col overflow-hidden"}>
             <div id={"fablab-card-" + fabLab.id + "-bg-image"} className={`h-18 overflow-hidden ${fabLab.card_banner_url == "" ? "bg-green-300" : ""}`}>
                 {
-                    fabLab.card_banner_url == "" ? <></> : <Image width={1024} height={1024} src={fabLab.card_banner_url} alt={"Banner"} className={"w-full h-auto"}/>
+                    fabLab.card_banner_url == "" ? <></> : <Image width={1024} height={1024} src={fabLab.card_banner_url} alt={"Banner"} className={"w-full h-auto object-cover object-center"}/>
                 }
             </div>
             <div className={"px-8 py-7"}>
