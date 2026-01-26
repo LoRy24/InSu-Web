@@ -21,17 +21,17 @@ export const FabLabsTestArray: FabLab[] = [
             FabLabTag.TECH_DESIGN,
         ],
         false,
-        "/resources/fablabs/0/banner.png",
+        "/app_data/resources/fablabs/0/banner.png",
         [
-            "/resources/fablabs/0/photos/1.png",
-            "/resources/fablabs/0/photos/2.png",
-            "/resources/fablabs/0/photos/3.png",
-            "/resources/fablabs/0/photos/4.png",
+            "/app_data/resources/fablabs/0/photos/1.png",
+            "/app_data/resources/fablabs/0/photos/2.png",
+            "/app_data/resources/fablabs/0/photos/3.png",
+            "/app_data/resources/fablabs/0/photos/4.png",
         ],
         [
             new FileReference(
                 "Documentazione",
-                "/resources/fablabs/0/files/Progetto realizzazione FabLab Guanzate.pdf",
+                "/app_data/resources/fablabs/0/files/Progetto realizzazione FabLab Guanzate.pdf",
                 FileType.DOCUMENT
             )
         ],
