@@ -7,7 +7,12 @@ import GlareHover from '@/components/reactbits/GlareHover'
 import ShinyText from "@/components/reactbits/ShinyText";
 import Footer from "@/components/layouts/Footer";
 import ScrollFloat from "@/components/reactbits/ScrollFloat";
-import SpotlightCard from "@/components/reactbits/SpotlightCard";
+import {
+    FabLabsShowMoreCard,
+    InsulligenceShowMoreCard,
+    ProjectsAndIdeasShowMoreCard,
+    TourShowMoreCard
+} from "@/components/ui/home/HomeButtons";
 
 // Icons
 
@@ -185,42 +190,10 @@ export default function Home() {
                         <p className={"max-w-100 text-center"}>Clicca su uno dei seguenti pulsanti per maggiori approfondimenti sui nostri servizi.</p>
                     </AnimatedContent>
                     <div className={"grid gap-6 grid-cols-[repeat(auto-fit,minmax(275px,1fr))]"}>
-                        <AnimatedContent
-                            duration={0.6}
-                            delay={0.15}
-                        >
-                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(102, 250, 219, 0.2)">
-                                <h1 className={"text-[24px] font-bold"}>Tour</h1>
-                                <p>Scopri il nostro servizio di tour sul territorio, completamente <b>gratis</b>!</p>
-                            </SpotlightCard>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            duration={0.6}
-                            delay={0.15}
-                        >
-                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(128, 211, 255, 0.2)">
-                                <h1 className={"text-[24px] font-bold"}>Insulligence</h1>
-                                <p>Alla base dei nostri servizi c&#39;è proprio lei, la nostra AI. Provala subito!</p>
-                            </SpotlightCard>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            duration={0.6}
-                            delay={0.15}
-                        >
-                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(225, 161, 255, 0.2)">
-                                <h1 className={"text-[24px] font-bold"}>Progetti & Idee</h1>
-                                <p>Vedi tutti i progetti realizzati dalla community, e scopri tutte le idee ancora non realizzate.</p>
-                            </SpotlightCard>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            duration={0.6}
-                            delay={0.15}
-                        >
-                            <SpotlightCard className={"custom-spotlight-card w-full cursor-pointer select-none"} spotlightColor="rgba(255, 161, 199, 0.2)">
-                                <h1 className={"text-[24px] font-bold"}>Fablabs</h1>
-                                <p>Vuoi condividere le tue capacità con tutta la comunità? Scopri tutti i Fablabs partner!</p>
-                            </SpotlightCard>
-                        </AnimatedContent>
+                        <TourShowMoreCard/>
+                        <InsulligenceShowMoreCard/>
+                        <ProjectsAndIdeasShowMoreCard/>
+                        <FabLabsShowMoreCard/>
                     </div>
                 </div>
             </div>
