@@ -97,7 +97,7 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.0001 11L10.0001 17L1.00012 11M19.0001 7L10.0001 13L1.00012 7L10.0001 1L19.0001 7Z" stroke="#f0f0f0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
-                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Tour</p>
+                                    <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Gladys</p>
                                 </button>
                                 <button id={"fab-labs-button"}
                                         className={`${page == 2 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
@@ -202,7 +202,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Turisti</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Informazioni</a>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Visualizza la Mappa</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"}>Itinerari</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Organizzatori</h1>

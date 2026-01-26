@@ -3,7 +3,7 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
-import FabLabsBrowser from "@/components/ui/fablabs/FabLabsBrowser";
+import FabLabsExplorer from "@/components/ui/fablabs/FabLabsExplorer";
 
 export default function FabLabs() {
     return (
@@ -39,8 +39,42 @@ export default function FabLabs() {
                     />
                 </div>
             </div>
-            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75"}>
-                <FabLabsBrowser/>
+            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
+                <div className={"w-full flex flex-col items-center px-16 mt-32 mb-48"}>
+                    <div className={"w-full max-w-375 flex flex-col justify-center min-h-[30vh]"}>
+                        <AnimatedContent
+                            distance={100}
+                            direction="vertical"
+                            reverse={false}
+                            duration={0.8}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity
+                            scale={1}
+                            threshold={0.1}
+                            delay={0}
+                        >
+                            <h1 className={"font-black text-[64px]"}>Cosa sono i "FabLabs"?</h1>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            distance={100}
+                            direction="vertical"
+                            reverse={false}
+                            duration={0.8}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.25}
+                        >
+                            <p className={"font-normal text-[20px] max-w-187.5 max-[1020px]:text-center"}>
+                                Descrizione su cosa siano i fablabs...
+                            </p>
+                        </AnimatedContent>
+                    </div>
+                </div>
+                <FabLabsExplorer/>
             </div>
         </div>
     );
