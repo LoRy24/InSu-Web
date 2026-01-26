@@ -16,7 +16,7 @@
     "gsap": "^3.14.2",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
-    "lucide-react": "^0.562.0",
+    "lucide-react": "^0.563.0",
     "motion": "^12.25.0",
     "next": "16.1.1",
     "ogl": "^1.0.11",
