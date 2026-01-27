@@ -6,7 +6,7 @@ import DotGrid from "@/components/reactbits/DotGrid";
 export default function GladysPage() {
     return (
         <div>
-            <Navbar page={2}/>
+            <Navbar page={5}/>
             <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
