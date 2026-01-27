@@ -67,7 +67,7 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                             <ShinyText text={"InSu"} speed={3} delay={1} color="#f0f0f0" shineColor="#aaffb0" yoyo className={"font-bold"}/>
                             <div id={"navbar-desktop-left-content-buttons"} className={"w-full flex items-center justify-start ml-16 space-x-10"}>
                                 <button id={"home-button"}
-                                        className={`${page == 0 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        className={`${page == 0 ? "navbar-button-selected cursor-default" : "navbar-button cursor-pointer"} flex flex-row items-center justify-start select-none`}
                                         onClick={() => {
                                             if (page != 0) {
                                                 redirect("/");
@@ -82,16 +82,14 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                 <button id={"tour-button"}
                                         className={`${page == 1 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
-                                            if (page !== 1) {
-                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.TOUR) {
-                                                    hideNavExtension();
-                                                    return;
-                                                } else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
-                                                    showNavExtension();
-                                                }
-
-                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.TOUR);
+                                            if (desktopNavExtendedPage === DesktopNavBarExtendedPage.TOUR) {
+                                                hideNavExtension();
+                                                return;
+                                            } else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                showNavExtension();
                                             }
+
+                                            setDesktopNavExtendedPage(DesktopNavBarExtendedPage.TOUR);
                                         }}
                                 >
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +98,7 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                     <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Gladys</p>
                                 </button>
                                 <button id={"fab-labs-button"}
-                                        className={`${page == 2 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        className={`${page == 2 ? "navbar-button-selected cursor-default" : "navbar-button cursor-pointer "} flex flex-row items-center justify-start select-none`}
                                         onClick={() => {
                                             if (page != 2) {
                                                 redirect("/fablabs");
@@ -115,16 +113,14 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                 <button id={"insulligence-button"}
                                         className={`${page == 3 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
-                                            if (page != 3) {
-                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.AI) {
-                                                    hideNavExtension();
-                                                    return;
-                                                }
-                                                else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
-                                                    showNavExtension();
-                                                }
-                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.AI);
+                                            if (desktopNavExtendedPage === DesktopNavBarExtendedPage.AI) {
+                                                hideNavExtension();
+                                                return;
                                             }
+                                            else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                showNavExtension();
+                                            }
+                                            setDesktopNavExtendedPage(DesktopNavBarExtendedPage.AI);
                                         }}
                                 >
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,18 +129,16 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                     <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Insulligence</p>
                                 </button>
                                 <button id={"resources-button"}
-                                        className={`${page == 3 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        className={`${page == 4 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
-                                            if (page != 3) {
-                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.RESOURCES) {
-                                                    hideNavExtension();
-                                                    return;
-                                                }
-                                                else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
-                                                    showNavExtension();
-                                                }
-                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.RESOURCES);
+                                            if (desktopNavExtendedPage === DesktopNavBarExtendedPage.RESOURCES) {
+                                                hideNavExtension();
+                                                return;
                                             }
+                                            else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                showNavExtension();
+                                            }
+                                            setDesktopNavExtendedPage(DesktopNavBarExtendedPage.RESOURCES);
                                         }}
                                 >
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,18 +147,16 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                     <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Risorse</p>
                                 </button>
                                 <button id={"environment-button"}
-                                        className={`${page == 4 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
+                                        className={`${page == 5 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
-                                            if (page != 3) {
-                                                if (desktopNavExtendedPage === DesktopNavBarExtendedPage.ENVIRONMENT) {
-                                                    hideNavExtension();
-                                                    return;
-                                                }
-                                                else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
-                                                    showNavExtension();
-                                                }
-                                                setDesktopNavExtendedPage(DesktopNavBarExtendedPage.ENVIRONMENT);
+                                            if (desktopNavExtendedPage === DesktopNavBarExtendedPage.ENVIRONMENT) {
+                                                hideNavExtension();
+                                                return;
                                             }
+                                            else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
+                                                showNavExtension();
+                                            }
+                                            setDesktopNavExtendedPage(DesktopNavBarExtendedPage.ENVIRONMENT);
                                         }}
                                 >
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
