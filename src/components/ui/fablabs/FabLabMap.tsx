@@ -4,10 +4,10 @@ import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import L from "leaflet";
 
 const markerCustomIcon = L.icon({
-    iconUrl: "/icons/marker.png",
-    iconSize: [40, 58.94],       // dimensione icona
-    iconAnchor: [20, 40],     // punto “esatto” che tocca la coordinata
-    popupAnchor: [0, -40],    // dove appare il popup rispetto all’icona
+    iconUrl: "/app_data/icons/gifs/location-pin.gif",
+    iconSize: [70, 70],       // dimensione icona
+    iconAnchor: [45, 50],     // punto “esatto” che tocca la coordinata
+    popupAnchor: [-10, -45],    // dove appare il popup rispetto all’icona
 });
 
 export default function FabLabMap({ latitude, longitude }: Readonly<{ latitude: number, longitude: number }>) {

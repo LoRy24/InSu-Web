@@ -103,7 +103,7 @@ function FabLabState({ active } : { active: boolean }) {
 }
 
 function FabLabTags({ tags } : { tags: FabLabTag[] }) {
-    return tags == 0 ? (
+    return tags.length == 0 ? (
         <>
         </>
     ) : (

@@ -40,7 +40,7 @@ export default function FabLabs() {
                 </div>
             </div>
             <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
-                <div className={"w-full flex flex-col items-center px-16 mt-32 mb-48"}>
+                <div className={"w-full flex flex-col items-center px-16 mt-16 mb-32"}>
                     <div className={"w-full max-w-375 flex flex-col justify-center min-h-[30vh]"}>
                         <AnimatedContent
                             distance={100}

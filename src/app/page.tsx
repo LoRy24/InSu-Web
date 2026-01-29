@@ -13,6 +13,7 @@ import {
     ProjectsAndIdeasShowMoreCard,
     TourShowMoreCard
 } from "@/components/ui/home/HomeButtons";
+import Image from "next/image";
 
 // Icons
 
@@ -110,9 +111,11 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div id={"description"} className={"w-full flex items-center justify-center py-25 bg-[#0a0a0a] pl-16 pr-16"}>
-                <div className={"w-full max-w-375 flex flex-row items-start max-[1020px]:items-center justify-start"}>
-                    <div className={"w-full flex flex-col items-start max-[1020px]:items-center justify-center h-137.5 max-[1020px]:text-center"}>
+            <div id={"description"} className={"relative w-full flex items-center justify-center py-25 bg-[#0a0a0a] pl-16 pr-16"}>
+                {/* BLUR LAYER */}
+                <div className={"w-full absolute z-4 h-full flex flex-col justify-center items-center pl-16 pr-16"}>
+                    <div className="absolute h-full inset-0 z-10 backdrop-blur-[100px] pointer-events-none"/>
+                    <div className={"relative z-0 w-full max-w-375 h-full flex flex-col justify-center items-end max-[1300px]:items-center mr-16 max-[1300px]:mr-0"}>
                         <AnimatedContent
                             distance={100}
                             direction="vertical"
@@ -125,48 +128,81 @@ export default function Home() {
                             threshold={0.1}
                             delay={0}
                         >
-                            <h1 className={"font-black text-[64px]"}>Chi Siamo</h1>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            distance={100}
-                            direction="vertical"
-                            reverse={false}
-                            duration={0.8}
-                            ease="power3.out"
-                            initialOpacity={0}
-                            animateOpacity
-                            scale={1}
-                            threshold={0.1}
-                            delay={0.25}
-                        >
-                            <p className={"font-normal text-[20px] max-w-187.5 max-[1020px]:text-center"}>
-                                Siamo un progetto nato con l&#39;obiettivo di portare, tramite le più moderne tecnologie, un radicale cambiamento all&#39;interno
-                                della regione <b>Insubrica</b>, in particolare fornendo servizi in ambito turistico, urbanistico, ed educativo con l&#39;integrazione
-                                dell&#39;intelligenza artificiale.
-                            </p>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            distance={100}
-                            direction="vertical"
-                            reverse={false}
-                            duration={0.8}
-                            ease="power3.out"
-                            initialOpacity={0}
-                            animateOpacity
-                            scale={1}
-                            threshold={0.1}
-                            delay={0.5}
-                        >
-                            <button className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-7.5 p-0"}>
-                                <svg className={"mt-0"} width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                                <p className={"mt-0 ml-2.5 text-[16px]"}>Crediti</p>
-                            </button>
+                            <Image src={"/app_data/images/home-page-image-1.png"} alt={"Lake"} width={744.45/2} height={659/2}/>
                         </AnimatedContent>
                     </div>
-                    <div className={"max-[1020px]:hidden w-187.5 h-full"}>
-
+                </div>
+                <div className={"w-full z-10 max-w-375 h-150 flex flex-row items-center max-[1300px]:items-center justify-center overflow-hidden"}>
+                    <div className="w-full flex flex-row items-center justify-center">
+                        <div className={"w-full flex flex-col items-start max-[1300px]:items-center justify-center h-137.5 max-[1300px]:text-center"}>
+                            <AnimatedContent
+                                distance={100}
+                                direction="vertical"
+                                reverse={false}
+                                duration={0.8}
+                                ease="power3.out"
+                                initialOpacity={0}
+                                animateOpacity
+                                scale={1}
+                                threshold={0.1}
+                                delay={0}
+                            >
+                                <h1 className={"font-black text-[64px]"}>Chi Siamo</h1>
+                            </AnimatedContent>
+                            <AnimatedContent
+                                distance={100}
+                                direction="vertical"
+                                reverse={false}
+                                duration={0.8}
+                                ease="power3.out"
+                                initialOpacity={0}
+                                animateOpacity
+                                scale={1}
+                                threshold={0.1}
+                                delay={0.25}
+                            >
+                                <p className={"font-normal text-[20px] max-w-187.5 max-[1300px]:text-center"}>
+                                    Siamo un progetto nato con l&#39;obiettivo di portare, tramite le più moderne tecnologie, un radicale cambiamento all&#39;interno
+                                    della regione <b>Insubrica</b>, in particolare fornendo servizi in ambito turistico, urbanistico, ed educativo con l&#39;integrazione
+                                    dell&#39;intelligenza artificiale.
+                                </p>
+                            </AnimatedContent>
+                            <AnimatedContent
+                                distance={100}
+                                direction="vertical"
+                                reverse={false}
+                                duration={0.8}
+                                ease="power3.out"
+                                initialOpacity={0}
+                                animateOpacity
+                                scale={1}
+                                threshold={0.1}
+                                delay={0.5}
+                            >
+                                <button className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-7.5 p-0"}>
+                                    <svg className={"mt-0"} width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    <p className={"mt-0 ml-2.5 text-[16px]"}>Crediti</p>
+                                </button>
+                            </AnimatedContent>
+                        </div>
+                        <div className={"max-[1300px]:hidden w-187.5 h-137.5 flex flex-col items-end justify-center"}>
+                            <AnimatedContent
+                                distance={100}
+                                direction="vertical"
+                                reverse={false}
+                                duration={0.8}
+                                ease="power3.out"
+                                initialOpacity={0}
+                                animateOpacity
+                                scale={1}
+                                threshold={0.1}
+                                delay={0}
+                            >
+                                <Image src={"/app_data/images/home-page-image-1.png"} alt={"Lake"} width={744.45} height={659}/>
+                            </AnimatedContent>
+                        </div>
                     </div>
                 </div>
             </div>
