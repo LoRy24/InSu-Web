@@ -54,7 +54,7 @@ export function InsulligenceShowMoreCard() {
 
 export function TourShowMoreCard() {
     return (
-        <button className={"text-start"}>
+        <button className={"text-start"} onClick={() => redirect(("/gladys"))}>
             <AnimatedContent
                 duration={0.6}
                 delay={0.15}

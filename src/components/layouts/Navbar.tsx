@@ -59,7 +59,7 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
 
     return (
         <div id={"main-navbar-container"} className={"max-[1220px]:hidden w-full h-full"}>
-            <nav id={"navbar"} className={"w-full fixed z-50 pointer-events-auto"}>
+            <nav id={"navbar"} className={"w-full fixed z-500 pointer-events-auto"}>
                 <div id={"navbar-desktop"} className={`hidden ${desktopNavExtended ? "bg-[#0a0a0a] h-92 border-b border-b-[#202020]" : "h-18"} backdrop-blur-lg h-18 min-[1220px]:flex flex-col items-center justify-start px-16 transition-[height] duration-250 ease`}>
                     <div id={"navbar-desktop-content"} className={"w-full h-18 flex items-center justify-center max-w-375"}>
                         {/* PARTE SINISTRA */}
