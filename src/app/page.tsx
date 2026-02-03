@@ -14,6 +14,8 @@ import {
     TourShowMoreCard
 } from "@/components/ui/home/HomeButtons";
 import Image from "next/image";
+import {HomeExploreButton} from "@/components/ui/home/HomeExploreButton";
+import {HomeTryInsulligenceButton} from "@/components/ui/home/HomeTryInsulligenceButton";
 
 // Icons
 
@@ -48,59 +50,8 @@ export default function Home() {
                         textAlign="center"
                     />
                     <div id={"page-head-buttons"} className={"flex flex-row items-center justify-center mt-8 space-x-8"}>
-                        <AnimatedContent
-                            distance={150}
-                            direction="vertical"
-                            reverse={false}
-                            duration={1.2}
-                            ease="power3.out"
-                            initialOpacity={0}
-                            animateOpacity
-                            scale={1}
-                            threshold={0.1}
-                            delay={1.5}>
-                            <button id={"home-page-head-explore-button"} className={"text-[19px] font-medium text-[#0a0a0a] select-none"}>
-                                <GlareHover
-                                    glareColor="#a0a0a0"
-                                    glareOpacity={0.3}
-                                    glareAngle={-30}
-                                    glareSize={300}
-                                    transitionDuration={800}
-                                    playOnce={false}
-                                    background={"#f0f0f0"}
-                                    borderColor={"#f0f0f0"}
-                                    width={"150px"}
-                                    height={"50px"}
-                                    borderRadius={"50px"}>
-                                    Esplora
-                                </GlareHover>
-                            </button>
-                        </AnimatedContent>
-                        <AnimatedContent
-                            distance={150}
-                            direction="vertical"
-                            reverse={false}
-                            duration={1.2}
-                            ease="power3.out"
-                            initialOpacity={0}
-                            animateOpacity
-                            scale={1}
-                            threshold={0.1}
-                            delay={1.5}>
-                            <button id={"home-page-head-ai-button"} className={"text-[20px] font-medium cursor-pointer select-none"}>
-                                <ShinyText
-                                    text="✨ Prova la nostra AI"
-                                    speed={2}
-                                    delay={0}
-                                    color="#f0f0f0"
-                                    shineColor="#aaffb0"
-                                    spread={300}
-                                    direction="left"
-                                    yoyo={false}
-                                    pauseOnHover={false}
-                                />
-                            </button>
-                        </AnimatedContent>
+                        <HomeExploreButton/>
+                        <HomeTryInsulligenceButton/>
                     </div>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-full"}>

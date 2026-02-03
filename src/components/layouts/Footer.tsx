@@ -1,7 +1,7 @@
-export default function Footer() {
+export default function Footer({ className } : { className?: string }) {
     return (
-        <div className={"flex flex-col items-center justify-center border-t-1 border-t-[#1a1a1a]"}>
-            <div id={"footer-content"} className={"bg-[#0f0f0f] w-full flex flex-col items-center py-14"}>
+        <div className={`flex flex-col items-center justify-center border-t-1 border-t-[#1a1a1a] ${className}`}>
+            <div id={"footer-content"} className={"bg-[#0f0f0f] w-full flex flex-col items-center py-24"}>
                 <div className={"w-full max-w-375 grid grid-cols-3"}>
                     <div id={"logo"} className={"flex flex-col justify-center"}>
                         <h1 className={"font-black text-[124px] h-[160px] text-[#d0d0d0] m-0"}>InSu</h1>
@@ -9,10 +9,10 @@ export default function Footer() {
                     </div>
                     <div id={"legal-info"} className={"mr-12 ml-12 flex flex-col gap-y-1"}>
                         <h1 className={"text-[22px] font-black mb-2"}>Informazioni</h1>
-                        <a href={""} className={"text-[#c0c0c0]"}>Privacy Policy</a>
-                        <a href={""} className={"text-[#c0c0c0]"}>Termini di Servizio</a>
+                        <a href={""} className={"text-[#c0c0c0] hover:text-white duration-150"}>Privacy Policy</a>
+                        <a href={""} className={"text-[#c0c0c0] hover:text-white duration-150"}>Termini di Servizio</a>
                         <h1 className={"text-[22px] font-black mb-2 mt-5"}>Collabora</h1>
-                        <a href={""} className={"text-[#c0c0c0]"}>GitHub</a>
+                        <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>GitHub</a>
                     </div>
                     <div id={"legal-info"}>
                         <h1 className={"text-[22px] font-black"}>Contatti</h1>

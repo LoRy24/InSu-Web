@@ -165,3 +165,16 @@ body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
 .font-custom-blinker {
     font-family: 'Blinker', serif;
 }
+
+/* Mappa Gladys */
+
+.person-popup .leaflet-popup-content-wrapper {
+    background: linear-gradient(180deg, #2a1033, #1d0b26);
+    color: #f4e9fa;
+    border: 2px solid #cc00ff;
+    border-radius: 10px;
+}
+
+.person-popup .leaflet-popup-tip {
+    background: #cc00ff;
+}

@@ -2,8 +2,8 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
-import GlareHover from "@/components/reactbits/GlareHover";
 import Footer from "@/components/layouts/Footer";
+import {ExploreMapButton} from "@/components/ui/gladys/GladysExploreMapButton";
 
 export default function GladysPage() {
     return (
@@ -106,34 +106,7 @@ export default function GladysPage() {
                             Visualizza la nostra mappa per saperne di più
                         </p>
                     </AnimatedContent>
-                    <AnimatedContent
-                        distance={150}
-                        direction="vertical"
-                        reverse={false}
-                        duration={1.2}
-                        ease="power3.out"
-                        initialOpacity={0}
-                        animateOpacity
-                        scale={1}
-                        threshold={0.1}
-                        delay={0.25}>
-                        <button id={"home-page-head-explore-button"} className={"text-[19px] font-medium text-[#0a0a0a] select-none"}>
-                            <GlareHover
-                                glareColor="#a0a0a0"
-                                glareOpacity={0.3}
-                                glareAngle={-30}
-                                glareSize={300}
-                                transitionDuration={800}
-                                playOnce={false}
-                                background={"#f0f0f0"}
-                                borderColor={"#f0f0f0"}
-                                width={"150px"}
-                                height={"50px"}
-                                borderRadius={"50px"}>
-                                Esplora
-                            </GlareHover>
-                        </button>
-                    </AnimatedContent>
+                    <ExploreMapButton/>
                 </div>
                 <Footer/>
             </div>
