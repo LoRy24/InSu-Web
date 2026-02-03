@@ -22,6 +22,7 @@ import {
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+import {HashLoader} from "react-spinners";
 
 /* ---------- ICONS ---------- */
 const cityIcon = L.divIcon({
@@ -234,7 +235,13 @@ export default function GladysMap({ latitude, longitude }: Props) {
             </MapContainer>
             {!loaded ? (
                 <div className={"absolute inset-0 z-50 bg-[#101010]/80 flex items-center justify-center"}>
-                    <h1>Caricamento</h1>
+                    <HashLoader
+                        color={"#ffffff"}
+                        loading={!loaded}
+                        size={50}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
                 </div>
             ) : (<></>)}
         </div>
