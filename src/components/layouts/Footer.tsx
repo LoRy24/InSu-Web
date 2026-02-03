@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer({ className } : { className?: string }) {
     return (
         <div className={`flex flex-col items-center justify-center border-t-1 border-t-[#1a1a1a] ${className}`}>
@@ -9,19 +11,19 @@ export default function Footer({ className } : { className?: string }) {
                     </div>
                     <div id={"legal-info"} className={"mr-12 ml-12 flex flex-col gap-y-1"}>
                         <h1 className={"text-[22px] font-black mb-1"}>Informazioni</h1>
-                        <a href={""} className={"text-[#c0c0c0] hover:text-white duration-150"}>Privacy Policy</a>
-                        <a href={""} className={"text-[#c0c0c0] hover:text-white duration-150"}>Termini di Servizio</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>Privacy Policy</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>Termini di Servizio</a>
                         <h1 className={"text-[22px] font-black mb-1 mt-4"}>Collabora & Interagisci</h1>
                         <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>GitHub</a>
-                        <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>Guide</a>
-                        <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>Developers</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>Guide</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>Developers</a>
                     </div>
                     <div id={"contacts-social-info"} className={"flex flex-col gap-y-1"}>
                         <h1 className={"text-[22px] font-black mb-1"}>Contatti</h1>
-                        <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>Email</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>Email</a>
                         <h1 className={"text-[22px] font-black mb-1 mt-4"}>Social</h1>
-                        <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>Instagram</a>
-                        <a href={"https://github.com/LoRy24/InSu-Web"} className={"text-[#c0c0c0] hover:text-white duration-150"}>TikTok</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>Instagram</a>
+                        <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer"}>TikTok</a>
                     </div>
                 </div>
             </div>
