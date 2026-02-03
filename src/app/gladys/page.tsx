@@ -4,6 +4,7 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 import {ExploreMapButton} from "@/components/ui/gladys/GladysExploreMapButton";
+import Image from "next/image";
 
 export default function GladysPage() {
     return (
@@ -40,7 +41,7 @@ export default function GladysPage() {
                 </div>
             </div>
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75"}>
-                <div id={"brief"} className={"flex flex-col items-center justify-center min-h-[400px] py-50"}>
+                <div id={"brief"} className={"flex flex-col items-center justify-center min-h-[400px] py-24"}>
                     <AnimatedContent
                         distance={100}
                         direction="vertical"
@@ -52,6 +53,28 @@ export default function GladysPage() {
                         scale={1}
                         threshold={0.1}
                         delay={0}
+                    >
+                        <div className="w-64 h-64 rounded-full overflow-hidden flex items-center justify-center mb-3">
+                            <Image
+                                src="/app_data/images/gladys-west.png"
+                                alt="Gladys West"
+                                width={1024}
+                                height={1024}
+                                className="object-cover w-full h-full"
+                            />
+                        </div>
+                    </AnimatedContent>
+                    <AnimatedContent
+                        distance={100}
+                        direction="vertical"
+                        reverse={false}
+                        duration={0.8}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        scale={1}
+                        threshold={0.1}
+                        delay={0.10}
                     >
                         <h1 className={"font-black text-[64px]"}>Un progresso importante</h1>
                     </AnimatedContent>
@@ -74,8 +97,27 @@ export default function GladysPage() {
                             sistema <b>GPS</b>, senza il quale moltissime delle nostre tecnologie non avrebbero modo di funzionare.
                         </p>
                     </AnimatedContent>
+                    <AnimatedContent
+                        distance={100}
+                        direction="vertical"
+                        reverse={false}
+                        duration={0.8}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        scale={1}
+                        threshold={0.1}
+                        delay={0.20}
+                    >
+                        <a href={"https://en.wikipedia.org/wiki/Gladys_West"} className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-7.5 p-0"}>
+                            <svg className={"mt-0"} width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            <p className={"mt-0 ml-2.5 text-[16px]"}>Approfondisci</p>
+                        </a>
+                    </AnimatedContent>
                 </div>
-                <div id={"view-map"} className={"w-full flex flex-col items-center justify-center min-h-[550px] py-30 border-y-[#202020] border-y-2 bg-[linear-gradient(90deg,rgba(10,10,10,1)_0%,rgba(20,20,20,1)_100%)]"}>
+                <div id={"view-map"} className={"w-full flex flex-col items-center justify-center min-h-[550px] mt-16 py-30 border-y-[#202020] border-y-2 bg-[linear-gradient(90deg,rgba(10,10,10,1)_0%,rgba(20,20,20,1)_100%)]"}>
                     <AnimatedContent
                         distance={100}
                         direction="vertical"

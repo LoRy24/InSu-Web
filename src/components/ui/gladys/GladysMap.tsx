@@ -111,10 +111,18 @@ export default function GladysMap({ latitude, longitude }: Props) {
     /* ---------- STYLES ---------- */
     const areaStyle = (feature: any) => {
         const id = feature.__areaId;
-        const isSpecial = id === "co" || id === "va" || id === "tic";
+
+        if (id == "vb") {
+            return {
+                color: "#b99bff",
+                weight: 2.5,
+                opacity: 0.9,
+                fillOpacity: 0.08,
+            };
+        }
 
         return {
-            color: isSpecial ? "#fff70a" : "#9cff33",
+            color: "#aaffb0",
             weight: 2.5,
             opacity: 0.9,
             fillOpacity: 0.08,
