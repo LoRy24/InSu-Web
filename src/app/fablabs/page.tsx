@@ -4,6 +4,7 @@ import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import FabLabsExplorer from "@/components/ui/fablabs/FabLabsExplorer";
+import Footer from "@/components/layouts/Footer";
 
 export default function FabLabs() {
     return (
@@ -39,7 +40,7 @@ export default function FabLabs() {
                     />
                 </div>
             </div>
-            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
+            <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 pt-24"}>
                 <div className={"w-full flex flex-col items-center px-16 mt-16 mb-32"}>
                     <div className={"w-full max-w-375 flex flex-col justify-center min-h-[30vh]"}>
                         <AnimatedContent
@@ -75,6 +76,7 @@ export default function FabLabs() {
                     </div>
                 </div>
                 <FabLabsExplorer/>
+                <Footer className={"mt-16"}/>
             </div>
         </div>
     );

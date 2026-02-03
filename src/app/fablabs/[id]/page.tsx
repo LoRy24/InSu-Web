@@ -5,6 +5,7 @@ import {FabLab, FabLabTag, FabLabTagsColors, FabLabTagsNames, FabLabTagsTextColo
 import FabLabMapClient from "@/components/ui/fablabs/FabLabMapClient";
 import {FileDownloadButton} from "@/components/ui/generic/FileDownloadButton";
 import {FabLabPicturesCarousel} from "@/components/swiper/FabLabPicturesCarousel";
+import Footer from "@/components/layouts/Footer";
 
 export default async function FabLabPage({ params } : Readonly<{ params: Promise<{ id: number }> }>) {
     const { id } = await params;
@@ -39,8 +40,8 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
                     />
                 </div>
             </div>
-            <div id={"fablab-content"} className={"relative z-20 min-h-250 w-full top-118.75 bg-[#0a0a0a] flex flex-col items-center justify-start py-20 px-16"}>
-                <div className={"w-full max-w-375"}>
+            <div id={"fablab-content"} className={"relative z-20 min-h-250 w-full top-118.75 bg-[#0a0a0a] flex flex-col items-center justify-start pt-20"}>
+                <div className={"w-full max-w-375 px-16"}>
                     <h1 className={"text-6xl font-bold flex flex-row items-center gap-4"}>
                         <FabLabState active={fabLab.active}/> {fabLab.name}
                     </h1>
@@ -85,6 +86,7 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
                         </div>
                     )}
                 </div>
+                <Footer className={"mt-24"}/>
             </div>
         </div>
     );

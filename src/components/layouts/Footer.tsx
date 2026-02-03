@@ -2,7 +2,7 @@
 
 export default function Footer({ className } : { className?: string }) {
     return (
-        <div className={`flex flex-col items-center justify-center border-t-1 border-t-[#1a1a1a] ${className}`}>
+        <div className={`flex flex-col items-center justify-center border-t-1 border-t-[#1a1a1a] w-full ${className}`}>
             <div id={"footer-content"} className={"bg-[#0f0f0f] w-full flex flex-col items-center py-24"}>
                 <div className={"w-full max-w-375 grid grid-cols-3"}>
                     <div id={"logo"} className={"flex flex-col justify-center"}>
