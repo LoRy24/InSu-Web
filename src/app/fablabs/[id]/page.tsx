@@ -2,7 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Image from "next/image";
 import {FabLabsTestArray} from "@/lib/insu/fablabs/FabLabDemoDB";
 import {FabLab, FabLabTag, FabLabTagsColors, FabLabTagsNames, FabLabTagsTextColors} from "@/lib/insu/fablabs/FabLab";
-import FabLabMapClient from "@/components/ui/fablabs/FabLabMapClient";
+import FabLabMapClient from "@/components/ui/fablabs/maps/single/FabLabMapClient";
 import {FileDownloadButton} from "@/components/ui/generic/FileDownloadButton";
 import {FabLabPicturesCarousel} from "@/components/swiper/FabLabPicturesCarousel";
 import Footer from "@/components/layouts/Footer";

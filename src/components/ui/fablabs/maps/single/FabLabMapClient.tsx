@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const FabLabMap = dynamic(
-    () => import("@/components/ui/fablabs/FabLabMap"),
+    () => import("@/components/ui/fablabs/maps/single/FabLabMap"),
     { ssr: false }
 );
 

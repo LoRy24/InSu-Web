@@ -1,0 +1,3 @@
+const resources: Resource[] = [
+
+];
