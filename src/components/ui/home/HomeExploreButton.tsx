@@ -16,7 +16,13 @@ export function HomeExploreButton() {
             scale={1}
             threshold={0.1}
             delay={1.5}>
-            <button id={"home-page-head-explore-button"} className={"text-[19px] font-medium text-[#0a0a0a] select-none"}>
+            <button id={"home-page-head-explore-button"} className={"text-[19px] font-medium text-[#0a0a0a] select-none"} onClick={() => {
+                window.scrollBy({
+                    top: window.innerHeight - 64,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }}>
                 <GlareHover
                     glareColor="#a0a0a0"
                     glareOpacity={0.3}
