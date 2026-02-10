@@ -1218,6 +1218,16 @@ export const PERSONAGGI = [
         works: "Storia del Canton Ticino",
         curiosities: "Massimo storico ticinese contemporaneo",
         img: "https://media.laregione.ch/files/domains/laregione.ch/images/4c3k/-ticinese-anni-dieci-centovalli-ceschi-1antu.jpg?v=1"
+    },
+    {
+        name: "Gladys West",
+        coords: [37.2707, -76.7075],
+        period: "1930 – presente",
+        city: "Virginia (USA)",
+        desc: "Matematica e informatica",
+        works: "Modelli matematici per la geodesia satellitare",
+        curiosities: "Contributo fondamentale allo sviluppo del GPS",
+        img: "https://static01.nyt.com/images/2026/01/29/obituaries/00west-topper-img-print3/00west-topper-img-master675.jpg"
     }
 ];
 
