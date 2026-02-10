@@ -1228,6 +1228,46 @@ export const PERSONAGGI = [
         works: "Modelli matematici per la geodesia satellitare",
         curiosities: "Contributo fondamentale allo sviluppo del GPS",
         img: "https://static01.nyt.com/images/2026/01/29/obituaries/00west-topper-img-print3/00west-topper-img-master675.jpg"
+    },
+    {
+        name: "Antonio Piatti",
+        coords: [ 45.8170, 8.8253  ],
+        period: "1875 – 1962",
+        city: "Varese",
+        desc: "Scultore e pittore italiano",
+        works: "Sculture e dipinti figurativi, ritratti e studi della figura umana",
+        curiosities: "Formatosi nella bottega del padre marmista e poi all’Accademia di Brera, unì grande abilità tecnica e sensibilità espressiva. Partecipò a importanti esposizioni tra fine Ottocento e primo Novecento, mantenendo un forte legame con la tradizione figurativa.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Antonio_Piatti.jpg"
+    },
+    {
+        name: "Luigi Villa",
+        coords: [ 45.8170, 8.8253  ],
+        period: "1867 – 1949",
+        city: "Varese",
+        desc: "Scalpellino",
+        works: "Lavorazione della pietra locale per gradini, lastre e davanzali",
+        curiosities: "Uomo di straordinaria forza fisica, lavorava il “sass di cost”, masso erratico nei boschi di Taino. Emigrò in America come boscaiolo per alcuni anni, poi tornò e fondò il Circolo Operaio. Alto circa 1,90 m, era noto per la sua forza eccezionale.",
+        img:"https://www.frosinipietre.it/wp-content/uploads/Lo-Scalpellino-1.jpg"
+    },
+    {
+        name: "Francesco Manni",
+        coords: [ 45.8170, 8.8253   ],
+        period: "1908 – ?",
+        city: "Varese",
+        desc: "Scalpellino specializzato in arte funeraria",
+        works: "Monumenti funerari e lavorazioni artistiche in pietra",
+        curiosities: "Lavorò fin da giovane in Svizzera e Francia con il padre Giuseppe. Visse a Nancy, poi rientrò in Italia negli anni ’30 per motivi di salute. La sua vita riflette le dure condizioni degli scalpellini, spesso colpiti da gravi malattie causate dalla polvere di pietra.",
+        img:"https://www.frosinipietre.it/wp-content/uploads/Lo-Scalpellino-1.jpg"
+    },
+    {
+        name: "Mario Movalli",
+        coords: [ 45.8170, 8.8253   ],
+        period: "1898 – ?",
+        city: "Varese",
+        desc: "Scalpellino e capo cantiere specializzato nel restauro monumentale",
+        works: "Ricostruzione di chiese e monumenti in Piccardia (Notre-Dame di Liesse, Urcel, Trucy, Coucy-la-Ville, Crandelain, castello di Blérancourt)",
+        curiosities: "Primogenito di nove figli, combatté nella Prima guerra mondiale nel Genio Ferrovieri. In Francia diresse la lavorazione di circa sei milioni di blocchi di pietra per il restauro di chiese danneggiate dalla guerra, ricevendo elogi ufficiali per l’elevata qualità del lavoro.",
+        img:"https://www.frosinipietre.it/wp-content/uploads/Lo-Scalpellino-1.jpg"
     }
 ];
 
