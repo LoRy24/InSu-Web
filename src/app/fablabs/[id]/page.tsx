@@ -1,7 +1,14 @@
 import Navbar from "@/components/layouts/Navbar";
 import Image from "next/image";
 import {FabLabsTestArray} from "@/lib/insu/fablabs/FabLabDemoDB";
-import {FabLab, FabLabTag, FabLabTagsColors, FabLabTagsNames, FabLabTagsTextColors} from "@/lib/insu/fablabs/FabLab";
+import {
+    FabLab,
+    FabLabIcons,
+    FabLabTag,
+    FabLabTagsColors,
+    FabLabTagsNames,
+    FabLabTagsTextColors
+} from "@/lib/insu/fablabs/FabLab";
 import FabLabMapClient from "@/components/ui/fablabs/maps/single/FabLabMapClient";
 import {FileDownloadButton} from "@/components/ui/generic/FileDownloadButton";
 import {FabLabPicturesCarousel} from "@/components/swiper/FabLabPicturesCarousel";
@@ -122,13 +129,13 @@ function FabLabTags({ tags } : { tags: FabLabTag[] }) {
         {
             tags.map(tag => (
                 <div key={"fablab-tag-" + tag}
-                     className={`w-min-[32px] h-[32px] px-6 flex flex-row items-center justify-center rounded-xl font-medium`}
+                     className={`w-min-[32px] h-[38px] px-6 flex flex-row items-center justify-center rounded-xl font-medium gap-x-1`}
                      style={{
                          backgroundColor: FabLabTagsColors[tag],
                          color: FabLabTagsTextColors[tag]
                      }}
                 >
-                    {FabLabTagsNames[tag]}
+                    <i className={`bi bi-${FabLabIcons[tag]} me-1`}></i> {FabLabTagsNames[tag]}
                 </div>
             ))
         }

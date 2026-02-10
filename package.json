@@ -11,6 +11,8 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@react-three/fiber": "^9.5.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.14.2",
