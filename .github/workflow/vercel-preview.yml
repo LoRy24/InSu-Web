@@ -1,0 +1,17 @@
+name: Vercel Preview
+
+on:
+  repository_dispatch:
+    types: [vercel-preview]
+
+jobs:
+  vercel-preview:
+    name: Vercel Preview Deployment   # ← QUESTO è il nome del Deployment Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Vercel status
+        uses: vercel/repository-dispatch/actions/status@v1
+        with:
+          state: success               # oppure failure
+          environment: preview
