@@ -3,7 +3,7 @@
 import "@/styles/components/fablabs.css"
 
 import React, {useState} from "react";
-import {FabLab, FabLabFiltersObject, FabLabState, FabLabTag} from "@/lib/insu/fablabs/FabLab";
+import {FabLab, FabLabFiltersObject, FabLabIcons, FabLabState, FabLabTag} from "@/lib/insu/fablabs/FabLab";
 import Image from "next/image";
 import FabLabCard from "@/components/ui/fablabs/FabLabCard";
 import {FabLabsTestArray} from "@/lib/insu/fablabs/FabLabDemoDB";
@@ -59,25 +59,25 @@ export default function FabLabsBrowser() {
                     <div id={"filters-technology"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>TECNOLOGIE</h1>
                         <div className={"flex flex-col space-y-4"}>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_INFO)} onClick={() => toggleTag(FabLabTag.TECH_INFO)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_INFO} selected={isTagSelected(FabLabTag.TECH_INFO)} onClick={() => toggleTag(FabLabTag.TECH_INFO)}>
                                 Informatica
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_NETWORKS)} onClick={() => toggleTag(FabLabTag.TECH_NETWORKS)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_NETWORKS} selected={isTagSelected(FabLabTag.TECH_NETWORKS)} onClick={() => toggleTag(FabLabTag.TECH_NETWORKS)}>
                                 Reti
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_ELECTRONICS)} onClick={() => toggleTag(FabLabTag.TECH_ELECTRONICS)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_ELECTRONICS} selected={isTagSelected(FabLabTag.TECH_ELECTRONICS)} onClick={() => toggleTag(FabLabTag.TECH_ELECTRONICS)}>
                                 Elettronica
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_MOBILE)} onClick={() => toggleTag(FabLabTag.TECH_MOBILE)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_MOBILE} selected={isTagSelected(FabLabTag.TECH_MOBILE)} onClick={() => toggleTag(FabLabTag.TECH_MOBILE)}>
                                 Cellulare
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_WEB)} onClick={() => toggleTag(FabLabTag.TECH_WEB)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_WEB} selected={isTagSelected(FabLabTag.TECH_WEB)} onClick={() => toggleTag(FabLabTag.TECH_WEB)}>
                                 Web
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_DESIGN)} onClick={() => toggleTag(FabLabTag.TECH_DESIGN)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_DESIGN} selected={isTagSelected(FabLabTag.TECH_DESIGN)} onClick={() => toggleTag(FabLabTag.TECH_DESIGN)}>
                                 Design
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TECH_MECHANICAL)} onClick={() => toggleTag(FabLabTag.TECH_MECHANICAL)}>
+                            <FabLabsFilterButton tag={FabLabTag.TECH_MECHANICAL} selected={isTagSelected(FabLabTag.TECH_MECHANICAL)} onClick={() => toggleTag(FabLabTag.TECH_MECHANICAL)}>
                                 Meccanica
                             </FabLabsFilterButton>
                         </div>
@@ -85,16 +85,16 @@ export default function FabLabsBrowser() {
                     <div id={"filters-technology"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>ARTE</h1>
                         <div className={"flex flex-col space-y-4"}>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.ART_PAINT)} onClick={() => toggleTag(FabLabTag.ART_PAINT)}>
+                            <FabLabsFilterButton tag={FabLabTag.ART_PAINT} selected={isTagSelected(FabLabTag.ART_PAINT)} onClick={() => toggleTag(FabLabTag.ART_PAINT)}>
                                 Pittura
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.ART_SCULPTURE)} onClick={() => toggleTag(FabLabTag.ART_SCULPTURE)}>
+                            <FabLabsFilterButton tag={FabLabTag.ART_SCULPTURE} selected={isTagSelected(FabLabTag.ART_SCULPTURE)} onClick={() => toggleTag(FabLabTag.ART_SCULPTURE)}>
                                 Scultura
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.ART_WRITING)} onClick={() => toggleTag(FabLabTag.ART_WRITING)}>
+                            <FabLabsFilterButton tag={FabLabTag.ART_WRITING} selected={isTagSelected(FabLabTag.ART_WRITING)} onClick={() => toggleTag(FabLabTag.ART_WRITING)}>
                                 Scrittura
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.ART_MUSIC)} onClick={() => toggleTag(FabLabTag.ART_MUSIC)}>
+                            <FabLabsFilterButton tag={FabLabTag.ART_MUSIC} selected={isTagSelected(FabLabTag.ART_MUSIC)} onClick={() => toggleTag(FabLabTag.ART_MUSIC)}>
                                 Musica
                             </FabLabsFilterButton>
                         </div>
@@ -102,19 +102,19 @@ export default function FabLabsBrowser() {
                     <div id={"filters-technology"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>TESSILE</h1>
                         <div className={"flex flex-col space-y-4"}>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TEXTILE_ECOPRINT)} onClick={() => toggleTag(FabLabTag.TEXTILE_ECOPRINT)}>
+                            <FabLabsFilterButton tag={FabLabTag.TEXTILE_ECOPRINT} selected={isTagSelected(FabLabTag.TEXTILE_ECOPRINT)} onClick={() => toggleTag(FabLabTag.TEXTILE_ECOPRINT)}>
                                 EcoPrint
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TEXTILE_TAILORING)} onClick={() => toggleTag(FabLabTag.TEXTILE_TAILORING)}>
+                            <FabLabsFilterButton tag={FabLabTag.TEXTILE_TAILORING} selected={isTagSelected(FabLabTag.TEXTILE_TAILORING)} onClick={() => toggleTag(FabLabTag.TEXTILE_TAILORING)}>
                                 Rammendo
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TEXTILE_EMBROIDERY)} onClick={() => toggleTag(FabLabTag.TEXTILE_EMBROIDERY)}>
+                            <FabLabsFilterButton tag={FabLabTag.TEXTILE_EMBROIDERY} selected={isTagSelected(FabLabTag.TEXTILE_EMBROIDERY)} onClick={() => toggleTag(FabLabTag.TEXTILE_EMBROIDERY)}>
                                 Ricamo
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TEXTILE_CROCHET)} onClick={() => toggleTag(FabLabTag.TEXTILE_CROCHET)}>
+                            <FabLabsFilterButton tag={FabLabTag.TEXTILE_CROCHET} selected={isTagSelected(FabLabTag.TEXTILE_CROCHET)} onClick={() => toggleTag(FabLabTag.TEXTILE_CROCHET)}>
                                 Maglia
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.TEXTILE_PRINTING)} onClick={() => toggleTag(FabLabTag.TEXTILE_PRINTING)}>
+                            <FabLabsFilterButton tag={FabLabTag.TEXTILE_PRINTING} selected={isTagSelected(FabLabTag.TEXTILE_PRINTING)} onClick={() => toggleTag(FabLabTag.TEXTILE_PRINTING)}>
                                 Serigrafia
                             </FabLabsFilterButton>
                         </div>
@@ -122,22 +122,22 @@ export default function FabLabsBrowser() {
                     <div id={"filters-technology"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>AGRICOLTURA</h1>
                         <div className={"flex flex-col space-y-4"}>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS)}>
+                            <FabLabsFilterButton tag={FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS} selected={isTagSelected(FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS)}>
                                 Orti
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES)}>
+                            <FabLabsFilterButton tag={FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES} selected={isTagSelected(FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES)}>
                                 Serre Idroponiche
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.AGRICOLTURE_BEEHIVES)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_BEEHIVES)}>
+                            <FabLabsFilterButton tag={FabLabTag.AGRICOLTURE_BEEHIVES} selected={isTagSelected(FabLabTag.AGRICOLTURE_BEEHIVES)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_BEEHIVES)}>
                                 Arnie
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.AGRICOLTURE_COMPOSTING)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_COMPOSTING)}>
+                            <FabLabsFilterButton tag={FabLabTag.AGRICOLTURE_COMPOSTING} selected={isTagSelected(FabLabTag.AGRICOLTURE_COMPOSTING)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_COMPOSTING)}>
                                 Compostaggio
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.AGRICOLTURE_FLORICOLTURE)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_FLORICOLTURE)}>
+                            <FabLabsFilterButton tag={FabLabTag.AGRICOLTURE_FLORICOLTURE} selected={isTagSelected(FabLabTag.AGRICOLTURE_FLORICOLTURE)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_FLORICOLTURE)}>
                                 Floricoltura
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.AGRICOLTURE_OFFICINAL)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_OFFICINAL)}>
+                            <FabLabsFilterButton tag={FabLabTag.AGRICOLTURE_OFFICINAL} selected={isTagSelected(FabLabTag.AGRICOLTURE_OFFICINAL)} onClick={() => toggleTag(FabLabTag.AGRICOLTURE_OFFICINAL)}>
                                 Officinal
                             </FabLabsFilterButton>
                         </div>
@@ -145,25 +145,25 @@ export default function FabLabsBrowser() {
                     <div id={"filters-technology"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>ARTIGIANATO</h1>
                         <div className={"flex flex-col space-y-4"}>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_WOOD)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_WOOD)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_WOOD} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_WOOD)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_WOOD)}>
                                 Legno
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_METAL)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_METAL)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_METAL} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_METAL)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_METAL)}>
                                 Metallo
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_LEATHER)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_LEATHER)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_LEATHER} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_LEATHER)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_LEATHER)}>
                                 Pelle
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_GLASS)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_GLASS)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_GLASS} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_GLASS)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_GLASS)}>
                                 Vetro
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_MECHANICS)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_MECHANICS)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_MECHANICS} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_MECHANICS)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_MECHANICS)}>
                                 Meccanica
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_REPAIR)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_REPAIR)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_REPAIR} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_REPAIR)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_REPAIR)}>
                                 Aggiustaggio
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_SOAPS)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_SOAPS)}>
+                            <FabLabsFilterButton tag={FabLabTag.CRAFTSMANSHIP_SOAPS} selected={isTagSelected(FabLabTag.CRAFTSMANSHIP_SOAPS)} onClick={() => toggleTag(FabLabTag.CRAFTSMANSHIP_SOAPS)}>
                                 Saponi
                             </FabLabsFilterButton>
                         </div>
@@ -177,7 +177,7 @@ export default function FabLabsBrowser() {
     );
 }
 
-function FabLabsFilterButton({ children, selected, onClick } : { children: React.ReactNode, selected: boolean, onClick: () => void } ) {
+function FabLabsFilterButton({ tag, children, selected, onClick } : { tag?: FabLabTag, children: React.ReactNode, selected: boolean, onClick: () => void } ) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -185,9 +185,9 @@ function FabLabsFilterButton({ children, selected, onClick } : { children: React
             onClick={onClick}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className={`text-left px-7 py-2.5 rounded-xl cursor-pointer ${isHovered ? "bg-[#ffffff] text-[#0a0a0a]" : selected ? "bg-[#ffffff] text-[#0a0a0a]" : "bg-[#101010] text-[#ffffff]"} transition-colors duration-250`}
+            className={`flex flex-row text-left px-7 py-2.5 rounded-xl cursor-pointer gap-x-3 ${isHovered ? "bg-[#ffffff] text-[#0a0a0a]" : selected ? "bg-[#ffffff] text-[#0a0a0a]" : "bg-[#101010] text-[#ffffff]"} transition-colors duration-250`}
         >
-            {children}
+            {tag != null ? (<i className={`bi bi-${FabLabIcons[tag]}`}></i>) : (<></>)} {children}
         </button>
     );
 }

@@ -186,6 +186,47 @@ export const FabLabTagsNames = [
     "Saponi"
 ];
 
+export const FabLabIcons: string[] = [
+    // Tecnologie
+    "cpu",               // TECH_INFO
+    "diagram-3",         // TECH_NETWORKS
+    "plug",              // TECH_ELECTRONICS
+    "phone",             // TECH_MOBILE
+    "globe",             // TECH_WEB
+    "vector-pen",        // TECH_DESIGN
+    "gear",              // TECH_MECHANICAL
+
+    // Arti
+    "palette",           // ART_PAINT
+    "image",             // ART_SCULPTURE (sostituito image-alt con image)
+    "pencil",            // ART_WRITING
+    "music-note",        // ART_MUSIC
+
+    // Tessile
+    "flower1",            // TEXTILE_ECOPRINT (sostituito flower1 con flower)
+    "scissors",          // TEXTILE_TAILORING
+    "patch-check",             // TEXTILE_EMBROIDERY (sostituito patch-check con patch)
+    "braces",            // TEXTILE_CROCHET (simbolo generico artigianale)
+    "printer",           // TEXTILE_PRINTING
+
+    // Agricoltura
+    "leaf-fill",          // AGRICOLTURE_VEGETABLE_GARDENS
+    "droplet",           // AGRICOLTURE_HYDROPONIC_GREENHOUSES
+    "hexagon",           // AGRICOLTURE_BEEHIVES
+    "recycle",           // AGRICOLTURE_COMPOSTING
+    "flower2",            // AGRICOLTURE_FLORICOLTURE
+    "bandaid",           // AGRICOLTURE_OFFICINAL (sostituito medkit con healing)
+
+    // Artigianato
+    "tree",              // CRAFTSMANSHIP_WOOD
+    "hammer",            // CRAFTSMANSHIP_METAL
+    "bag",               // CRAFTSMANSHIP_LEATHER
+    "droplet",           // CRAFTSMANSHIP_GLASS (sostituito droplet-fill con droplet)
+    "wrench",            // CRAFTSMANSHIP_MECHANICS
+    "tools",             // CRAFTSMANSHIP_REPAIR
+    "cup-straw",         // CRAFTSMANSHIP_SOAPS (simbolo generico, cup-straw come alternativa)
+];
+
 export enum FabLabState {
     ALL,
     ACTIVE,
