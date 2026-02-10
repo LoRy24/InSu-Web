@@ -2,59 +2,58 @@
 
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
-import {FabLabsTestArray} from "@/lib/insu/fablabs/FabLabDemoDB";
+import MarkerClusterGroup from "react-leaflet-cluster";
 
-const markerCustomIcon = L.icon({
-    iconUrl: "/app_data/icons/gifs/location-pin.gif",
-    iconSize: [70, 70],
-    iconAnchor: [45, 50],
-    popupAnchor: [-10, -45],
-});
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+
+import { FabLabsTestArray } from "@/lib/insu/fablabs/FabLabDemoDB";
 
 type FabLabLocation = {
-    position: { lat: number; lng: number }
-    label: string
-}
+    position: { lat: number; lng: number };
+    label: string;
+};
+
+const fabLabDotIcon = L.divIcon({
+    className: "fablab-dot",
+    html: `<span class="pulse"></span>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+});
 
 export default function FabLabOverallMap() {
-    // Database dei fablab
-    const FabLabArray = FabLabsTestArray;
+    const fabLabLocations: FabLabLocation[] = FabLabsTestArray.map(fablab => ({
+        position: {
+            lat: fablab.latitude,
+            lng: fablab.longitude,
+        },
+        label: fablab.name,
+    }));
 
-    // Crea la lista delle posizioni
-    const fabLabLocations = FabLabArray.map(fablab => {
-        return {
-            position: {
-                lat: fablab.latitude,
-                lng: fablab.longitude
-            },
-            label: fablab.name
-        }
-    }) as FabLabLocation[];
-
-    // Centro
-    const center: [number, number] = [latitude, longitude];
+    const center: [number, number] = [45.8153535, 9.0701202];
 
     return (
-        <div className={"overflow-hidden rounded-2xl h-85 w-full"}>
-            <MapContainer
-                center={center}
-                zoom={15}
-                className={"h-full w-full"}
-            >
+        <div className="overflow-hidden rounded-2xl h-150 w-full max-w-375">
+            <MapContainer center={center} zoom={5} className="h-full w-full">
                 <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    attribution='&copy; OpenStreetMap'
                     url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png"
                 />
 
-                <Marker position={center} icon={markerCustomIcon}>
-                    <Popup>Questa è una posizione indicativa. Potrebbe non essere accurata.</Popup>
-                </Marker>
-
-                {fabLabLocations.map((marker, idx) => (
-                    <Marker key={idx} position={marker.position} icon={markerCustomIcon}>
-                        <Popup>{marker.label}</Popup>
-                    </Marker>
-                ))}
+                <MarkerClusterGroup
+                    chunkedLoading
+                    showCoverageOnHover={false}
+                >
+                    {fabLabLocations.map((marker, idx) => (
+                        <Marker
+                            key={idx}
+                            position={marker.position}
+                            icon={fabLabDotIcon}
+                        >
+                            <Popup>{marker.label}</Popup>
+                        </Marker>
+                    ))}
+                </MarkerClusterGroup>
             </MapContainer>
         </div>
     );

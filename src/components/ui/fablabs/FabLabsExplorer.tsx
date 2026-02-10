@@ -2,6 +2,7 @@
 
 import FabLabsBrowser from "@/components/ui/fablabs/FabLabsBrowser";
 import React, {useState} from "react";
+import FabLabOverallMapClient from "@/components/ui/fablabs/maps/overall/FabLabOverallMapClient";
 
 export default function FabLabsExplorer() {
     const [ navigatorPage, setNavigatorPage ] = useState(0);
@@ -21,8 +22,8 @@ export default function FabLabsExplorer() {
                 navigatorPage == 0 ? (
                     <FabLabsBrowser/>
                 ) : (
-                    <div className={"text-[#ffffff] h-[600px] w-full flex flex-col items-center justify-center text-3xl"}>
-                        In arrivo a breve!
+                    <div className={"text-[#ffffff] h-[600px] w-full flex flex-col items-center justify-center text-3xl pl-16 pr-16 mt-12 mb-32"}>
+                        <FabLabOverallMapClient/>
                     </div>
                 )
             }
