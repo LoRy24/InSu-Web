@@ -54,10 +54,12 @@ export const FabLabsTestArray: FabLab[] = [
             FabLabTag.TECH_MECHANICAL
         ],
         false,
-        "/app_data/resources/fablabs/1/banner.png",
+        "/app_data/resources/fablabs/1/banner.jpeg",
         [
-            "/app_data/resources/fablabs/1/photos/1.png",
-            "/app_data/resources/fablabs/1/photos/2.png"
+            "/app_data/resources/fablabs/1/photos/1.jpeg",
+            "/app_data/resources/fablabs/1/photos/2.jpeg",
+            "/app_data/resources/fablabs/1/photos/3.jpeg",
+            "/app_data/resources/fablabs/1/photos/4.jpeg"
         ],
         [
             new FileReference(
@@ -78,8 +80,8 @@ export const FabLabsTestArray: FabLab[] = [
         "Vertemate con Minoprio",
         "Como (IT)",
         12345, // ZIPCODE
-        "Recupero dell’Abbazia di San Giovanni a Vertemate con Minoprio, oggi privata e in parte degradata.Pulizia, messa in sicurezza e impianti sostenibili per riaprirla a usi culturali.",
-        "Il progetto punta a riqualificare l’Abbazia di San Giovanni (XI secolo) rimuovendo vegetazione e degrado e consolidando le strutture. Sono previsti fotovoltaico e illuminazione a basso impatto per rendere il complesso più sostenibile.\nL’area verrebbe usata per attività culturali e didattiche, come visite guidate e spazi formativi.\nIn più, si prevedono aree per artigiani e un rilancio turistico per il territorio.",
+        "Recupero dell’Abbazia di San Giovanni a Vertemate con Minoprio, oggi privata e in parte degradata.\n\nPulizia, messa in sicurezza e impianti sostenibili per riaprirla a usi culturali.",
+        "Il progetto punta a riqualificare l’Abbazia di San Giovanni (XI secolo) rimuovendo vegetazione e degrado e consolidando le strutture.\n\n Sono previsti fotovoltaico e illuminazione a basso impatto per rendere il complesso più sostenibile.\nL’area verrebbe usata per attività culturali e didattiche, come visite guidate e spazi formativi.\nIn più, si prevedono aree per artigiani e un rilancio turistico per il territorio.",
         [
             FabLabTag.ART_PAINT,
             FabLabTag.ART_WRITING,
@@ -92,9 +94,11 @@ export const FabLabsTestArray: FabLab[] = [
             FabLabTag.AGRICOLTURE_OFFICINAL
         ],
         false,
-        "/app_data/resources/fablabs/1/banner.png",
+        "/app_data/resources/fablabs/2/banner.jpeg",
         [
-            "/app_data/resources/fablabs/0/photos/1.png",
+            "/app_data/resources/fablabs/2/photos/1.jpeg",
+            "/app_data/resources/fablabs/2/photos/2.jpeg",
+            "/app_data/resources/fablabs/2/photos/3.jpeg",
         ],
         [
             new FileReference(

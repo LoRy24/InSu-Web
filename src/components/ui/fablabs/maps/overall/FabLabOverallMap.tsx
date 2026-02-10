@@ -12,6 +12,7 @@ import { FabLabsTestArray } from "@/lib/insu/fablabs/FabLabDemoDB";
 type FabLabLocation = {
     position: { lat: number; lng: number };
     label: string;
+    id: number;
 };
 
 const fabLabDotIcon = L.divIcon({
@@ -28,6 +29,7 @@ export default function FabLabOverallMap() {
             lng: fablab.longitude,
         },
         label: fablab.name,
+        id: fablab.id
     }));
 
     const center: [number, number] = [45.8153535, 9.0701202];
@@ -50,7 +52,10 @@ export default function FabLabOverallMap() {
                             position={marker.position}
                             icon={fabLabDotIcon}
                         >
-                            <Popup>{marker.label}</Popup>
+                            <Popup>
+                                <h1>{marker.label}</h1>
+                                <a href={"/fablabs/" + marker.id}>Clicca per Visitare</a>
+                            </Popup>
                         </Marker>
                     ))}
                 </MarkerClusterGroup>
