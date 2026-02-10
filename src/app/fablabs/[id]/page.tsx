@@ -36,10 +36,12 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
                         src={fabLab.card_banner_url}
                         alt="Banner"
                         fill
+                        sizes="(max-width: 768px) 100vw, 800px"
+                        quality={75}
                         className="object-cover object-center"
-                        priority
                     />
                 </div>
+
             </div>
             <div id={"fablab-content"} className={"relative z-20 min-h-250 w-full top-118.75 bg-[#0a0a0a] flex flex-col items-center justify-start pt-20"}>
                 <div className={"w-full max-w-375 px-16"}>

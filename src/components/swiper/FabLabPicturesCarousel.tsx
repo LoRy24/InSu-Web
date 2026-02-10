@@ -30,8 +30,9 @@ export function FabLabPicturesCarousel({ picturesUrls }: Readonly<{ picturesUrls
                                 src={pictureUrl}
                                 alt="slide"
                                 fill
+                                sizes="100vw"
+                                quality={80}
                                 className="object-cover object-center"
-                                priority
                             />
                         </div>
                     </SwiperSlide>

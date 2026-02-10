@@ -78,7 +78,14 @@ export default function Home() {
                                 threshold={0.1}
                                 delay={0}
                             >
-                                <Image src={"/app_data/images/home-page-image-1.png"} alt={"Lake"} width={744.45/2} height={659/2}/>
+                                <Image
+                                    src="/app_data/images/home-page-image-1.png"
+                                    alt="Lake"
+                                    width={372}
+                                    height={330}
+                                    sizes="372px"
+                                    quality={80}
+                                />
                             </AnimatedContent>
                         </div>
                     </div>
@@ -150,7 +157,14 @@ export default function Home() {
                                     threshold={0.1}
                                     delay={0}
                                 >
-                                    <Image src={"/app_data/images/home-page-image-1.png"} alt={"Lake"} width={744.45} height={659}/>
+                                    <Image
+                                        src="/app_data/images/home-page-image-1.png"
+                                        alt="Lake"
+                                        width={744}
+                                        height={659}
+                                        sizes="744px"
+                                        quality={80}
+                                    />
                                 </AnimatedContent>
                             </div>
                         </div>

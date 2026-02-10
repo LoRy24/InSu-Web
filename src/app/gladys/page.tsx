@@ -58,8 +58,9 @@ export default function GladysPage() {
                             <Image
                                 src="/app_data/images/gladys-west.png"
                                 alt="Gladys West"
-                                width={1024}
-                                height={1024}
+                                width={256}
+                                height={256}
+                                quality={80}
                                 className="object-cover w-full h-full"
                             />
                         </div>
