@@ -4,6 +4,7 @@ import {FabLab, FabLabTag} from "./FabLab";
 import {FileReference, FileType} from "@/lib/insu/File";
 
 export const FabLabsTestArray: FabLab[] = [
+    // region GuanzateIO
     new FabLab(
         0,
         "GuanzateIO",
@@ -38,4 +39,72 @@ export const FabLabsTestArray: FabLab[] = [
         45.7220087,
         9.0105897
     ),
+    // endregion
+    // region FenLabX
+    new FabLab(
+        1,
+        "FenLabX",
+        "Via XXV Aprile 7",
+        "Fenegrò",
+        "CO (ITALIA)",
+        22070, // ZIPCODE
+        "FabLab dedicato a stampa 3D e fabbricazione digitale",
+        "Spazio di aggregazione, formazione e produzione dedicato alla stampa 3D, modellazione e fabbricazione digitale. Il FabLab nasce dalla riconversione di un ex supermercato e offre supporto tecnico, formazione avanzata e infrastruttura professionale per scuole, artigiani e appassionati.",
+        [
+            FabLabTag.TECH_MECHANICAL
+        ],
+        false,
+        "/app_data/resources/fablabs/1/banner.png",
+        [
+            "/app_data/resources/fablabs/1/photos/1.png",
+            "/app_data/resources/fablabs/1/photos/2.png"
+        ],
+        [
+            new FileReference(
+                "Documentazione",
+                "/app_data/resources/fablabs/1/files/documentazione.pdf",
+                FileType.DOCUMENT
+            )
+        ],
+        45.70014, // LATITUDINE
+        8.99728 // LONGITUDINE
+    ),
+    // endregion
+    // region Abbaz.Io
+    new FabLab(
+        2,
+        "Abbaz.Io",
+        "Via Abbazia",
+        "Vertemate con Minoprio",
+        "Como (IT)",
+        12345, // ZIPCODE
+        "Recupero dell’Abbazia di San Giovanni a Vertemate con Minoprio, oggi privata e in parte degradata.Pulizia, messa in sicurezza e impianti sostenibili per riaprirla a usi culturali.",
+        "Il progetto punta a riqualificare l’Abbazia di San Giovanni (XI secolo) rimuovendo vegetazione e degrado e consolidando le strutture. Sono previsti fotovoltaico e illuminazione a basso impatto per rendere il complesso più sostenibile.\nL’area verrebbe usata per attività culturali e didattiche, come visite guidate e spazi formativi.\nIn più, si prevedono aree per artigiani e un rilancio turistico per il territorio.",
+        [
+            FabLabTag.ART_PAINT,
+            FabLabTag.ART_WRITING,
+            FabLabTag.ART_MUSIC,
+            FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS,
+            FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES,
+            FabLabTag.AGRICOLTURE_BEEHIVES,
+            FabLabTag.AGRICOLTURE_COMPOSTING,
+            FabLabTag.AGRICOLTURE_FLORICOLTURE,
+            FabLabTag.AGRICOLTURE_OFFICINAL
+        ],
+        false,
+        "/app_data/resources/fablabs/1/banner.png",
+        [
+            "/app_data/resources/fablabs/0/photos/1.png",
+        ],
+        [
+            new FileReference(
+                "Documentazione",
+                "/app_data/resources/fablabs/1/files/documentazione.pdf",
+                FileType.DOCUMENT
+            )
+        ],
+        45.731365, // LATITUDINE
+        9.084284 // LONGITUDINE
+    ),
+    // endregion
 ];
