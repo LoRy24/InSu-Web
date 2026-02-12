@@ -10,7 +10,7 @@ import {
     FabLabTagsTextColors
 } from "@/lib/insu/fablabs/FabLab";
 import FabLabMapClient from "@/components/ui/fablabs/maps/single/FabLabMapClient";
-import {FileDownloadButton} from "@/components/ui/generic/FileDownloadButton";
+import {FileDownloadButton} from "@/components/ui/commons/FileDownloadButton";
 import {FabLabPicturesCarousel} from "@/components/swiper/FabLabPicturesCarousel";
 import Footer from "@/components/layouts/Footer";
 import Markdown from "react-markdown";
