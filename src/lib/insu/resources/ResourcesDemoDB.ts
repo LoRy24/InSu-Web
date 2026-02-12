@@ -1,5 +1,18 @@
-import {Resource} from "@/lib/insu/resources/Resource";
+import {Resource, ResourceType} from "@/lib/insu/resources/Resource";
 
-const resources: Resource[] = [
-
+export const ResourcesDB: Resource[] = [
+    new Resource(
+        0,
+        "Prova",
+        "Risorsa di prova",
+        "Descrizione lunga",
+        ResourceType.SCHOOL_BANK,
+        null,
+        "/app_data/images/cat.png",
+        []
+    )
 ];
+
+export function collectByType(type: ResourceType): Resource[] {
+    return ResourcesDB.filter(resource => resource.type === type);
+}

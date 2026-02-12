@@ -6,13 +6,24 @@ export enum ResourceType {
     SCHOOL_BANK,
 }
 
-export type Resource = {
+export class Resource {
     id: number
-    name: string
+    resourceName: string
     brief: string
     description: string
     type: ResourceType
     lastUpdate: Date
     banner: string
     files: FileReference[]
-};
+
+    constructor(id: number, resourceName: string, brief: string, description: string, type: ResourceType, lastUpdate: Date, banner: string, files: FileReference[]) {
+        this.id = id;
+        this.resourceName = resourceName;
+        this.brief = brief;
+        this.description = description;
+        this.type = type;
+        this.lastUpdate = lastUpdate;
+        this.banner = banner;
+        this.files = files;
+    }
+}
