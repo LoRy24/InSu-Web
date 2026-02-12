@@ -40,7 +40,7 @@ export default function GladysPage() {
                 </div>
             </div>
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 pt-24"}>
-                <div className={"flex flex-col items-center justify-center w-full"}>
+                <div className={"flex flex-col items-center justify-center w-full px-16"}>
                     <div className={"w-full max-w-375 overflow-hidden rounded-2xl border-1 border-[#303030]"}>
                         <GladysMapWrapper/>
                     </div>
