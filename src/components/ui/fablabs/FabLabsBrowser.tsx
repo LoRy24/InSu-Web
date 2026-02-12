@@ -204,7 +204,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
     if (filtered.length == 0) {
         return (
             <div className={"w-full h-[72vh] flex flex-col items-center justify-center bg-[#0e0e0e] rounded-2xl"}>
-                <Image src={"/images/sleepy-dog.png"} alt={"Sleepy Dog"} width={300} height={100}/>
+                <Image src={"app_data/images/sleepy-dog.png"} alt={"Sleepy Dog"} width={300} height={100}/>
                 <h1 className={"text-[32px] font-bold"}>Si è verificato un problema!</h1>
                 <h2>Non è presente alcun FabLab! Prova a controllare i filtri applicati e riprova</h2>
             </div>
