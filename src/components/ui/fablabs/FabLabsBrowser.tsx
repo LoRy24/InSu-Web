@@ -7,6 +7,7 @@ import {FabLab, FabLabFiltersObject, FabLabIcons, FabLabState, FabLabTag} from "
 import Image from "next/image";
 import FabLabCard from "@/components/ui/fablabs/FabLabCard";
 import {FabLabsTestArray} from "@/lib/insu/fablabs/FabLabDemoDB";
+import {BottomPagesNavigator} from "@/components/ui/commons/NavigationElements";
 
 // Components
 
@@ -204,7 +205,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
     if (filtered.length == 0) {
         return (
             <div className={"w-full h-[72vh] flex flex-col items-center justify-center bg-[#0e0e0e] rounded-2xl"}>
-                <Image src={"/images/sleepy-dog.png"} alt={"Sleepy Dog"} width={300} height={100}/>
+                <Image src={"app_data/images/sleepy-dog.png"} alt={"Sleepy Dog"} width={300} height={100}/>
                 <h1 className={"text-[32px] font-bold"}>Si è verificato un problema!</h1>
                 <h2>Non è presente alcun FabLab! Prova a controllare i filtri applicati e riprova</h2>
             </div>
@@ -224,36 +225,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
     return (
         <div className={"w-full grid grid-cols"}>
             <FabLabsGrid fabLabs={filtered} itemsPerPage={itemsPerPage} page={page} />
-            <div className={"w-full h-14 bg-[#101010] rounded-2xl mt-8 flex flex-row items-center px-8"}>
-                <div className={"w-full flex flex-row items-center gap-3"}>
-                    <button id={"previous-page-button"}
-                            disabled={page == 0}
-                            className={`w-9 h-9 bg-[#303030] cursor-pointer disabled:bg-[#151515] hover:bg-[#f0f0f0] disabled:cursor-default flex flex-col items-center justify-center rounded-xl transition-all duration-250`}
-                            onClick={() => {
-                                setPage(page - 1);
-                            }}
-                    >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 16L10 12L14 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </button>
-                    <span className={"select-none text-[13px] font-medium w-9 h-9 bg-[#202020] flex flex-col items-center justify-center rounded-xl"}>{page + 1}</span>
-                    <button id={"next-page-button"}
-                            disabled={page == totalPages - 1}
-                            className={"w-9 h-9 bg-[#303030] cursor-pointer disabled:bg-[#151515] hover:bg-[#f0f0f0] disabled:cursor-default flex flex-col items-center justify-center rounded-xl transition-all duration-250"}
-                            onClick={() => {
-                                setPage(page + 1);
-                            }}
-                    >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 8L14 12L10 16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div id={"page-indicator"} className={"w-full flex flex-row items-center justify-end select-none"}>
-                    <p className={"text-[12px] text-[#707070]"}>Stai visualizzando la pagina <span className={"text-[#ffffff]"}>{page + 1}</span> di <span className={"text-[#ffffff]"}>{totalPages}</span></p>
-                </div>
-            </div>
+            <BottomPagesNavigator page={page} setPage={setPage} totalPages={totalPages} />
         </div>
     );
 }
