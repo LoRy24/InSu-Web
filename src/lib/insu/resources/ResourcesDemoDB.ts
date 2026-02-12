@@ -7,7 +7,7 @@ export const ResourcesDB: Resource[] = [
         "Risorsa di prova",
         "Descrizione lunga",
         ResourceType.SCHOOL_BANK,
-        null,
+        new Date(),
         "/app_data/images/cat.png",
         []
     )
