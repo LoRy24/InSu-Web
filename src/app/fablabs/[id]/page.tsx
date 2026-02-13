@@ -4,6 +4,7 @@ import {FabLabsTestArray} from "@/lib/insu/fablabs/FabLabDemoDB";
 import {
     FabLab,
     FabLabIcons,
+    FabLabState,
     FabLabTag,
     FabLabTagsColors,
     FabLabTagsNames,
@@ -53,7 +54,7 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
             <div id={"fablab-content"} className={"relative z-20 min-h-250 w-full top-118.75 bg-[#0a0a0a] flex flex-col items-center justify-start pt-20"}>
                 <div className={"w-full max-w-375 px-16"}>
                     <h1 className={"text-6xl font-bold flex flex-row items-center gap-4"}>
-                        <FabLabState active={fabLab.active}/> {fabLab.name}
+                        <FabLabStateBadge status={fabLab.activity_state}/> {fabLab.name}
                     </h1>
                     <div className="text-[#a0a0a0] mt-3">
                         <Markdown>
@@ -91,7 +92,7 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
                         </div>
                         <FabLabMapClient latitude={fabLab.latitude} longitude={fabLab.longitude} />
                     </div>
-                    {fabLab.active ? (
+                    {fabLab.activity_state == FabLabState.ACTIVE || fabLab.activity_state == FabLabState.CLOSED ? (
                         <></>
                     ) : (
                         <div id={"fablab-disclaimer"}>
@@ -108,14 +109,22 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
     );
 }
 
-function FabLabState({ active } : { active: boolean }) {
-    return active ? (
-        <div id={"fablab-state-active"} className={"flex flex-row items-center justify-center w-[120px] h-[36px] text-[21px] font-bold rounded-xl text-[#0a0a0a] bg-green-300"}>
+function FabLabStateBadge({ status } : { status: FabLabState }) {
+    return status == FabLabState.ACTIVE ? (
+        <div id={"fablab-state-active"} className={"flex flex-row items-center justify-center w-30 h-9 text-[21px] font-bold rounded-xl text-[#0a0a0a] bg-green-300"}>
             Attivo
         </div>
+    ) : status == FabLabState.CLOSED ? (
+        <div id={"fablab-state-active"} className={"flex flex-row items-center justify-center w-30 h-9 text-[21px] font-bold rounded-xl bg-red-400"}>
+            Chiuso
+        </div>
+    ) : status == FabLabState.IDEA ? (
+        <div id={"fablab-state-active"} className={"flex flex-row items-center justify-center w-30 h-9 text-[21px] font-bold rounded-xl bg-purple-400 text-[#0a0a0a]"}>
+            Idea
+        </div>
     ) : (
-        <div id={"fablab-state-active"} className={"flex flex-row items-center justify-center w-[120px] h-[36px] text-[21px] font-bold rounded-xl bg-red-400"}>
-            Inattivo
+        <div id={"fablab-state-active"} className={"flex flex-row items-center justify-center w-30 h-9 text-[21px] font-bold rounded-xl bg-yellow-300 text-[#0a0a0a]"}>
+            Pronto
         </div>
     );
 }

@@ -11,7 +11,7 @@ export class FabLab {
     description: string;
     complete_description: string;
     tags: FabLabTag[];
-    active: boolean;
+    activity_state: FabLabState;
     photos_urls: string[];
     files: FileReference[];
     latitude: number;
@@ -30,7 +30,7 @@ export class FabLab {
                 description: string,
                 complete_description: string,
                 tags: FabLabTag[],
-                active: boolean,
+                activity_state: FabLabState,
                 card_banner_url: string,
                 photos_urls: string[],
                 files: FileReference[],
@@ -45,7 +45,7 @@ export class FabLab {
         this.description = description;
         this.complete_description = complete_description;
         this.tags = tags;
-        this.active = active;
+        this.activity_state = activity_state;
         this.card_banner_url = card_banner_url;
         this.photos_urls = photos_urls;
         this.files = files;
@@ -230,7 +230,9 @@ export const FabLabIcons: string[] = [
 export enum FabLabState {
     ALL,
     ACTIVE,
-    INACTIVE
+    CLOSED,
+    IDEA,
+    READY,
 }
 
 export type FabLabFiltersObject = {

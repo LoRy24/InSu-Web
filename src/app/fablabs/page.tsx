@@ -70,7 +70,7 @@ export default function FabLabs() {
                             delay={0.25}
                         >
                             <p className={"font-normal text-[20px] max-w-187.5 max-[1020px]:text-center"}>
-                                Descrizione su cosa siano i fablabs...
+                                L’insieme dei FabLab può essere visto come una rete di laboratori diffusi sul territorio che lavorano insieme, ognuno con una propria specializzazione. Non sono realtà isolate, ma spazi che collaborano in modo coordinato, seguendo un modello di economia circolare e di sviluppo locale sostenibile. Ogni laboratorio contribuisce con competenze diverse, creando un sistema integrato in cui le funzioni si completano a vicenda.
                             </p>
                         </AnimatedContent>
                     </div>

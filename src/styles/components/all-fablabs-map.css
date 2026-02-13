@@ -1,0 +1,30 @@
+/* Wrapper invisibile */
+.custom-marker-wrapper {
+    background: transparent;
+    border: none;
+}
+
+/* Base dot */
+.custom-marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Stati */
+.custom-marker.active {
+    background-color: #22c55e; /* verde */
+}
+
+.custom-marker.closed {
+    background-color: #ef4444; /* rosso */
+}
+
+.custom-marker.idea {
+    background-color: #a855f7; /* viola */
+}
+
+.custom-marker.ready {
+    background-color: #facc15; /* giallo */
+}
