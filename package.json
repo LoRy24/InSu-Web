@@ -20,7 +20,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "leaflet-search": "^4.0.0",
     "leaflet.markercluster": "^1.5.3",
-    "lucide-react": "^0.563.0",
+    "lucide-react": "^0.564.0",
     "motion": "^12.34.0",
     "next": "^16.1.6",
     "ogl": "^1.0.11",
@@ -32,8 +32,8 @@
     "react-markdown": "^10.1.0",
     "react-spinners": "^0.17.0",
     "recharts": "^3.7.0",
-    "swiper": "^12.1.0",
-    "tailwind-merge": "^3.4.0",
+    "swiper": "^12.1.2",
+    "tailwind-merge": "^3.4.1",
     "three": "^0.182.0"
   },
   "devDependencies": {
