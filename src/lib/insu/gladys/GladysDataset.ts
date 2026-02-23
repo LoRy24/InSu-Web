@@ -1268,6 +1268,16 @@ export const PERSONAGGI = [
         works: "Ricostruzione di chiese e monumenti in Piccardia (Notre-Dame di Liesse, Urcel, Trucy, Coucy-la-Ville, Crandelain, castello di Blérancourt)",
         curiosities: "Primogenito di nove figli, combatté nella Prima guerra mondiale nel Genio Ferrovieri. In Francia diresse la lavorazione di circa sei milioni di blocchi di pietra per il restauro di chiese danneggiate dalla guerra, ricevendo elogi ufficiali per l’elevata qualità del lavoro.",
         img:"https://www.frosinipietre.it/wp-content/uploads/Lo-Scalpellino-1.jpg"
+    },
+    {
+        name: "Federico Frigerio",
+        coords: [45.8090, 9.0852],
+        period: "1873–1959",
+        city: "Como",
+        desc: "Architetto e preside",
+        works: "Architettura monumentale; edifici civili e scolastici",
+        curiosities: "Primo preside della scuola Magistri Cumacini e architetto del Tempio Voltiano e del Politeama di Como",
+        img: "https://upload.wikimedia.org/wikipedia/commons/3/36/Federico_Frigerio_Ritratto.jpg"
     }
 ];
 
