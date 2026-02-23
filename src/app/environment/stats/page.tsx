@@ -4,6 +4,7 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import {Card, CardContent} from "@/components/ui/card";
 import {InsubricaMainGraph} from "@/components/ui/stats/environment/InSuMainGraph";
+import {ExampleGraph} from "@/components/ui/stats/environment/sub/ExampleGraph";
 
 export default function GladysPage() {
     return (
@@ -27,7 +28,7 @@ export default function GladysPage() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Dettagli</p>
+                        <p className={"max-w-100 text-center mt-0"}>Approfondisci le statistiche per l&#39;ambiente</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>
@@ -48,16 +49,16 @@ export default function GladysPage() {
 
 function InsubricaCharts() {
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white p-6">
-            <div className="max-w-7xl mx-auto space-y-8">
+        <div className="min-h-screen bg-[#0a0a0a] text-white p-6 px-16">
+            <div className="max-w-375 mx-auto space-y-8">
                 {/* Titolo */}
                 <div>
-                    <h1 className="text-3xl font-bold text-lime-400">
-                        Regione Insubrica – Distribuzione Settori Economici
+                    <h1 className="text-5xl font-bold text-white">
+                        Grafici del&#39;area Insubrica
                     </h1>
-                    <p className="text-gray-400 mt-2">
-                        Andamento percentuale dei settori primario, secondario e terziario
-                        dal 2000 al 2025.
+                    <p className="text-gray-100 mt-2 mb-20">
+                        In questa pagina avrai modo di analizzare e studiare molti importanti dati attuali sulla regione insubrica,
+                        aggiornati all&#39;anno <b>2025</b>.
                     </p>
                 </div>
 
@@ -66,11 +67,7 @@ function InsubricaCharts() {
 
                 {/* Sezione grafici secondari */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
-                        <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
-                            Grafico Regione 1
-                        </CardContent>
-                    </Card>
+                    <ExampleGraph/>
 
                     <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
                         <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
