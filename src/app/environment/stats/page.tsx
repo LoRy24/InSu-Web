@@ -2,9 +2,11 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
-import {Card, CardContent} from "@/components/ui/card";
-import {InsubricaMainGraph} from "@/components/ui/stats/environment/InSuMainGraph";
-import {ExampleGraph} from "@/components/ui/stats/environment/sub/ExampleGraph";
+import {InsubricaEconomySectorsGraph} from "@/components/ui/stats/economy/InSuEconomySectorsGraph";
+import {ComoEconomyGraph} from "@/components/ui/stats/economy/sub/ComoEconomyGraph";
+import {TicinoEconomyGraph} from "@/components/ui/stats/economy/sub/TicinoEconomyGraph";
+import {VareseEconomyGraph} from "@/components/ui/stats/economy/sub/VareseEconomyGraph";
+import {LeccoEconomyGraph} from "@/components/ui/stats/economy/sub/LeccoEconomyGraph";
 
 export default function GladysPage() {
     return (
@@ -63,41 +65,14 @@ function InsubricaCharts() {
                 </div>
 
                 {/* Grafico principale grande */}
-                <InsubricaMainGraph/>
+                <InsubricaEconomySectorsGraph/>
 
                 {/* Sezione grafici secondari */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <ExampleGraph/>
-
-                    <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
-                        <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
-                            Grafico Regione 2
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
-                        <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
-                            Grafico Regione 3
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
-                        <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
-                            Grafico Regione 4
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
-                        <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
-                            Grafico Regione 5
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-[#111111] border border-lime-500/10 rounded-2xl">
-                        <CardContent className="p-4 h-64 flex items-center justify-center text-gray-500">
-                            Grafico Regione 6
-                        </CardContent>
-                    </Card>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <LeccoEconomyGraph/>
+                    <ComoEconomyGraph/>
+                    <VareseEconomyGraph/>
+                    <TicinoEconomyGraph/>
                 </div>
             </div>
         </div>
