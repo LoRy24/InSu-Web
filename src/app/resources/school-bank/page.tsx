@@ -6,7 +6,7 @@ import ResourcesBrowser from "@/components/ui/resources/ResourcesBrowser";
 import {ResourceType} from "@/lib/insu/resources/Resource";
 import Footer from "@/components/layouts/Footer";
 
-export default function GladysPage() {
+export default function SchoolBankPage() {
     return (
         <div>
             <Navbar page={4}/>
