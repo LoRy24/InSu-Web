@@ -56,7 +56,7 @@ function InsubricaCharts() {
                 {/* Titolo */}
                 <div>
                     <h1 className="text-5xl font-bold text-white">
-                        Grafici del&#39;area Insubrica
+                        Grafici dell&#39;area Insubrica
                     </h1>
                     <p className="text-gray-100 mt-2 mb-20">
                         In questa pagina avrai modo di analizzare e studiare molti importanti dati attuali sulla regione insubrica,
