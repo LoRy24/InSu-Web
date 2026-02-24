@@ -13,8 +13,32 @@ import {
 } from "recharts";
 
 const data = [
-    { year: 2000, primario: 2.5, secondario: 36.3, terziario: 61.3 },
-
+    { year: 2000, primario: 2.0, secondario: 39.0, terziario: 59.0 },
+    { year: 2001, primario: 2.0, secondario: 39.0, terziario: 59.0 },
+    { year: 2002, primario: 2.0, secondario: 39.0, terziario: 59.0 },
+    { year: 2003, primario: 2.0, secondario: 40.0, terziario: 58.0 },
+    { year: 2004, primario: 2.0, secondario: 40.0, terziario: 58.0 },
+    { year: 2005, primario: 2.0, secondario: 40.0, terziario: 58.0 },
+    { year: 2006, primario: 2.0, secondario: 40.0, terziario: 58.0 },
+    { year: 2007, primario: 2.0, secondario: 39.0, terziario: 59.0 },
+    { year: 2008, primario: 2.0, secondario: 39.0, terziario: 59.0 },
+    { year: 2009, primario: 2.0, secondario: 38.0, terziario: 60.0 },
+    { year: 2010, primario: 1.8, secondario: 38.0, terziario: 60.2 },
+    { year: 2011, primario: 1.8, secondario: 37.0, terziario: 61.2 },
+    { year: 2012, primario: 1.8, secondario: 36.5, terziario: 61.7 },
+    { year: 2013, primario: 1.8, secondario: 36.0, terziario: 62.2 },
+    { year: 2014, primario: 1.8, secondario: 35.5, terziario: 62.7 },
+    { year: 2015, primario: 1.8, secondario: 35.0, terziario: 63.2 },
+    { year: 2016, primario: 1.8, secondario: 34.5, terziario: 63.7 },
+    { year: 2017, primario: 1.8, secondario: 34.0, terziario: 64.2 },
+    { year: 2018, primario: 1.8, secondario: 33.5, terziario: 64.7 },
+    { year: 2019, primario: 1.8, secondario: 33.0, terziario: 65.2 },
+    { year: 2020, primario: 1.7, secondario: 32.0, terziario: 66.3 },
+    { year: 2021, primario: 1.6, secondario: 31.0, terziario: 67.4 },
+    { year: 2022, primario: 1.5, secondario: 30.0, terziario: 68.5 },
+    { year: 2023, primario: 1.5, secondario: 29.0, terziario: 69.5 },
+    { year: 2024, primario: 1.5, secondario: 28.5, terziario: 70.0 },
+    { year: 2025, primario: 1.5, secondario: 28.0, terziario: 70.5 },
 ];
 
 export function VareseEconomyGraph() {
