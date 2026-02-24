@@ -1,6 +1,6 @@
 // In futuro deve essere rimpiazzato con una chiamata API che mi ottiene i FabLabs registrati nella piattaforma
 
-import {FabLab, FabLabTag} from "./FabLab";
+import {FabLab, FabLabState, FabLabTag} from "./FabLab";
 import {FileReference, FileType} from "@/lib/insu/File";
 
 export const FabLabsTestArray: FabLab[] = [
@@ -21,7 +21,7 @@ export const FabLabsTestArray: FabLab[] = [
             FabLabTag.TECH_MECHANICAL,
             FabLabTag.TECH_DESIGN,
         ],
-        false,
+        FabLabState.READY,
         "/app_data/resources/fablabs/0/banner.png",
         [
             "/app_data/resources/fablabs/0/photos/1.png",
@@ -53,7 +53,7 @@ export const FabLabsTestArray: FabLab[] = [
         [
             FabLabTag.TECH_MECHANICAL
         ],
-        false,
+        FabLabState.READY,
         "/app_data/resources/fablabs/1/banner.jpeg",
         [
             "/app_data/resources/fablabs/1/photos/1.jpeg",
@@ -93,7 +93,7 @@ export const FabLabsTestArray: FabLab[] = [
             FabLabTag.AGRICOLTURE_FLORICOLTURE,
             FabLabTag.AGRICOLTURE_OFFICINAL
         ],
-        false,
+        FabLabState.READY,
         "/app_data/resources/fablabs/2/banner.jpeg",
         [
             "/app_data/resources/fablabs/2/photos/1.jpeg",

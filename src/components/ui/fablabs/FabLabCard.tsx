@@ -1,7 +1,7 @@
 "use client";
 
-import { FabLab } from "@/lib/insu/fablabs/FabLab";
-import { redirect } from "next/navigation";
+import {FabLab, FabLabState} from "@/lib/insu/fablabs/FabLab";
+import {redirect} from "next/navigation";
 import Image from "next/image";
 
 export default function FabLabCard({ fabLab }: Readonly<{ fabLab: FabLab }>) {
@@ -10,7 +10,6 @@ export default function FabLabCard({ fabLab }: Readonly<{ fabLab: FabLab }>) {
             id={`fablab-card-${fabLab.id}`}
             className="rounded-2xl h-61 bg-[#101010] flex flex-col overflow-hidden"
         >
-            {/* Banner */}
             <div
                 id={`fablab-card-${fabLab.id}-bg-image`}
                 className={`relative h-18 overflow-hidden ${
@@ -38,7 +37,7 @@ export default function FabLabCard({ fabLab }: Readonly<{ fabLab: FabLab }>) {
                 </h1>
 
                 <p id={`fablab-card-${fabLab.id}-description`}
-                    className="text-[13px] text-[#a0a0a0] mt-1 max-h-[32px] overflow-hidden truncate">
+                    className="text-[13px] text-[#a0a0a0] mt-1 max-h-8 overflow-hidden truncate">
                     {fabLab.description}
                 </p>
 
@@ -55,12 +54,18 @@ function FabLabStateBadge({ fabLab }: Readonly<{ fabLab: FabLab }>) {
     return (
         <span
             className={`text-[12px] w-16 h-5 flex items-center justify-center font-medium rounded-xl ${
-                fabLab.active
-                    ? "bg-green-300 text-[#0a0a0a]"
-                    : "bg-red-400 text-[#0a0a0a]"
+                fabLab.activity_state == FabLabState.ACTIVE ? "bg-green-300 text-[#0a0a0a]"
+                    : fabLab.activity_state == FabLabState.CLOSED ? "bg-red-400 text-[#0a0a0a]" 
+                    : fabLab.activity_state == FabLabState.IDEA ? "bg-purple-400 text-[#0a0a0a]" 
+                    : "bg-yellow-300 text-[#0a0a0a]"
             }`
         }>
-            {fabLab.active ? "Attivo" : "Inattivo"}
+            {
+                fabLab.activity_state == FabLabState.ACTIVE ? "Attivo"
+                : fabLab.activity_state == FabLabState.CLOSED ? "Chiuso"
+                : fabLab.activity_state == FabLabState.IDEA ? "Idea"
+                : "Pronto"
+            }
         </span>
     );
 }
