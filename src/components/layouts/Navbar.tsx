@@ -146,7 +146,7 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                     </svg>
                                     <p className={"ml-3 text-[19px] font-custom-blinker font-medium"}>Risorse</p>
                                 </button>
-                                <button id={"environment-button"}
+                                <button id={"economy-button"}
                                         className={`${page == 5 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
                                             if (desktopNavExtendedPage === DesktopNavBarExtendedPage.ENVIRONMENT) {
