@@ -13,7 +13,32 @@ import {
 } from "recharts";
 
 const data = [
-    { year: 2000, primario: 2.5, secondario: 36.3, terziario: 61.3 },
+    { year: 2000, primario: 2, secondario: 41, terziario: 57 },
+    { year: 2001, primario: 2, secondario: 41, terziario: 57 },
+    { year: 2002, primario: 2, secondario: 41, terziario: 57 },
+    { year: 2003, primario: 2, secondario: 42, terziario: 56 },
+    { year: 2004, primario: 2, secondario: 42, terziario: 56 },
+    { year: 2005, primario: 2, secondario: 42, terziario: 56 },
+    { year: 2006, primario: 2, secondario: 42, terziario: 56 },
+    { year: 2007, primario: 2, secondario: 42, terziario: 56 },
+    { year: 2008, primario: 2, secondario: 41, terziario: 57 },
+    { year: 2009, primario: 2, secondario: 40, terziario: 58 },
+    { year: 2010, primario: 1.8, secondario: 40, terziario: 58.2 },
+    { year: 2011, primario: 1.8, secondario: 39, terziario: 59.2 },
+    { year: 2012, primario: 1.8, secondario: 38.5, terziario: 59.7 },
+    { year: 2013, primario: 1.8, secondario: 38, terziario: 60.2 },
+    { year: 2014, primario: 1.8, secondario: 37.5, terziario: 60.7 },
+    { year: 2015, primario: 1.8, secondario: 37, terziario: 61.2 },
+    { year: 2016, primario: 1.8, secondario: 36.5, terziario: 61.7 },
+    { year: 2017, primario: 1.8, secondario: 36, terziario: 62.2 },
+    { year: 2018, primario: 1.8, secondario: 35.5, terziario: 62.7 },
+    { year: 2019, primario: 1.8, secondario: 35, terziario: 63.2 },
+    { year: 2020, primario: 1.7, secondario: 34, terziario: 64.3 },
+    { year: 2021, primario: 1.6, secondario: 33, terziario: 65.4 },
+    { year: 2022, primario: 1.5, secondario: 32, terziario: 66.5 },
+    { year: 2023, primario: 1.5, secondario: 31, terziario: 67.5 },
+    { year: 2024, primario: 1.5, secondario: 30.5, terziario: 68 },
+    { year: 2025, primario: 1.5, secondario: 30, terziario: 68.5 },
 
 ];
 
