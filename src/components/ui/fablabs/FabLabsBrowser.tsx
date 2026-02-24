@@ -52,8 +52,14 @@ export default function FabLabsBrowser() {
                             <FabLabsFilterButton selected={stateFilter == FabLabState.ACTIVE} onClick={() => toggleState(FabLabState.ACTIVE)}>
                                 Attivo
                             </FabLabsFilterButton>
-                            <FabLabsFilterButton selected={stateFilter == FabLabState.INACTIVE} onClick={() => toggleState(FabLabState.INACTIVE)}>
-                                Inattivo
+                            <FabLabsFilterButton selected={stateFilter == FabLabState.CLOSED} onClick={() => toggleState(FabLabState.CLOSED)}>
+                                Chiuso
+                            </FabLabsFilterButton>
+                            <FabLabsFilterButton selected={stateFilter == FabLabState.IDEA} onClick={() => toggleState(FabLabState.IDEA)}>
+                                Idea
+                            </FabLabsFilterButton>
+                            <FabLabsFilterButton selected={stateFilter == FabLabState.READY} onClick={() => toggleState(FabLabState.READY)}>
+                                Pronto - Non Attivo
                             </FabLabsFilterButton>
                         </div>
                     </div>
@@ -205,7 +211,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
     if (filtered.length == 0) {
         return (
             <div className={"w-full h-[72vh] flex flex-col items-center justify-center bg-[#0e0e0e] rounded-2xl"}>
-                <Image src={"app_data/images/sleepy-dog.png"} alt={"Sleepy Dog"} width={300} height={100}/>
+                <Image src={"/app_data/images/sleepy-dog.png"} alt={"Sleepy Dog"} width={300} height={100}/>
                 <h1 className={"text-[32px] font-bold"}>Si è verificato un problema!</h1>
                 <h2>Non è presente alcun FabLab! Prova a controllare i filtri applicati e riprova</h2>
             </div>
@@ -243,7 +249,7 @@ function FabLabsGrid({ fabLabs, itemsPerPage, page } : Readonly<{ fabLabs: FabLa
 // Utils
 function applyFilters(filters: FabLabFiltersObject, labs: FabLab[]) : FabLab[] {
     return labs
-        .filter(lab => filters.state == FabLabState.ALL ? true : filters.state == FabLabState.INACTIVE ? !lab.active : lab.active)
+        .filter(lab => filters.state == FabLabState.ALL ? true : filters.state == lab.activity_state)
         .filter(lab => {
             if (filters.tags.length == 0) return true;
             for (const tag of filters.tags) {
