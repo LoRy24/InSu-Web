@@ -111,4 +111,42 @@ export const FabLabsTestArray: FabLab[] = [
         9.084284 // LONGITUDINE
     ),
     // endregion
+    // region ReLab
+    new FabLab(
+        3,
+        "Fab ReLab",
+        "Via Crotto Rosa, 11 ",
+        "Erba",
+        "CO",
+        22036,
+        "Un laboratorio innovativo dove puoi realizzare i tuoi progetti, stampare in 3D, tagliare al laser e saldare con strumenti professionali. Accedi con un abbonamento conveniente e utilizza materiali acquistabili direttamente sul posto. Un negozio di componenti elettrici a prezzi competitivi completa l’esperienza.",
+        "Benvenuti a Fab ReLab, il nuovo laboratorio creativo e tecnologico situato nell’ex Istituto Cristo Re di Erba. Il nostro spazio è pensato per chi vuole trasformare le proprie idee in realtà: dai makers agli hobbisti, dagli studenti ai professionisti.\n\nAll’interno troverai:\n\nLaboratori attrezzati con stampanti 3D (FDM e resina), taglio laser, postazioni di saldatura e strumenti professionali per assemblare e costruire i tuoi progetti.\n\nNegozio di componenti elettrici con prezzi convenienti simili agli store online, dove puoi acquistare transistor, condensatori, led, schede e molto altro.\n\nL’accesso al FabLab avviene tramite un abbonamento economico, che ti permette di utilizzare gli strumenti del laboratorio in totale sicurezza e autonomia. I materiali (filamenti, resina, legno, ecc.) si pagano in base all’uso, così puoi stampare o tagliare solo ciò che ti serve.\n\nChe tu voglia costruire prototipi, riparare dispositivi, realizzare gadget o semplicemente sperimentare, FabLab Erba ti offre tutto lo spazio, gli strumenti e le risorse necessarie per dare vita alle tue idee, in un ambiente stimolante e collaborativo.",
+        [
+        FabLabTag.TECH_INFO,
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_MOBILE,
+            FabLabTag.TECH_WEB,
+            FabLabTag.TECH_DESIGN,
+            FabLabTag.TECH_MECHANICAL,
+            FabLabTag.CRAFTSMANSHIP_WOOD,
+            FabLabTag.CRAFTSMANSHIP_METAL,
+            FabLabTag.CRAFTSMANSHIP_LEATHER,
+            FabLabTag.CRAFTSMANSHIP_MECHANICS,
+            FabLabTag.CRAFTSMANSHIP_REPAIR
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/3/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/3/photos/1.jpg",
+            "/app_data/resources/fablabs/3/photos/2.webp"
+        ],
+        [
+
+        ],
+        45.81011888908896,
+        9.216596326734741
+    ),
+    // endregion
+
 ];
