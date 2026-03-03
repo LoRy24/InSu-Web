@@ -148,6 +148,7 @@ export const FabLabsTestArray: FabLab[] = [
         9.216596326734741
     ),
     // endregion
+    // region Blue Star Market
     new FabLab(
         4,
         "Blue Star Market",
@@ -179,4 +180,5 @@ export const FabLabsTestArray: FabLab[] = [
         45.69677,
         9.06415
     ),
+    // endregion
 ];
