@@ -148,5 +148,35 @@ export const FabLabsTestArray: FabLab[] = [
         9.216596326734741
     ),
     // endregion
-
+    new FabLab(
+        4,
+        "Blue Star Market",
+        "Via Giuseppe Garibaldi 21",
+        "Bregnano",
+        "Como",
+        22070,
+        "Il progetto prevede la realizzazione di un laboratorio di reti professionale su due piani, con VLAN, server, firewall e sistemi di sicurezza dedicati, per garantire formazione pratica avanzata, affidabilità e protezione dei da",
+        "Il Laboratorio di Reti Professionale – Blue Star Market di Bregnano (CO) è una struttura di circa 940 m² distribuita su Piano Terra e Piano Interrato, dotata di un’infrastruttura di rete moderna, sicura e scalabile.\n\nL’architettura è di tipo gerarchico (Core–Distribution–Access), con dorsali in fibra ottica OM5 tra MDF e IDF e cablaggio orizzontale in rame Cat. 6A per un totale di 250 prese RJ45. Sono presenti 5 rack professionali, core switch Layer 3, router WAN, firewall ridondati, server virtualizzati, NAS/SAN e segmentazione avanzata tramite VLAN con indirizzamento IPv4 dedicato.\n\nGli ambienti comprendono aule LAN Base e Cisco Lab, NOC, laboratorio di cablaggio, area coworking, server room, sala sicurezza e laboratorio WAN/fibra ottica. L’intera infrastruttura è supportata da UPS, linee elettriche dedicate, controllo climatico e sistemi di sicurezza, garantendo elevati standard di affidabilità, protezione e formazione tecnica avanzata.",
+        [
+        FabLabTag.TECH_INFO,
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_WEB
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/4/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/4/photos/1.png",
+            "/app_data/resources/fablabs/4/photos/2.png",
+            "/app_data/resources/fablabs/4/photos/3.png",
+            "/app_data/resources/fablabs/4/photos/4.png",
+            "/app_data/resources/fablabs/4/photos/5.png",
+            "/app_data/resources/fablabs/4/photos/6.png"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/4/files/SCHEDA DI CABLAGGIO STRUTTURATO.pdf", FileType.DOCUMENT)
+        ],
+        45.69677,
+        9.06415
+    ),
 ];
