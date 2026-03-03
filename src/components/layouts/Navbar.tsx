@@ -255,6 +255,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Urban</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/neighborhoods"}>Quartieri</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/bq-index"}>Indice BQ</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/stats"}>Statistiche</a>
                     </div>
                 </div>
             )
