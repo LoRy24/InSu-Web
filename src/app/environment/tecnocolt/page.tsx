@@ -25,7 +25,7 @@ export default function GladysPage() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Una soluzione tecnologica per innovare l'agricoltura</p>
+                        <p className={"max-w-100 text-center mt-0"}>Una soluzione tecnologica per innovare l&#39;agricoltura</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>
