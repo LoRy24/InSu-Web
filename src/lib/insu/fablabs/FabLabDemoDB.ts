@@ -111,4 +111,74 @@ export const FabLabsTestArray: FabLab[] = [
         9.084284 // LONGITUDINE
     ),
     // endregion
+    // region ReLab
+    new FabLab(
+        3,
+        "Fab ReLab",
+        "Via Crotto Rosa, 11 ",
+        "Erba",
+        "CO",
+        22036,
+        "Un laboratorio innovativo dove puoi realizzare i tuoi progetti, stampare in 3D, tagliare al laser e saldare con strumenti professionali. Accedi con un abbonamento conveniente e utilizza materiali acquistabili direttamente sul posto. Un negozio di componenti elettrici a prezzi competitivi completa l’esperienza.",
+        "Benvenuti a Fab ReLab, il nuovo laboratorio creativo e tecnologico situato nell’ex Istituto Cristo Re di Erba. Il nostro spazio è pensato per chi vuole trasformare le proprie idee in realtà: dai makers agli hobbisti, dagli studenti ai professionisti.\n\nAll’interno troverai:\n\nLaboratori attrezzati con stampanti 3D (FDM e resina), taglio laser, postazioni di saldatura e strumenti professionali per assemblare e costruire i tuoi progetti.\n\nNegozio di componenti elettrici con prezzi convenienti simili agli store online, dove puoi acquistare transistor, condensatori, led, schede e molto altro.\n\nL’accesso al FabLab avviene tramite un abbonamento economico, che ti permette di utilizzare gli strumenti del laboratorio in totale sicurezza e autonomia. I materiali (filamenti, resina, legno, ecc.) si pagano in base all’uso, così puoi stampare o tagliare solo ciò che ti serve.\n\nChe tu voglia costruire prototipi, riparare dispositivi, realizzare gadget o semplicemente sperimentare, FabLab Erba ti offre tutto lo spazio, gli strumenti e le risorse necessarie per dare vita alle tue idee, in un ambiente stimolante e collaborativo.",
+        [
+        FabLabTag.TECH_INFO,
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_MOBILE,
+            FabLabTag.TECH_WEB,
+            FabLabTag.TECH_DESIGN,
+            FabLabTag.TECH_MECHANICAL,
+            FabLabTag.CRAFTSMANSHIP_WOOD,
+            FabLabTag.CRAFTSMANSHIP_METAL,
+            FabLabTag.CRAFTSMANSHIP_LEATHER,
+            FabLabTag.CRAFTSMANSHIP_MECHANICS,
+            FabLabTag.CRAFTSMANSHIP_REPAIR
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/3/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/3/photos/1.jpg",
+            "/app_data/resources/fablabs/3/photos/2.webp"
+        ],
+        [
+
+        ],
+        45.81011888908896,
+        9.216596326734741
+    ),
+    // endregion
+    // region Blue Star Market
+    new FabLab(
+        4,
+        "Blue Star Market",
+        "Via Giuseppe Garibaldi 21",
+        "Bregnano",
+        "Como",
+        22070,
+        "Il progetto prevede la realizzazione di un laboratorio di reti professionale su due piani, con VLAN, server, firewall e sistemi di sicurezza dedicati, per garantire formazione pratica avanzata, affidabilità e protezione dei da",
+        "Il Laboratorio di Reti Professionale – Blue Star Market di Bregnano (CO) è una struttura di circa 940 m² distribuita su Piano Terra e Piano Interrato, dotata di un’infrastruttura di rete moderna, sicura e scalabile.\n\nL’architettura è di tipo gerarchico (Core–Distribution–Access), con dorsali in fibra ottica OM5 tra MDF e IDF e cablaggio orizzontale in rame Cat. 6A per un totale di 250 prese RJ45. Sono presenti 5 rack professionali, core switch Layer 3, router WAN, firewall ridondati, server virtualizzati, NAS/SAN e segmentazione avanzata tramite VLAN con indirizzamento IPv4 dedicato.\n\nGli ambienti comprendono aule LAN Base e Cisco Lab, NOC, laboratorio di cablaggio, area coworking, server room, sala sicurezza e laboratorio WAN/fibra ottica. L’intera infrastruttura è supportata da UPS, linee elettriche dedicate, controllo climatico e sistemi di sicurezza, garantendo elevati standard di affidabilità, protezione e formazione tecnica avanzata.",
+        [
+        FabLabTag.TECH_INFO,
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_WEB
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/4/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/4/photos/1.png",
+            "/app_data/resources/fablabs/4/photos/2.png",
+            "/app_data/resources/fablabs/4/photos/3.png",
+            "/app_data/resources/fablabs/4/photos/4.png",
+            "/app_data/resources/fablabs/4/photos/5.png",
+            "/app_data/resources/fablabs/4/photos/6.png"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/4/files/SCHEDA DI CABLAGGIO STRUTTURATO.pdf", FileType.DOCUMENT)
+        ],
+        45.69677,
+        9.06415
+    ),
+    // endregion
 ];

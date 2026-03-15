@@ -31,7 +31,7 @@ export default function FabLabCard({ fabLab }: Readonly<{ fabLab: FabLab }>) {
             {/* Content */}
             <div className="px-8 py-7">
                 <h1 id={`fablab-card-${fabLab.id}-name`}
-                    className="text-[20px] flex flex-row items-center gap-2 font-bold">
+                    className="text-[20px] flex flex-row items-center gap-2 font-bold truncate">
                     {fabLab.name}
                     <FabLabStateBadge fabLab={fabLab} />
                 </h1>

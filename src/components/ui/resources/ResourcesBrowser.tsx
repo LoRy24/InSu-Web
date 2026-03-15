@@ -5,6 +5,7 @@ import {collectByType} from "@/lib/insu/resources/ResourcesDemoDB";
 import React, { useRef, useState } from "react"
 import {BottomPagesNavigator} from "@/components/ui/commons/NavigationElements";
 import Image from "next/image";
+import {redirect} from "next/navigation";
 
 export default function ResourcesBrowser({ type } : Readonly<{ type : ResourceType }>) {
     // Dataset di partenza
@@ -97,10 +98,10 @@ function ResourceCard({ resource }: { resource: Resource }) {
                     fill
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0e0e0e]/75 to-[#0e0e0e]" />
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#0e0e0e]/75 to-[#0e0e0e]" />
             </div>
 
-            <div className="relative z-10 flex flex-col justify-end h-[275px] p-6">
+            <div className="relative z-10 flex flex-col justify-end h-68.75 p-6">
                 <h3 className="text-xl font-semibold text-white">
                     {resource.resourceName}
                 </h3>
@@ -109,7 +110,9 @@ function ResourceCard({ resource }: { resource: Resource }) {
                     {resource.brief}
                 </p>
 
-                <button className="mt-6 w-full rounded-2xl bg-white px-4 py-2.5 text-sm font-medium text-black transition hover:bg-zinc-200 cursor-pointer duration-150">
+                <button onClick={() => {
+                    redirect("/resources/view/" + resource.id);
+                }} className="mt-6 w-full rounded-2xl bg-white px-4 py-2.5 text-sm font-medium text-black transition hover:bg-zinc-200 cursor-pointer duration-150">
                     Esplora
                 </button>
             </div>

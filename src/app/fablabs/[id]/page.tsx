@@ -134,20 +134,20 @@ function FabLabTags({ tags } : { tags: FabLabTag[] }) {
         <>
         </>
     ) : (
-        <div className={"flex flex-row gap-3 mt-3"}>
-        {
-            tags.map(tag => (
-                <div key={"fablab-tag-" + tag}
-                     className={`w-min-[32px] h-[38px] px-6 flex flex-row items-center justify-center rounded-xl font-medium gap-x-1`}
-                     style={{
-                         backgroundColor: FabLabTagsColors[tag],
-                         color: FabLabTagsTextColors[tag]
-                     }}
-                >
-                    <i className={`bi bi-${FabLabIcons[tag]} me-1`}></i> {FabLabTagsNames[tag]}
-                </div>
-            ))
-        }
+        <div className={"flex flex-row flex-wrap gap-3 mt-3"}>
+            {
+                tags.map(tag => (
+                    <div key={"fablab-tag-" + tag}
+                         className={`min-w-8 h-9.5 px-6 flex flex-row items-center justify-center rounded-xl font-medium gap-x-1`}
+                         style={{
+                             backgroundColor: FabLabTagsColors[tag],
+                             color: FabLabTagsTextColors[tag]
+                         }}
+                    >
+                        <i className={`bi bi-${FabLabIcons[tag]} me-1`}></i> {FabLabTagsNames[tag]}
+                    </div>
+                ))
+            }
         </div>
     );
 }
