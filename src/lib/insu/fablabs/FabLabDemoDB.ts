@@ -181,4 +181,31 @@ export const FabLabsTestArray: FabLab[] = [
         9.06415
     ),
     // endregion
+    // region Reti e Tecnologie
+    new FabLab(
+        6,
+        "Reti e Tecnologie",
+        "Via Giuseppe Negrini 7/9/11",
+        "Cermenate",
+        "Como IT",
+        22072,
+        "Il progetto prevede la riqualificazione dell’ex asilo Giuseppe Garbagnati ad Asnago di Cermenate, trasformandolo in un centro tecnologico dedicato alla formazione e alla sperimentazione pratica. L’edificio ospiterà aule teoriche, laboratori per tecnologie innovative come stampa 3D, robotica e intelligenza artificiale, oltre a una moderna infrastruttura di rete progettata per attività didattiche e simulazioni informatiche.",
+        "Il progetto riguarda la riconversione dell’ex asilo Giuseppe Garbagnati, situato ad Asnago di Cermenate, in un moderno centro di formazione tecnologica. L’edificio, attualmente inutilizzato, verrà riqualificato per ospitare attività didattiche teoriche e pratiche legate alle nuove tecnologie, come stampa 3D, robotica, intelligenza artificiale e simulazioni di reti informatiche.\nLa struttura sarà organizzata principalmente su un piano dedicato alle attività didattiche, con un’aula teorica dotata di circa venti postazioni, laboratori tecnologici per esercitazioni pratiche e spazi dedicati ai docenti e al personale tecnico. Inoltre sarà presente un locale tecnico con server room e apparati di rete, che costituirà il cuore dell’infrastruttura informatica dell’edificio.\nL’intero edificio sarà dotato di un’infrastruttura di rete moderna, basata su cablaggio strutturato e fibra ottica, progettata per garantire prestazioni elevate, sicurezza e possibilità di espansione futura. La rete permetterà la gestione di diverse attività didattiche, la separazione del traffico tramite VLAN e la simulazione di ambienti di rete reali. In questo modo lo stabile verrà trasformato da edificio storico inutilizzato a spazio innovativo dedicato alla formazione tecnologica e allo sviluppo di competenze digitali.",
+        [
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_WEB
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/6/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/6/photos/1.jpeg"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/6/files/Progetto sistemi upgrade.pdf", FileType.DOCUMENT)
+        ],
+        45.7047,
+        9.0922
+    ),
+    // endregion
 ];
