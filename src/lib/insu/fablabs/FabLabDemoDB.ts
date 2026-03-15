@@ -12,8 +12,8 @@ export const FabLabsTestArray: FabLab[] = [
         "Guanzate",
         "Como (IT)",
         22070,
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "FabLab dedicato ad attività informatiche e di progettazione 3D.",
+        "GuanzateIO è un FabLab realizzato per dare una nuova vita ad un capannone presente nel paese, rimasto inutilizzato per svariati anni. Lo scopo è di fornire un luogo comune dove possibile utilizzare servizi informatici e improntati alla stampa 3D, grazie ad un'importante 3D Farm realizzabile all'interno della struttura.",
         [
             FabLabTag.TECH_WEB,
             FabLabTag.TECH_INFO,
