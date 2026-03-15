@@ -4,7 +4,7 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 import {ExploreMapButton} from "@/components/ui/gladys/GladysExploreMapButton";
-import Image from "next/image";
+import GladysVideoPopUp from "@/components/ui/gladys/GladysVideoPopUp";
 
 export default function GladysPage() {
     return (
@@ -41,7 +41,7 @@ export default function GladysPage() {
                 </div>
             </div>
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75"}>
-                <div id={"brief"} className={"flex flex-col items-center justify-center min-h-[400px] py-24"}>
+                <div id={"brief"} className={"flex flex-col items-center justify-center min-h-100 py-24"}>
                     <AnimatedContent
                         distance={100}
                         direction="vertical"
@@ -54,16 +54,7 @@ export default function GladysPage() {
                         threshold={0.1}
                         delay={0}
                     >
-                        <div className="w-64 h-64 rounded-full overflow-hidden flex items-center justify-center mb-3">
-                            <Image
-                                src="/app_data/images/gladys-west.png"
-                                alt="Gladys West"
-                                width={256}
-                                height={256}
-                                quality={80}
-                                className="object-cover w-full h-full"
-                            />
-                        </div>
+                        <GladysVideoPopUp/>
                     </AnimatedContent>
                     <AnimatedContent
                         distance={100}
@@ -92,7 +83,7 @@ export default function GladysPage() {
                         delay={0.15}
                     >
                         <p className={"font-normal text-[18px] max-w-187.5 text-center"}>
-                            Non è un caso se il nostro innovativo sistema di Tour si intitoli proprio "Gladys": proporre un cambiamento
+                            Non è un caso se il nostro innovativo sistema di Tour si intitoli proprio &#34;Gladys&#34;: proporre un cambiamento
                             nelle tecnologie attuali è il nostro principale obiettivo, come lo era per <b>Gladys West</b>, una donna statunitense
                             che, con le sue competenze in ambito matematico, collaborò significativamente per la realizzazione del
                             sistema <b>GPS</b>, senza il quale moltissime delle nostre tecnologie non avrebbero modo di funzionare.
@@ -118,7 +109,7 @@ export default function GladysPage() {
                         </a>
                     </AnimatedContent>
                 </div>
-                <div id={"view-map"} className={"w-full flex flex-col items-center justify-center min-h-[550px] mt-16 py-30 border-y-[#202020] border-y-2 bg-[linear-gradient(90deg,rgba(10,10,10,1)_0%,rgba(20,20,20,1)_100%)]"}>
+                <div id={"view-map"} className={"w-full flex flex-col items-center justify-center min-h-137.5 mt-16 py-30 border-y-[#202020] border-y-2 bg-[linear-gradient(90deg,rgba(10,10,10,1)_0%,rgba(20,20,20,1)_100%)]"}>
                     <AnimatedContent
                         distance={100}
                         direction="vertical"
