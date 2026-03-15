@@ -2,6 +2,11 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
+import {InsubricaUrbanGraph} from "@/components/ui/stats/urban/InSuUrbanGraph";
+import {ComoUrbanGraph} from "@/components/ui/stats/urban/sub/ComoUrbanGraph";
+import {LeccoUrbanGraph} from "@/components/ui/stats/urban/sub/LeccoUrbanGraph";
+import {TicinoUrbanGraph} from "@/components/ui/stats/urban/sub/TicinoUrbanGraph";
+import {VareseUrbanGraph} from "@/components/ui/stats/urban/sub/VareseUrbanGraph";
 
 export default function GladysPage() {
     return (
@@ -10,7 +15,7 @@ export default function GladysPage() {
             <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="TecnoColt"
+                        text="Statistiche"
                         className="text-[114px] font-black text-center select-none cursor-default mb-0 mt-18"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
@@ -25,7 +30,7 @@ export default function GladysPage() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Una soluzione tecnologica per innovare l&#39;agricoltura</p>
+                        <p className={"max-w-100 text-center mt-0"}>Approfondisci le statistiche per l&#39;urbanizzazione</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>
@@ -38,7 +43,37 @@ export default function GladysPage() {
                 </div>
             </div>
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
+                <InsubricaCharts/>
+            </div>
+        </div>
+    );
+}
 
+function InsubricaCharts() {
+    return (
+        <div className="min-h-screen bg-[#0a0a0a] text-white p-6 px-16">
+            <div className="max-w-375 mx-auto space-y-8">
+                {/* Titolo */}
+                <div>
+                    <h1 className="text-5xl font-bold text-white">
+                        Grafici sull&#39;Urbanizzazione
+                    </h1>
+                    <p className="text-gray-100 mt-2 mb-20">
+                        Questa pagina è stata realizzata per visualizzare importanti grafici in merito all&#39;urbanizzazione
+                        della regione Insubrica.
+                    </p>
+                </div>
+
+                {/* Grafico principale grande */}
+                <InsubricaUrbanGraph/>
+
+                {/* Sezione grafici secondari */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ComoUrbanGraph/>
+                    <LeccoUrbanGraph/>
+                    <TicinoUrbanGraph/>
+                    <VareseUrbanGraph/>
+                </div>
             </div>
         </div>
     );

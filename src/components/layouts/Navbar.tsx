@@ -194,7 +194,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Turisti</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys"}>Informazioni</a>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/routes"}>Itinerari</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/routes"}>Mappa</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Organizzatori</h1>
@@ -208,14 +208,17 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                             <h1 className={"font-medium text-[20px] mb-3 select-none"}>Informazioni</h1>
                             <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/resources"}>Panoramica</a>
                         </div>
-                        <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
-                            <h1 className={"font-medium text-[20px] mb-3 select-none"}>Contribuisci</h1>
-                            <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/resources/ideas"}>Idee & Bozze</a>
-                        </div>
+                        { /*
+                            <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
+                                <h1 className={"font-medium text-[20px] mb-3 select-none"}>Contribuisci</h1>
+                                <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/resources/ideas"}>Idee & Bozze</a>
+                            </div>
+                          */
+                        }
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Esplora</h1>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/resources/projects"}>Progetti</a>
+                        {/* <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/resources/projects"}>Progetti</a> */}
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/resources/school-bank"}>School Bank</a>
                     </div>
                 </div>
@@ -252,6 +255,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Urban</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/neighborhoods"}>Quartieri</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/bq-index"}>Indice BQ</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/stats"}>Statistiche</a>
                     </div>
                 </div>
             )

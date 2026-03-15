@@ -12,8 +12,8 @@ export const FabLabsTestArray: FabLab[] = [
         "Guanzate",
         "Como (IT)",
         22070,
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "FabLab dedicato ad attività informatiche e di progettazione 3D.",
+        "GuanzateIO è un FabLab realizzato per dare una nuova vita ad un capannone presente nel paese, rimasto inutilizzato per svariati anni. Lo scopo è di fornire un luogo comune dove possibile utilizzare servizi informatici e improntati alla stampa 3D, grazie ad un'importante 3D Farm realizzabile all'interno della struttura.",
         [
             FabLabTag.TECH_WEB,
             FabLabTag.TECH_INFO,
@@ -109,6 +109,103 @@ export const FabLabsTestArray: FabLab[] = [
         ],
         45.731365, // LATITUDINE
         9.084284 // LONGITUDINE
+    ),
+    // endregion
+    // region ReLab
+    new FabLab(
+        3,
+        "Fab ReLab",
+        "Via Crotto Rosa, 11 ",
+        "Erba",
+        "CO",
+        22036,
+        "Un laboratorio innovativo dove puoi realizzare i tuoi progetti, stampare in 3D, tagliare al laser e saldare con strumenti professionali. Accedi con un abbonamento conveniente e utilizza materiali acquistabili direttamente sul posto. Un negozio di componenti elettrici a prezzi competitivi completa l’esperienza.",
+        "Benvenuti a Fab ReLab, il nuovo laboratorio creativo e tecnologico situato nell’ex Istituto Cristo Re di Erba. Il nostro spazio è pensato per chi vuole trasformare le proprie idee in realtà: dai makers agli hobbisti, dagli studenti ai professionisti.\n\nAll’interno troverai:\n\nLaboratori attrezzati con stampanti 3D (FDM e resina), taglio laser, postazioni di saldatura e strumenti professionali per assemblare e costruire i tuoi progetti.\n\nNegozio di componenti elettrici con prezzi convenienti simili agli store online, dove puoi acquistare transistor, condensatori, led, schede e molto altro.\n\nL’accesso al FabLab avviene tramite un abbonamento economico, che ti permette di utilizzare gli strumenti del laboratorio in totale sicurezza e autonomia. I materiali (filamenti, resina, legno, ecc.) si pagano in base all’uso, così puoi stampare o tagliare solo ciò che ti serve.\n\nChe tu voglia costruire prototipi, riparare dispositivi, realizzare gadget o semplicemente sperimentare, FabLab Erba ti offre tutto lo spazio, gli strumenti e le risorse necessarie per dare vita alle tue idee, in un ambiente stimolante e collaborativo.",
+        [
+        FabLabTag.TECH_INFO,
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_MOBILE,
+            FabLabTag.TECH_WEB,
+            FabLabTag.TECH_DESIGN,
+            FabLabTag.TECH_MECHANICAL,
+            FabLabTag.CRAFTSMANSHIP_WOOD,
+            FabLabTag.CRAFTSMANSHIP_METAL,
+            FabLabTag.CRAFTSMANSHIP_LEATHER,
+            FabLabTag.CRAFTSMANSHIP_MECHANICS,
+            FabLabTag.CRAFTSMANSHIP_REPAIR
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/3/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/3/photos/1.jpg",
+            "/app_data/resources/fablabs/3/photos/2.webp"
+        ],
+        [
+
+        ],
+        45.81011888908896,
+        9.216596326734741
+    ),
+    // endregion
+    // region Blue Star Market
+    new FabLab(
+        4,
+        "Blue Star Market",
+        "Via Giuseppe Garibaldi 21",
+        "Bregnano",
+        "Como",
+        22070,
+        "Il progetto prevede la realizzazione di un laboratorio di reti professionale su due piani, con VLAN, server, firewall e sistemi di sicurezza dedicati, per garantire formazione pratica avanzata, affidabilità e protezione dei da",
+        "Il Laboratorio di Reti Professionale – Blue Star Market di Bregnano (CO) è una struttura di circa 940 m² distribuita su Piano Terra e Piano Interrato, dotata di un’infrastruttura di rete moderna, sicura e scalabile.\n\nL’architettura è di tipo gerarchico (Core–Distribution–Access), con dorsali in fibra ottica OM5 tra MDF e IDF e cablaggio orizzontale in rame Cat. 6A per un totale di 250 prese RJ45. Sono presenti 5 rack professionali, core switch Layer 3, router WAN, firewall ridondati, server virtualizzati, NAS/SAN e segmentazione avanzata tramite VLAN con indirizzamento IPv4 dedicato.\n\nGli ambienti comprendono aule LAN Base e Cisco Lab, NOC, laboratorio di cablaggio, area coworking, server room, sala sicurezza e laboratorio WAN/fibra ottica. L’intera infrastruttura è supportata da UPS, linee elettriche dedicate, controllo climatico e sistemi di sicurezza, garantendo elevati standard di affidabilità, protezione e formazione tecnica avanzata.",
+        [
+        FabLabTag.TECH_INFO,
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_WEB
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/4/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/4/photos/1.png",
+            "/app_data/resources/fablabs/4/photos/2.png",
+            "/app_data/resources/fablabs/4/photos/3.png",
+            "/app_data/resources/fablabs/4/photos/4.png",
+            "/app_data/resources/fablabs/4/photos/5.png",
+            "/app_data/resources/fablabs/4/photos/6.png"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/4/files/SCHEDA DI CABLAGGIO STRUTTURATO.pdf", FileType.DOCUMENT)
+        ],
+        45.69677,
+        9.06415
+    ),
+    // endregion
+    // region Reti e Tecnologie
+    new FabLab(
+        6,
+        "Reti e Tecnologie",
+        "Via Giuseppe Negrini 7/9/11",
+        "Cermenate",
+        "Como IT",
+        22072,
+        "Il progetto prevede la riqualificazione dell’ex asilo Giuseppe Garbagnati ad Asnago di Cermenate, trasformandolo in un centro tecnologico dedicato alla formazione e alla sperimentazione pratica. L’edificio ospiterà aule teoriche, laboratori per tecnologie innovative come stampa 3D, robotica e intelligenza artificiale, oltre a una moderna infrastruttura di rete progettata per attività didattiche e simulazioni informatiche.",
+        "Il progetto riguarda la riconversione dell’ex asilo Giuseppe Garbagnati, situato ad Asnago di Cermenate, in un moderno centro di formazione tecnologica. L’edificio, attualmente inutilizzato, verrà riqualificato per ospitare attività didattiche teoriche e pratiche legate alle nuove tecnologie, come stampa 3D, robotica, intelligenza artificiale e simulazioni di reti informatiche.\nLa struttura sarà organizzata principalmente su un piano dedicato alle attività didattiche, con un’aula teorica dotata di circa venti postazioni, laboratori tecnologici per esercitazioni pratiche e spazi dedicati ai docenti e al personale tecnico. Inoltre sarà presente un locale tecnico con server room e apparati di rete, che costituirà il cuore dell’infrastruttura informatica dell’edificio.\nL’intero edificio sarà dotato di un’infrastruttura di rete moderna, basata su cablaggio strutturato e fibra ottica, progettata per garantire prestazioni elevate, sicurezza e possibilità di espansione futura. La rete permetterà la gestione di diverse attività didattiche, la separazione del traffico tramite VLAN e la simulazione di ambienti di rete reali. In questo modo lo stabile verrà trasformato da edificio storico inutilizzato a spazio innovativo dedicato alla formazione tecnologica e allo sviluppo di competenze digitali.",
+        [
+            FabLabTag.TECH_NETWORKS,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_WEB
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/6/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/6/photos/1.jpeg"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/6/files/Progetto sistemi upgrade.pdf", FileType.DOCUMENT)
+        ],
+        45.7047,
+        9.0922
     ),
     // endregion
 ];
