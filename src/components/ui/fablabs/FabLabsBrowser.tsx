@@ -177,7 +177,7 @@ export default function FabLabsBrowser() {
                     </div>
                 </div>
                 <div id={"fab-labs-browser-content"} className={"ml-10 max-h-300"}>
-                    <BrowserContent filters={{state: stateFilter, tags: tagsFilter}} defaultItemsPerPage={8} />
+                    <BrowserContent filters={{state: stateFilter, tags: tagsFilter}} defaultItemsPerPage={9} />
                 </div>
             </div>
         </div>
@@ -221,7 +221,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
     // Altrimenti definisci gli stati per la selezione della pagina, items per pagina ecc.
 
     // Calcola alcuni valori
-    const totalPages = Math.trunc((filtered.length / itemsPerPage) + 1);
+    const totalPages = Math.trunc(((filtered.length - 1) / itemsPerPage) + 1);
 
     // Fuori dalle pagine totali
     if (page + 1 > totalPages) {
@@ -238,7 +238,7 @@ function BrowserContent({ filters, defaultItemsPerPage } : Readonly<{ filters: F
 
 function FabLabsGrid({ fabLabs, itemsPerPage, page } : Readonly<{ fabLabs: FabLab[], itemsPerPage: number, page: number }>) {
     return (
-        <div id={"fab-labs-grid-container"} className={"grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"}>
+        <div id={"fab-labs-grid-container"} className={"grid gap-6 grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3"}>
             {fabLabs.slice(page * itemsPerPage, (page + 1) * itemsPerPage).map(fabLabObject => (
                 <FabLabCard key={fabLabObject.id} fabLab={fabLabObject} />
             ))}

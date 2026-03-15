@@ -142,7 +142,7 @@ export const FabLabsTestArray: FabLab[] = [
             "/app_data/resources/fablabs/3/photos/2.webp"
         ],
         [
-
+            new FileReference("Documentazione","/app_data/resources/fablabs/3/files/MARELLIl.pdf",FileType.DOCUMENT)
         ],
         45.81011888908896,
         9.216596326734741
@@ -206,6 +206,90 @@ export const FabLabsTestArray: FabLab[] = [
         ],
         45.7047,
         9.0922
+    ),
+    // endregion
+    // region Programmiamoci
+    new FabLab(
+        7,
+        "Programmiamoci",
+        "Piazza La Torre 22",
+        "Centro Valle Intelvi",
+        "Como(ITALIA)",
+        22023,
+        "Il progetto “Programmiamoci” prevede la realizzazione di un laboratorio dedicato all’introduzione alla programmazione per i ragazzi della Valle Intelvi. L’obiettivo è creare uno spazio educativo dotato di postazioni informatiche e connessione di rete, dove gli studenti possano imparare le basi del coding attraverso attività pratiche, sviluppando logica, creatività e capacità di problem solving.",
+        "Il progetto “Programmiamoci” riguarda la creazione di un laboratorio educativo pensato per avvicinare i giovani della Valle Intelvi al mondo della programmazione. L’obiettivo è offrire uno spazio moderno e attrezzato in cui studenti e educatori possano svolgere attività didattiche legate al coding, alla logica e alle tecnologie digitali. All’interno del laboratorio saranno presenti diverse postazioni informatiche che permetteranno ai partecipanti di sperimentare in modo pratico lo sviluppo di piccoli programmi e progetti. Il laboratorio è progettato per favorire l’apprendimento collaborativo, stimolare la curiosità verso l’informatica e sviluppare competenze come il pensiero logico, la creatività e il problem solving, creando un ambiente dinamico e coinvolgente dedicato alla formazione tecnologica.",
+        [
+            FabLabTag.TECH_INFO,
+            FabLabTag.TECH_ELECTRONICS,
+            FabLabTag.TECH_WEB
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/7/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/7/photos/1.jpeg"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/7/files/GABRIELE DE NICOLA - consegna cablaggio 1.pdf", FileType.DOCUMENT)
+        ],
+        45.95485,
+        9.09015
+    ),
+    // endregion
+    // region Au Lac
+    new FabLab(
+        16,
+        "Au Lac",
+        "Via Vecchia Regina Teodolinda 101",
+        "Laglio",
+        "Como (IT)",
+        22010,
+        "Il FabLab realizzato all’interno dell’ex Hotel Plinio Au Lac, situato a Laglio, è un laboratorio tecnologico organizzato su quattro piani dedicati alla produzione e alla lavorazione di diversi materiali. Gli spazi sono suddivisi in aree specifiche per incisione su legno e metalli, lavorazione del legno, lavorazione del metallo e assemblaggio finale. Ogni piano è dotato di postazioni informatiche, macchinari di lavorazione e strumenti necessari per lo sviluppo e la realizzazione di progetti tecnologici e artigianali.",
+        "Il FabLab situato nell’edificio dell’ex Hotel Plinio Au Lac, nel comune di Laglio, è uno spazio tecnologico progettato per ospitare attività di progettazione, lavorazione dei materiali e realizzazione di prodotti. La struttura è organizzata su quattro piani, ognuno destinato a una specifica fase del processo produttivo, in modo da creare un percorso di lavoro progressivo dalla lavorazione iniziale dei materiali fino all’assemblaggio finale.\n\nIl primo piano è dedicato all’incisione su legno e metalli. In questa area sono presenti macchinari controllati da computer che permettono di incidere e lavorare i materiali con precisione, realizzando componenti personalizzati e dettagli tecnici.\n\nIl secondo piano ospita la zona di lavorazione del legno, dove vengono effettuate operazioni di taglio, modellazione e lavorazione delle parti in legno. Questo spazio è destinato alla produzione di elementi strutturali o decorativi che potranno essere utilizzati nelle fasi successive del processo.\n\nIl terzo piano è dedicato alla lavorazione del metallo. In quest’area sono presenti attrezzature e postazioni informatiche utilizzate per la gestione delle lavorazioni e per il controllo delle macchine impiegate nella produzione di componenti metallici.\n\nIl quarto piano è destinato all’assemblaggio e alla rifinitura dei prodotti. Qui vengono montati i componenti realizzati nei piani inferiori e completati i progetti. L’ambiente è organizzato con diverse postazioni di lavoro che permettono la collaborazione tra gli operatori e la realizzazione delle fasi finali di produzione.\n\nNel complesso il FabLab rappresenta uno spazio di lavoro strutturato che integra tecnologia, lavorazione dei materiali e attività collaborative, permettendo la realizzazione di progetti tecnici e prodotti attraverso un’organizzazione degli spazi distribuita su più livelli dell’edificio.",
+        [FabLabTag.CRAFTSMANSHIP_WOOD, FabLabTag.CRAFTSMANSHIP_METAL],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/16/banner/banner.jpeg",
+        ["/app_data/resources/fablabs/16/photos/1.jpeg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/16/files/FabLab Au Lac.docx",FileType.DOCUMENT)],
+        45.5318,
+        9.0835
+    ),
+    // endregion
+    // region GeLAN
+    new FabLab(
+        18,
+        "GeLAN",
+        "Piazza Castello 5/B, 22060 Carimate (CO)",
+        "Carimate",
+        "Como",
+        22060,
+        "Il progetto prevede la realizzazione di un’infrastruttura di rete per la riqualificazione dell’ex gelateria “Zia Nelly” situata a Carimate.\nLa rete sarà progettata con cablaggio strutturato Cat.6, topologia a stella e uno switch centrale, in modo da collegare i principali dispositivi del locale come cassa, PC gestionale, stampante, telecamere di videosorveglianza e access point Wi-Fi.\nL’obiettivo è creare una rete affidabile, sicura e scalabile, adatta alle esigenze di una piccola attività commerciale.",
+        "Il progetto riguarda la progettazione e la realizzazione di un’infrastruttura di rete per la riqualificazione dell’ex gelateria “Zia Nelly”, situata nel comune di Carimate. L’obiettivo è trasformare il locale in una nuova attività commerciale dotata di una rete moderna, efficiente e sicura, in grado di supportare i principali servizi informatici necessari al funzionamento della gelateria.\n\nLa rete sarà realizzata tramite cablaggio strutturato in categoria 6, che garantisce velocità fino a 1 Gbps e un buon livello di affidabilità. L’architettura scelta è una topologia a stella, con uno switch centrale che collega tutti i dispositivi della rete, tra cui il sistema di cassa e POS, il computer gestionale, la stampante di rete, le telecamere IP di videosorveglianza e un access point Wi-Fi per la connessione wireless.\n\nAll’interno del locale tecnico sarà installato un armadio rack da muro da 12U, contenente router, switch, patch panel e un gruppo di continuità UPS, utile per garantire il funzionamento della rete anche in caso di brevi interruzioni della corrente elettrica. L’infrastruttura prevede inoltre misure di sicurezza come messa a terra certificata, protezione da sovratensioni e sistema di videosorveglianza collegato alla rete.\n\nIl progetto include anche la pianificazione del cablaggio orizzontale con 14 prese RJ45, distribuite tra area vendita, laboratorio e dispositivi di sicurezza. La rete sarà dimensionata per circa 12 dispositivi attivi, con possibilità di espansione fino a 25–30 host, permettendo eventuali futuri ampliamenti dell’attività.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/18/banner/banner.png",
+        ["/app_data/resources/fablabs/18/photos/1.png", "/app_data/resources/fablabs/18/photos/2.png"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/18/files/SCHEDA DI CABLAGGIO.pdf",FileType.DOCUMENT)],
+        45.70255,
+        9.11506
+    ),
+    // endregion
+    // region Water Center
+    new FabLab(
+        19,
+        "Water Center",
+        "Via lega lombarda, snc",
+        "Albavilla",
+        "Como (IT)",
+        22031,
+        "Punto di raccolta per le acque piovane e zona di erogazione di acqua potabile.",
+        "Il Water Center nasce dalla riqualifica del lavatoio di Carcano con lo scopo di fornire, agli abitanti della zona, un luogo in cui rifornirsi di acqua potabile gasata o naturale.\nL'acqua impiegata proviene direttamente dalle fonti sottostanti alla zona e, prima di essere resa disponibile, subisce un processo di depurazione.\nIl Water Center offre anche un servizio di raccolta delle acque piovane, il quale viene messo a disposizione: al pronto intervento in caso di necessità, principalmente con lo scopo di estinguere incendi dolosi, oppure a servizio degli altri FabLab improntati all'attività agricola.",
+        [FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS, FabLabTag.AGRICOLTURE_HYDROPONIC_GREENHOUSES, FabLabTag.AGRICOLTURE_FLORICOLTURE, FabLabTag.AGRICOLTURE_OFFICINAL],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/19/banner/banner.jpg",
+        ["/app_data/resources/fablabs/19/photos/1.jpg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/19/files/Documentazione riqualifica luogo per progetto Rotari.pdf",FileType.DOCUMENT)],
+        45.4725,
+        9.1203
     ),
     // endregion
 ];
