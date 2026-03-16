@@ -292,4 +292,21 @@ export const FabLabsTestArray: FabLab[] = [
         9.1203
     ),
     // endregion
+    new FabLab(
+        10,
+        "Bocciodromo",
+        "",
+        "Albese con Cassano",
+        "Como (IT)",
+        22031,
+        "Un vecchio Bocciodromo abbandonato che viene riqualificato come \"centro civico\" così da ottenere uno spazio per ragazzi aperto il più tempo possibile così da ricavare un luogo di ritrovo dove svagarsi.",
+        "",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.ART_PAINT, FabLabTag.ART_MUSIC, FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS, FabLabTag.AGRICOLTURE_FLORICOLTURE],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/10/banner/banner.png",
+        ["/app_data/resources/fablabs/10/photos/1.png"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/10/files/SCHEDA DI RIQUALIFICAZIONE DEL BOCCIODROMO DI ALBESE CON CASSANO.pdf",FileType.DOCUMENT)],
+        0.0,
+        0.0
+    ),
 ];
