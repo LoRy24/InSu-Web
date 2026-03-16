@@ -301,7 +301,7 @@ export const FabLabsTestArray: FabLab[] = [
         "Como (IT)",
         22032,
         "Un vecchio Bocciodromo abbandonato che viene riqualificato come \"centro civico\" così da ottenere uno spazio per ragazzi aperto il più tempo possibile così da ricavare un luogo di ritrovo dove svagarsi.",
-        "",
+        "Il Vecchio bocciodromo di albese con cassano è in disuso da anni e i ragazzi tendono a riunirsi la sera davanti ad esso perciò nasce l'idea di una nuova ludoteca. Un nuovo centro civico dove i ragazzi possano riunirsi per stare insieme, avere riscaldamento d'inverno, un campo dove giocare a palla d'estate. Questo ridurrebbe drasticamente i rifiuti sparsi per la piazza, aumenterebbe il senso civico di unione tra cittadini.",
         [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.ART_PAINT, FabLabTag.ART_MUSIC, FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS, FabLabTag.AGRICOLTURE_FLORICOLTURE],
         FabLabState.READY,
         "/app_data/resources/fablabs/10/banner/banner.png",
