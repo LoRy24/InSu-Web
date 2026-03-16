@@ -298,7 +298,7 @@ export const FabLabsTestArray: FabLab[] = [
         "",
         "Albese con Cassano",
         "Como (IT)",
-        22031,
+        0,
         "Un vecchio Bocciodromo abbandonato che viene riqualificato come \"centro civico\" così da ottenere uno spazio per ragazzi aperto il più tempo possibile così da ricavare un luogo di ritrovo dove svagarsi.",
         "",
         [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.ART_PAINT, FabLabTag.ART_MUSIC, FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS, FabLabTag.AGRICOLTURE_FLORICOLTURE],
