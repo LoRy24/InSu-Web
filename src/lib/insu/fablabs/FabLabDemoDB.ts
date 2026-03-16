@@ -363,7 +363,7 @@ export const FabLabsTestArray: FabLab[] = [
         FabLabState.READY,
         "/app_data/resources/fablabs/9/banner/banner.png",
         ["/app_data/resources/fablabs/9/photos/1.png", "/app_data/resources/fablabs/9/photos/2.jpeg"],
-        [new FileReference("Gelain.docx","/app_data/resources/fablabs/9/files/Gelain.docx",FileType.DOCUMENT)],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/9/files/Gelain.docx",FileType.DOCUMENT)],
         45.72449,
         9.08409
     ),
