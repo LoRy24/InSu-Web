@@ -113,14 +113,7 @@ function DesktopNavbar({ page } : Readonly<{ page: number }>) {
                                 <button id={"insulligence-button"}
                                         className={`${page == 3 ? "navbar-button-selected" : "navbar-button"} flex flex-row items-center justify-start cursor-pointer select-none`}
                                         onClick={() => {
-                                            if (desktopNavExtendedPage === DesktopNavBarExtendedPage.AI) {
-                                                hideNavExtension();
-                                                return;
-                                            }
-                                            else if (desktopNavExtendedPage === DesktopNavBarExtendedPage.NONE) {
-                                                showNavExtension();
-                                            }
-                                            setDesktopNavExtendedPage(DesktopNavBarExtendedPage.AI);
+                                            redirect("/insulligence");
                                         }}
                                 >
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
