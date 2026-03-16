@@ -2,6 +2,7 @@
 
 import ShinyText from "@/components/reactbits/ShinyText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
+import {redirect} from "next/navigation";
 
 export function HomeTryInsulligenceButton() {
     return (
@@ -16,7 +17,9 @@ export function HomeTryInsulligenceButton() {
             scale={1}
             threshold={0.1}
             delay={1.5}>
-            <button id={"home-page-head-ai-button"} className={"text-[20px] font-medium cursor-pointer select-none"}>
+            <button id={"home-page-head-ai-button"} onClick={() => {
+                redirect("/insulligence");
+            }} className={"text-[20px] font-medium cursor-pointer select-none"}>
                 <ShinyText
                     text="✨ Prova la nostra AI"
                     speed={2}
