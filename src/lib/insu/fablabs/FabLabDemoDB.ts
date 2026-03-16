@@ -349,4 +349,23 @@ export const FabLabsTestArray: FabLab[] = [
         9.0941487
     ),
     // endregion
+    // region InnovaLab
+    new FabLab(
+        9,
+        "InnovaLab",
+        "Via Provinciale per Bulgorello 1",
+        "Vertemate Con Minoprio",
+        "Como (IT)",
+        22070,
+        "Descrizione breve\n\nL’edificio situato in Via Provinciale per Bulgorello 1 a Vertemate è progettato come un FabLab tecnologico multifunzionale, dedicato all’innovazione, alla formazione e allo sviluppo tecnologico. La struttura ospita spazi di lavoro informatico, laboratori per la prototipazione, sale riunioni e un’infrastruttura di rete professionale basata su cablaggio strutturato. L’obiettivo è creare un ambiente moderno e collaborativo in cui professionisti, studenti e aziende possano sviluppare progetti tecnologici, condividere competenze e lavorare in modo efficiente.",
+        "L’edificio situato in Via Provinciale per Bulgorello 1 a Vertemate funziona come un FabLab e hub tecnologico multifunzionale dedicato alle attività di innovazione, formazione e sviluppo tecnologico. La struttura è organizzata per offrire ambienti moderni e flessibili in cui professionisti, studenti e aziende possono collaborare, sviluppare progetti digitali e sperimentare nuove tecnologie.\n\nIl piano terra ospita un grande open space operativo destinato alle attività principali del FabLab. Qui sono presenti numerose postazioni informatiche per lo sviluppo software, la progettazione digitale e il lavoro collaborativo. Sono inoltre presenti aree dedicate alla prototipazione tecnologica, sale riunioni per il lavoro di gruppo e spazi pensati per favorire lo scambio di idee tra i membri della comunità tecnologica. All’interno di questo livello è presente anche una server room, che gestisce l’infrastruttura informatica dell’edificio attraverso una rete progettata secondo i principi del cablaggio strutturato, garantendo prestazioni elevate, sicurezza e possibilità di espansione.\n\nIl piano superiore è destinato alle attività direzionali e amministrative. Qui si trovano gli uffici per la gestione del centro, sale riunioni più riservate e spazi dedicati al coordinamento delle attività del FabLab. Questa organizzazione consente di separare le funzioni operative da quelle gestionali, mantenendo comunque un collegamento diretto tra i diversi ambienti della struttura.\n\nAnche gli spazi esterni fanno parte dell’organizzazione del centro. Il piazzale viene utilizzato come area di parcheggio per dipendenti e visitatori e può ospitare momenti di socializzazione, eventi o attività all’aperto legate alle iniziative del FabLab.\n\nNel complesso, l’edificio si presenta come un centro tecnologico moderno e funzionale, progettato per favorire la collaborazione, la sperimentazione e la crescita di competenze nel settore digitale e tecnologico.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_MOBILE, FabLabTag.TECH_WEB, FabLabTag.TECH_DESIGN, FabLabTag.TECH_MECHANICAL],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/9/banner/banner.png",
+        ["/app_data/resources/fablabs/9/photos/1.png", "/app_data/resources/fablabs/9/photos/2.jpeg"],
+        [new FileReference("Gelain.docx","/app_data/resources/fablabs/9/files/Gelain.docx",FileType.DOCUMENT)],
+        45.72449,
+        9.08409
+    ),
+    // endregion
 ];
