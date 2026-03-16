@@ -250,8 +250,8 @@ export const FabLabsTestArray: FabLab[] = [
         "/app_data/resources/fablabs/16/banner/banner.jpeg",
         ["/app_data/resources/fablabs/16/photos/1.jpeg"],
         [new FileReference("Documentazione","/app_data/resources/fablabs/16/files/FabLab Au Lac.docx",FileType.DOCUMENT)],
-        45.5318,
-        9.0835
+        45.8885899,
+        9.1426614,
     ),
     // endregion
     // region GeLAN
