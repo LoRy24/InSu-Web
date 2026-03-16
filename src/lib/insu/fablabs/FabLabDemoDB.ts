@@ -292,4 +292,21 @@ export const FabLabsTestArray: FabLab[] = [
         9.1203
     ),
     // endregion
+    new FabLab(
+        5,
+        "AtelierLab",
+        "Via Castelnuovo 11",
+        "Italia",
+        "CO",
+        22100,
+        "Laboratorio per creazione di costumi e tessuti \nArea adibita alla creazione di costumi, vestiti e tessuti attraverso il riutilizzo di materiali\n",
+        "Lo spazio si sviluppa su tre livelli ed è progettato come un luogo aperto al quartiere dove produzione, sperimentazione creativa e incontro sociale ruotano attorno al riuso tessile.\n\nIl piano terreno è dedicato all’accoglienza e alle attività collettive: comprende la reception, dove i visitatori possono informarsi sulle attività o iscriversi ai corsi, e una grande sala polifunzionale per eventi, sfilate, mostre, workshop e mercatini di scambio di abiti. Sono presenti anche aree informali con tavoli e sedute per favorire la socialità.\n\nIl primo piano rappresenta il cuore operativo del progetto e ospita i laboratori di produzione e sperimentazione. Qui si trovano spazi attrezzati per cucito, taglio dei tessuti, progettazione e modellistica, oltre ad aree dedicate a tecniche come tintura, stampa su tessuto, patchwork e ricamo. Gli ambienti sono organizzati per favorire collaborazione e scambio di competenze tra utenti.\n\nIl secondo piano è invece destinato all’infrastruttura tecnologica, con server, apparecchiature di rete e sistemi informatici che supportano le attività digitali del laboratorio e la gestione dei dati.\n\nNel complesso, l’edificio diventa un luogo multifunzionale che unisce artigianato, creatività e partecipazione sociale, trasformando il riuso tessile in un’occasione di apprendimento e incontro per la comunità.",
+        [FabLabTag.TECH_DESIGN, FabLabTag.TEXTILE_ECOPRINT, FabLabTag.TEXTILE_TAILORING, FabLabTag.TEXTILE_EMBROIDERY, FabLabTag.TEXTILE_CROCHET, FabLabTag.TEXTILE_PRINTING],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/5/banner/banner.jpg",
+        ["/app_data/resources/fablabs/5/photos/1.jpg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/5/files/BREMBILLA.pdf",FileType.DOCUMENT)],
+        45.8004,
+        9.0883
+    ),
 ];
