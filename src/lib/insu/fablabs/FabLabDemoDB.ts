@@ -368,4 +368,23 @@ export const FabLabsTestArray: FabLab[] = [
         9.08409
     ),
     // endregion
+    // region FabCarniti
+    new FabLab(
+        14,
+        "FabCarniti",
+        "Via per Molteno",
+        "Oggiono",
+        "LC (Lecco)",
+        23848 ,
+        "Riqualificazione dell'ex stabilimento Carniti in un FabLab di 420 m² su 4 piani, con una rete LAN a stella gerarchica per supportare progettazione CAD, robotica e prototipazione rapida.",
+        "Il progetto prevede la trasformazione dell'edificio industriale storico \"Ex Fabbrica Carniti\" di Oggiono in un moderno FabLab (Laboratorio di Fabbricazione). La struttura, di 420 m² distribuiti su 4 piani (per un volume di 3360 m³), è stata pensata per ospitare diverse attività tecnologiche: progettazione digitale CAD al piano 1, laboratorio di elettronica e robotica al piano 2, prototipazione rapida con stampanti 3D al piano 3, e assemblaggio e testing al piano 4.\nPer supportare queste attività, è stata progettata un'infrastruttura di rete LAN professionale con topologia a stella gerarchica. La connettività è garantita da un backbone in fibra ottica che collega i quattro piani a un rack centrale situato al piano terra, dove risiedono il router, lo switch core e l'UPS. Ogni piano è dotato di uno switch PoE a 24 porte che serve le postazioni fisse (36 PC e 6 stampanti, per un totale di 55 porte attive) e 13 Access Point per la copertura Wi-Fi. La rete è segmentata in 7 VLAN per separare e gestire in modo efficiente i diversi reparti, la management, gli ospiti e la videosorveglianza. Il cablaggio orizzontale è realizzato in canaline con cavo Cat.6, mentre la dorsale verticale sfrutta canaline più capienti con fibra ottica multimodale. Il progetto punta a creare uno spazio modulare, performante e facilmente espandibile, contribuendo alla riqualificazione urbana del territorio della Brianza lecchese.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_DESIGN, FabLabTag.CRAFTSMANSHIP_WOOD, FabLabTag.CRAFTSMANSHIP_METAL, FabLabTag.CRAFTSMANSHIP_MECHANICS],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/14/banner/banner.png",
+        ["/app_data/resources/fablabs/14/photos/1.jpg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/14/files/KIRILL MOZZHORIN - consegna cablaggio.pdf",FileType.DOCUMENT)],
+        45.78091820675948,
+        9.311666766615632
+    ),
+    // endregion
 ];
