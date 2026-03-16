@@ -292,6 +292,7 @@ export const FabLabsTestArray: FabLab[] = [
         9.1203
     ),
     // endregion
+    // region AtelierLab
     new FabLab(
         5,
         "AtelierLab",
@@ -309,4 +310,5 @@ export const FabLabsTestArray: FabLab[] = [
         45.8004,
         9.0883
     ),
+    // endregion
 ];
