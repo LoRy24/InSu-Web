@@ -387,4 +387,23 @@ export const FabLabsTestArray: FabLab[] = [
         9.311666766615632
     ),
     // endregion
+    // region Fabtory
+    new FabLab(
+        8,
+        "Fabtory",
+        "Via Nuova Valassina, 5b",
+        "Merone",
+        "Como",
+        22046,
+        "Il progetto prevede la trasformazione di un ex-capannone industriale in un polo multifunzionale dedicato all'innovazione tecnologica, alla formazione e all'economia circolare.",
+        "Il progetto prevede la riqualificazione di un edificio in Via Roma 27 a Merone per trasformarlo in uno spazio dedicato a innovazione, tecnologia e formazione. La struttura ospiterà un FabLab per la prototipazione digitale, un’officina circolare per il riutilizzo e la riparazione dei materiali, spazi di coworking e aule STEAM per attività educative. L’edificio sarà dotato di un’infrastruttura digitale avanzata con rete in fibra ottica, server room centrale e connessioni ad alta velocità per garantire prestazioni elevate e sicurezza dei dati. L’obiettivo è creare un centro moderno dove studenti, professionisti e cittadini possano collaborare, imparare e sviluppare progetti tecnologici, contribuendo allo sviluppo innovativo della comunità locale.\n",
+        [FabLabTag.TECH_NETWORKS, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_MOBILE, FabLabTag.TECH_MECHANICAL, FabLabTag.CRAFTSMANSHIP_WOOD, FabLabTag.CRAFTSMANSHIP_METAL, FabLabTag.CRAFTSMANSHIP_MECHANICS, FabLabTag.CRAFTSMANSHIP_REPAIR],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/8/banner/banner.png",
+        ["/app_data/resources/fablabs/8/photos/1.png"],
+        [new FileReference("FABTORY DOCUMENTAZIONE.pdf","/app_data/resources/fablabs/8/files/FABTORY DOCUMENTAZIONE.pdf",FileType.DOCUMENT)],
+        45.78556381995319,
+        9.24281699069234
+    ),
+    // endregion
 ];
