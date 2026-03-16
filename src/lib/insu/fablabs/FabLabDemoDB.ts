@@ -288,8 +288,8 @@ export const FabLabsTestArray: FabLab[] = [
         "/app_data/resources/fablabs/19/banner/banner.jpg",
         ["/app_data/resources/fablabs/19/photos/1.jpg"],
         [new FileReference("Documentazione","/app_data/resources/fablabs/19/files/Documentazione riqualifica luogo per progetto Rotari.pdf",FileType.DOCUMENT)],
-        45.4725,
-        9.1203
+        45.790296,
+        9.200992
     ),
     // endregion
     // region Bocciodromo
