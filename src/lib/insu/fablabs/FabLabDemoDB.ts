@@ -311,4 +311,23 @@ export const FabLabsTestArray: FabLab[] = [
         9.0883
     ),
     // endregion
+    // region Ex Caserma
+    new FabLab(
+        15,
+        "Ex Caserma",
+        "Via Borgo Vico",
+        "Como",
+        "Como(Italia)",
+        22100,
+        "L’Ex Caserma Capitano De Cristoforis è un grande complesso militare storico situato a Como, vicino al centro cittadino e alla stazione Como Borghi. Costruita tra la fine dell’Ottocento e l’inizio del Novecento, la caserma è oggi dismessa e oggetto di un importante progetto di riqualificazione per trasformarla in una cittadella di uffici pubblici e spazi urbani aperti.",
+        "Per molti decenni la struttura ha avuto una funzione militare e amministrativa. Con la progressiva riorganizzazione delle strutture dell’esercito, il complesso è stato dismesso ed è rimasto inutilizzato per diversi anni. Data la sua posizione strategica vicino al centro urbano, l’area è stata successivamente inserita in un grande progetto di riqualificazione urbana. Oltre al valore urbanistico, la ex caserma rappresenta anche una testimonianza della storia militare e urbana di Como, inserita in un contesto cittadino in continua trasformazione. L’obiettivo è trasformare parte della struttura in un ambiente funzionale per attività formative, laboratori digitali e postazioni di lavoro condivise, dotandola di un’infrastruttura di rete moderna, sicura e facilmente espandibile.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_MOBILE, FabLabTag.TECH_DESIGN, FabLabTag.TECH_MECHANICAL],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/15/banner/banner.webp",
+        ["/app_data/resources/fablabs/15/photos/1.webp"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/15/files/camblaggio maspero.docx",FileType.DOCUMENT)],
+        45.7967965,
+        9.0941487
+    ),
+    // endregion
 ];
