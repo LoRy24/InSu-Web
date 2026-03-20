@@ -187,7 +187,8 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Turisti</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys"}>Informazioni</a>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/routes"}>Mappa</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/routes"}>Tour</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/people"}>Personaggi</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Organizzatori</h1>
@@ -241,7 +242,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Energia</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/cluster"}>Cluster</a>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/dashboard"}>Dashboard</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/centraline"}>Centraline</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/stats"}>Statistiche</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
