@@ -16,7 +16,7 @@ interface CarouselProps {
 
 export default function GladysPage() {
     const [modalData, setModalData] = useState<{ images: string[]; index: number } | null>(null);
-    const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+    const [, setIsHeaderHidden] = useState(false);
 
     useEffect(() => {
         if (!modalData) return;
@@ -220,9 +220,7 @@ export default function GladysPage() {
 
             <div
                 id="head"
-                className={`fixed z-40 w-full h-118.75 flex flex-col items-center justify-center ${
-                    isHeaderHidden ? "hidden" : ""
-                }`}
+                className={`fixed z-40 w-full h-118.75 flex flex-col items-center justify-center`}
             >
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
@@ -249,7 +247,7 @@ export default function GladysPage() {
                 </div>
             </div>
 
-            <div id="page-content" className="relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center">
+            <div id="page-content" className="relative z-50 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center">
                 <div className={"py-28 gap-36 flex flex-col items-center"}>
                     {/* INPUT AI */}
                     <div className="w-full max-w-2xl bg-neutral-900 border border-neutral-700 rounded-2xl px-6 py-5 flex items-end gap-3 shadow-lg">
