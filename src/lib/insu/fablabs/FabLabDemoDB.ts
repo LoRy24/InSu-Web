@@ -425,4 +425,30 @@ export const FabLabsTestArray: FabLab[] = [
         9.0895
     ),
     // endregion
+    // region Mastro Salotti
+    new FabLab(
+        20,
+        "Mastro Salotti",
+        "Viale Brianza 12",
+        "Carugo",
+        "Como",
+        22060,
+        "Ex tappezziere ",
+        "All’interno di un Fab Lab, il lavoro del tappezziere può integrarsi con tecnologie moderne e strumenti digitali. Per esempio, è possibile utilizzare macchine da taglio computerizzate, stampanti per tessuti o software di progettazione per creare modelli personalizzati e prototipi di rivestimenti. Questo permette di sperimentare nuovi design, combinare materiali innovativi e realizzare prodotti su misura in modo più rapido ed efficiente.",
+        [
+            FabLabTag.TEXTILE_ECOPRINT,
+            FabLabTag.TEXTILE_TAILORING
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/20/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/20/photos/1.jpeg"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/20/files/Zemolin.luoghi_abbandonati.docx", FileType.DOCUMENT)
+        ],
+        45.7087638,
+        9.1949379
+    ),
+    // endregion
 ];
