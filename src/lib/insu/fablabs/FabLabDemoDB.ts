@@ -401,9 +401,28 @@ export const FabLabsTestArray: FabLab[] = [
         FabLabState.READY,
         "/app_data/resources/fablabs/8/banner/banner.png",
         ["/app_data/resources/fablabs/8/photos/1.png"],
-        [new FileReference("FABTORY DOCUMENTAZIONE.pdf","/app_data/resources/fablabs/8/files/FABTORY DOCUMENTAZIONE.pdf",FileType.DOCUMENT)],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/8/files/FABTORY DOCUMENTAZIONE.pdf",FileType.DOCUMENT)],
         45.78556381995319,
         9.24281699069234
+    ),
+    // endregion
+    // region Hotel Tesoro
+    new FabLab(
+        11,
+        "Hotel Tesoro",
+        "Sighignola 8",
+        "Lanzo d’Intelvi ",
+        "Como, Italia",
+        22024,
+        "L’Hotel Tesoro si presenta come una grande struttura con molteplici potenzialità ",
+        "Questo hotel si trasformerà in un fablab basato sulla creatività, dove ciò che si sogna può essere realizzato, in cui saranno stabiliti molteplici stanze con diverse attrezzature di cui poter usufruire e tanto materiale da cui ispirarsi. un posto dove la noia non esiste.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_DESIGN, FabLabTag.ART_SCULPTURE],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/11/banner/banner.png",
+        ["/app_data/resources/fablabs/11/photos/1.png"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/11/files/posti abbandonati.gdoc",FileType.DOCUMENT)],
+        45.9883,
+        9.0895
     ),
     // endregion
 ];
