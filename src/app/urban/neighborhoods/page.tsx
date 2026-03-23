@@ -13,7 +13,7 @@ export default function GladysPage() {
             <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="Quartieri"
+                        text="Quartieri Sostenibili"
                         className="text-[114px] font-black text-center select-none cursor-default mb-0 mt-18"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
@@ -42,7 +42,15 @@ export default function GladysPage() {
             </div>
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center justify-center"}>
                 <div className={"w-full px-16 py-24 max-w-375 grid grid-cols-1 gap-y-12"}>
-                    <NeighborhoodCard page={"/urban/neighborhoods/a"} image={"/app_data/images/cat.png"} logo={"/"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCard page={"/urban/neighborhoods/a"} image={"/app_data/resources/neighbourhoods/panchine/panchine.JPG"} logo={"/app_data/resources/neighbourhoods/panchine/panchine.JPEG"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCardReverse page={"/urban/neighborhoods/a"} image={"/app_data/images/cat.png"} logo={"/"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCard page={"/urban/neighborhoods/a"} image={"/app_data/resources/neighbourhoods/panchine/panchine.JPG"} logo={"/app_data/resources/neighbourhoods/panchine/panchine.JPEG"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCardReverse page={"/urban/neighborhoods/a"} image={"/app_data/images/cat.png"} logo={"/"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCard page={"/urban/neighborhoods/a"} image={"/app_data/resources/neighbourhoods/panchine/panchine.JPG"} logo={"/app_data/resources/neighbourhoods/panchine/panchine.JPEG"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCardReverse page={"/urban/neighborhoods/a"} image={"/app_data/images/cat.png"} logo={"/"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCard page={"/urban/neighborhoods/a"} image={"/app_data/resources/neighbourhoods/panchine/panchine.JPG"} logo={"/app_data/resources/neighbourhoods/panchine/panchine.JPEG"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCardReverse page={"/urban/neighborhoods/a"} image={"/app_data/images/cat.png"} logo={"/"} title={"Titolo 1"} description={"Descrizione 1"}/>
+                    <NeighborhoodCard page={"/urban/neighborhoods/a"} image={"/app_data/resources/neighbourhoods/panchine/panchine.JPG"} logo={"/app_data/resources/neighbourhoods/panchine/panchine.JPEG"} title={"Titolo 1"} description={"Descrizione 1"}/>
                     <NeighborhoodCardReverse page={"/urban/neighborhoods/a"} image={"/app_data/images/cat.png"} logo={"/"} title={"Titolo 1"} description={"Descrizione 1"}/>
                 </div>
                 <Footer/>
