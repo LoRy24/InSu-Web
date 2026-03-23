@@ -1,20 +1,20 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 
-import { FabLabsTestArray } from "@/lib/insu/fablabs/FabLabDemoDB";
+import Footer from "@/components/layouts/Footer";
 
 interface CarouselProps {
     images: string[]
     labels?: string[]
 }
 
-export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLabsTestArray }) {
+export default function GladysPage() {
     const [modalData, setModalData] = useState<{ images: string[]; index: number } | null>(null);
     const [isHeaderHidden, setIsHeaderHidden] = useState(false);
 
@@ -55,7 +55,7 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
     
     function Carousel({ images, labels }: CarouselProps) {
         const [index, setIndex] = useState(0);
-        const validImages = images.filter(img => typeof img === "string" && img.trim() !== "");
+        const validImages = images.filter(img => img.trim() !== "");
         const startXRef = useRef(0);
         const isDraggingRef = useRef(false);
         const didDragRef = useRef(false);
@@ -98,7 +98,7 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
             <div className="relative w-full max-w-6xl flex flex-col items-center select-none">
 
                 <div
-                    className="relative w-full flex items-center justify-center h-[320px] md:h-[360px] cursor-grab"
+                    className="relative w-full flex items-center justify-center h-80 md:h-90 cursor-grab"
                     onMouseDown={onMouseDown}
                     onMouseUp={onMouseUp}
                     onMouseLeave={onMouseLeave}
@@ -108,7 +108,7 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
 
                     {validImages.map((img, i) => {
                         const offset = (i - index + validImages.length) % validImages.length;
-                        let position = "";
+                        let position: string;
                         if (offset === 0) position = "scale-100 z-20 opacity-100";
                         else if (offset === 1) position = "translate-x-64 md:translate-x-96 scale-90 opacity-50";
                         else if (offset === validImages.length - 1) position = "-translate-x-64 md:-translate-x-96 scale-90 opacity-50";
@@ -124,7 +124,7 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
                                         if (didDragRef.current) return;
                                         setModalData({ images: validImages, index: i });
                                     }}
-                                    className="w-[320px] h-[200px] md:w-[480px] md:h-[280px] rounded-2xl bg-neutral-800 flex items-center justify-center relative border border-neutral-700 overflow-hidden cursor-zoom-in"
+                                    className="w-[320px] h-50 md:w-120 md:h-70 rounded-2xl bg-neutral-800 flex items-center justify-center relative border border-neutral-700 overflow-hidden cursor-zoom-in"
                                     aria-label="Apri immagine in grande"
                                 >
                                     <Image
@@ -136,8 +136,8 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
                                 </button>
 
                                 {offset === 0 && (
-                                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-30 inline-flex min-w-[240px] md:min-w-[280px] rounded-2xl bg-gradient-to-b from-neutral-600/80 via-[#4c6a57]/70 to-[#00cc55]/90 p-[1px]">
-                                        <div className="flex w-full min-w-[240px] md:min-w-[280px] flex-col items-stretch rounded-2xl overflow-hidden bg-gradient-to-b from-neutral-900/95 via-[#1b2b23] to-[#0f3a26]">
+                                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-30 inline-flex min-w-60 md:min-w-70 rounded-2xl bg-linear-to-b from-neutral-600/80 via-[#4c6a57]/70 to-[#00cc55]/90 p-px">
+                                        <div className="flex w-full min-w-60 md:min-w-70 flex-col items-stretch rounded-2xl overflow-hidden bg-linear-to-b from-neutral-900/95 via-[#1b2b23] to-[#0f3a26]">
                                             <span className="px-5 py-1.5 text-white text-[14px] md:text-[15px] text-center">
                                                 {label || "Scopri la sezione"}
                                             </span>
@@ -211,7 +211,8 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
         )
     }
 
-    const fablabImages = (fablabsData || FabLabsTestArray).flatMap(f => f.card_banner_url);
+    // noinspection JSUnusedLocalSymbols
+    //const fablabImages = FabLabsTestArray.flatMap(f => f.card_banner_url);
 
     return (
         <div>
@@ -240,7 +241,7 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Prima AI che vive l'Insubria conoscendola profondamente</p>
+                        <p className={"max-w-120 text-center mt-0"}>Prima AI che vive l'Insubria conoscendola profondamente</p>
                     </AnimatedContent>
                 </div>
                 <div id="home-page-head-background" className="absolute -z-100 w-full h-[50vh]">
@@ -248,10 +249,10 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
                 </div>
             </div>
 
-            <div id="page-content" className="relative z-20 w-full bg-[#0a0a0a] top-118.75 py-28 flex flex-col items-center gap-36">
-
-                {/* INPUT AI */}
-                <div className="w-full max-w-2xl bg-neutral-900 border border-neutral-700 rounded-2xl px-6 py-5 flex items-end gap-3 shadow-lg">
+            <div id="page-content" className="relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center">
+                <div className={"py-28 gap-36 flex flex-col items-center"}>
+                    {/* INPUT AI */}
+                    <div className="w-full max-w-2xl bg-neutral-900 border border-neutral-700 rounded-2xl px-6 py-5 flex items-end gap-3 shadow-lg">
                     <textarea
                         placeholder="Chiedi qualcosa a Insulligence..."
                         rows={1}
@@ -260,54 +261,54 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
                             target.style.height = "auto";
                             target.style.height = `${Math.min(target.scrollHeight, 180)}px`;
                         }}
-                        className="flex-1 bg-transparent outline-none text-[16px] placeholder-neutral-500 text-center resize-none overflow-hidden leading-[1.5]"
+                        className="flex-1 bg-transparent outline-none text-[16px] placeholder-neutral-500 text-center resize-none overflow-hidden leading-normal"
                     />
-                    <button className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#aaffb0] text-black hover:scale-105 transition">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                            <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
+                        <button className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#aaffb0] text-black hover:scale-105 transition">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                {/* SEZIONI ORIGINALI */}
-                <Section
-                    title="Cosa sa fare Insulligence"
-                    description="Scopri come la nostra AI può assisterti nell'esplorazione del territorio, nell'accesso alle informazioni locali e nella scoperta dell'Insubria."
-/*                     images={["/app_data/resources/ai/fabio/1.jpeg",
-                        "/app_data/resources/ai/fabio/2.jpeg",
-                        "/app_data/resources/ai/fabio/3.jpeg",
-                        "/app_data/resources/ai/fabio/4.jpeg"
-                    ]} */
-                    images={["/app_data/resources/ai/tia/1.png",
-                        "/app_data/resources/ai/tia/2.png",
-                        "/app_data/resources/ai/tia/3.png",
-                        "/app_data/resources/ai/tia/4.png",
-                        "/app_data/resources/ai/tia/5.png",
-                        "/app_data/resources/ai/tia/6.png",
-                        //"/app_data/resources/ai/tia/7.png"
-                    ]}
-                    labels={[
-                        "Conoscienza territoriale",
-                        "Gestione quartieri intelligenti",
-                        "Conoscenza storica",
-                        "Tour guidati e personalizzati",
-                        "Conoscenza di clima e colture",
-                        "Gestione dei FabLab",
-                        //"Controllo del traffico"
-                    ]}
-                    titleClassName="text-[52px] md:text-[60px]"
-                />
+                    {/* SEZIONI ORIGINALI */}
+                    <Section
+                        title="Cosa sa fare Insulligence"
+                        description="Scopri come la nostra AI può assisterti nell'esplorazione del territorio, nell'accesso alle informazioni locali e nella scoperta dell'Insubria."
+                        /*                     images={["/app_data/resources/ai/fabio/1.jpeg",
+                                                "/app_data/resources/ai/fabio/2.jpeg",
+                                                "/app_data/resources/ai/fabio/3.jpeg",
+                                                "/app_data/resources/ai/fabio/4.jpeg"
+                                            ]} */
+                        images={["/app_data/resources/ai/tia/1.png",
+                            "/app_data/resources/ai/tia/2.png",
+                            "/app_data/resources/ai/tia/3.png",
+                            "/app_data/resources/ai/tia/4.png",
+                            "/app_data/resources/ai/tia/5.png",
+                            "/app_data/resources/ai/tia/6.png",
+                            //"/app_data/resources/ai/tia/7.png"
+                        ]}
+                        labels={[
+                            "Conoscenza territoriale",
+                            "Gestione quartieri intelligenti",
+                            "Conoscenza storica",
+                            "Tour guidati e personalizzati",
+                            "Conoscenza di clima e colture",
+                            "Gestione dei FabLab",
+                            //"Controllo del traffico"
+                        ]}
+                        titleClassName="text-[52px] md:text-[60px]"
+                    />
 
-                <Section
-                    title="i Progetti principali con Insulligence"
-                    description="Una panoramica dei progetti innovativi sviluppati dalla rete InSu Network e supportati da Insulligence."
-                    images={["/app_data/images/project1.png","/app_data/images/project2.png","/app_data/images/project3.png"]}
-                    labels={["Progetto 1", "Progetto 2", "Progetto 3"]}
-                    extraText="Abbiamo molti progetti. Questi sono i più grandi: fatti aiutare da Insulligence a comprenderli e a scoprire tutto ciò che si nasconde dietro di essi."
-                    titleClassName="text-[52px] md:text-[60px]"
-                />
+                    <Section
+                        title="i Progetti principali con Insulligence"
+                        description="Una panoramica dei progetti innovativi sviluppati dalla rete InSu Network e supportati da Insulligence."
+                        images={["/app_data/images/project1.png","/app_data/images/project2.png","/app_data/images/project3.png"]}
+                        labels={["Progetto 1", "Progetto 2", "Progetto 3"]}
+                        extraText="Abbiamo molti progetti. Questi sono i più grandi: fatti aiutare da Insulligence a comprenderli e a scoprire tutto ciò che si nasconde dietro di essi."
+                        titleClassName="text-[52px] md:text-[60px]"
+                    />
 
-                {/* <Section
+                    {/* <Section
                     title="FabLab"
                     description="I nostri laboratori di innovazione dove tecnologia, creatività e territorio si incontrano."
                     images={fablabImages}
@@ -318,7 +319,9 @@ export default function GladysPage({ fablabsData }: { fablabsData?: typeof FabLa
                     description="Esplora l'Insubria con percorsi intelligenti, suggerimenti personalizzati e guide interattive."
                     images={["/app_data/images/tour1.png","/app_data/images/tour2.png","/app_data/images/tour3.png"]}
                 /> */}
+                </div>
 
+                <Footer/>
             </div>
 
             {modalData && (

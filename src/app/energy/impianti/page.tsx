@@ -2,15 +2,16 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
+import Footer from "@/components/layouts/Footer";
 
-export default function GladysPage() {
+export default function ImpiantiPage() {
     return (
         <div>
             <Navbar page={5}/>
             <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="Nome Pagina"
+                        text="Impianti"
                         className="text-[114px] font-black text-center select-none cursor-default mb-0 mt-18"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
@@ -25,7 +26,7 @@ export default function GladysPage() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Dettagli</p>
+                        <p className={"max-w-120 text-center mt-0"}>Statistiche degli impianti energetici rinnovabili della regione</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>
@@ -37,8 +38,13 @@ export default function GladysPage() {
                     />
                 </div>
             </div>
-            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
-
+            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center justify-center"}>
+                    <div className={"flex flex-col items-center justify-center w-full px-16 py-16 bg-red-200"}>
+                        <div className={"w-full max-w-375 flex flex-col items-center justify-center bg-blue-200"}>
+                            Ciao
+                        </div>
+                    </div>
+                <Footer/>
             </div>
         </div>
     );
