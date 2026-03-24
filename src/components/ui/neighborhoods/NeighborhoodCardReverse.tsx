@@ -39,7 +39,7 @@ export default function NeighborhoodCardReverse({
                         {title}
                     </h2>
 
-                    <p className="text-neutral-400 text-sm font-medium leading-relaxed max-w-lg text-right mb-3">
+                    <p className="text-neutral-400 text-sm font-medium leading-relaxed max-w-lg text-left mb-3">
                         {description}
                     </p>
 
