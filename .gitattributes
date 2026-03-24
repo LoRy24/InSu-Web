@@ -1,0 +1,2 @@
+/public/app_data/*.mp4 filter=lfs diff=lfs merge=lfs -text
+/public/app_data/*/*.mp4 filter=lfs diff=lfs merge=lfs -text
