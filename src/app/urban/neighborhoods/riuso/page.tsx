@@ -11,7 +11,7 @@ export default function NeighbourhoodResourcePage() {
             <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="Centro di Riuso"
+                        text="Centri di Riuso"
                         className="text-[114px] font-black text-center select-none cursor-default mb-0 mt-18"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
