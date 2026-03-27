@@ -22,7 +22,7 @@ export function FabLabsShowMoreCard() {
 
 export function ProjectsAndIdeasShowMoreCard() {
     return (
-        <button className={"text-start"}>
+        <button onClick={() => redirect(("/resources"))} className={"text-start"}>
             <AnimatedContent
                 duration={0.6}
                 delay={0.15}
@@ -38,7 +38,7 @@ export function ProjectsAndIdeasShowMoreCard() {
 
 export function InsulligenceShowMoreCard() {
     return (
-        <button className={"text-start"}>
+        <button onClick={() => redirect(("/insulligence"))} className={"text-start"}>
             <AnimatedContent
                 duration={0.6}
                 delay={0.15}

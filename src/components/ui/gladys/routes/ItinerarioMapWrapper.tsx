@@ -1,10 +1,9 @@
-// src/components/ui/gladys/newversion/ItinerarioMapWrapper.tsx
 "use client";
 
 import dynamic from "next/dynamic";
 
 const ItinerarioMap = dynamic(
-    () => import("@/components/ui/gladys/newversion/ItinerarioMap"),
+    () => import("@/components/ui/gladys/routes/ItinerarioMap"),
     {
         ssr: false,
         loading: () => (

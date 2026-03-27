@@ -16,7 +16,7 @@ import {
   TIPO_COLORS,
   MOVIMENTO_META,
   TappaItinerario,
-} from "@/components/ui/gladys/newversion/ItinerarioDataset";
+} from "@/components/ui/gladys/routes/ItinerarioDataset";
 
 import "leaflet/dist/leaflet.css";
 
@@ -87,7 +87,7 @@ export default function ItinerarioMap() {
   return (
     <div className="relative w-full h-full flex flex-col gap-0 bg-[#0a0a0a]">
       {/* ── SELEZIONE ITINERARIO ── */}
-      <div className="z-20 px-6 py-4 border-b border-[#202020] min-h-[72px]">
+      <div className="z-20 px-6 py-4 border-b border-[#202020] min-h-18">
         <div className="flex flex-nowrap items-center justify-center gap-3 overflow-x-auto">
           {ITINERARI.map((it) => (
             <button
@@ -97,7 +97,7 @@ export default function ItinerarioMap() {
                 setGiornoAttivo(null);
                 setTappaAttiva(null);
               }}
-              className={`min-w-[220px] shrink-0 px-5 py-3 rounded-2xl text-[13px] font-semibold border transition-colors ${
+              className={`min-w-55 shrink-0 px-5 py-3 rounded-2xl text-[13px] font-semibold border transition-colors mb-12 ${
                 itinerarioAttivoId === it.id
                   ? "bg-white text-[#0a0a0a] border-white"
                   : "bg-[#101010] text-white/80 border-[#202020] hover:border-[#303030]"
@@ -154,7 +154,7 @@ export default function ItinerarioMap() {
       */}
 
       {/* ── LAYOUT MAPPA + SIDEBAR ── */}
-      <div className="flex flex-1 min-h-0 overflow-hidden h-[520px] md:h-[580px]">
+      <div className="flex flex-1 min-h-0 overflow-hidden h-130 md:h-145">
         {/* MAPPA */}
         <div className="flex-1 relative" style={{ touchAction: "pan-y" }}>
           <MapContainer
@@ -169,7 +169,7 @@ export default function ItinerarioMap() {
             boxZoom={true}
             keyboard={true}
             dragging={true}
-            tap={true}
+            /*tap={true}*/
             style={{ touchAction: "pan-y" }}
           >
             <TileLayer
@@ -225,14 +225,14 @@ export default function ItinerarioMap() {
           </MapContainer>
 
           {/* Legenda in overlay */}
-          <div className="absolute bottom-4 left-4 z-[500] flex flex-col gap-2 bg-[#0f0f0f]/90 backdrop-blur px-3 py-2.5 rounded-xl border border-[#202020]">
+          <div className="absolute bottom-4 left-4 z-500 flex flex-col gap-2 bg-[#0f0f0f]/90 backdrop-blur px-3 py-2.5 rounded-xl border border-[#202020]">
             <p className="text-[10px] text-[#a0a0a0] uppercase tracking-widest mb-0.5">
               Legenda giorni
             </p>
             {giorni.map((g) => (
               <div key={g} className="flex items-center gap-2">
                 <span
-                  className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                  className="w-2.5 h-2.5 rounded-full shrink-0"
                   style={{ background: getGiornoConfig(g).color }}
                 />
                 <span className="text-[11px] text-white/80">
@@ -292,7 +292,7 @@ export default function ItinerarioMap() {
                     }`}
                   >
                     <div className="flex items-start gap-2.5">
-                      <span className="text-[10px] text-white/30 mt-0.5 w-4 flex-shrink-0">
+                      <span className="text-[10px] text-white/30 mt-0.5 w-4 shrink-0">
                         {idx + 1}
                       </span>
                       <div className="flex-1 min-w-0">
@@ -301,7 +301,7 @@ export default function ItinerarioMap() {
                         </p>
                         <div className="flex items-center gap-1.5 mt-1 flex-wrap">
                           <span
-                            className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                            className="w-1.5 h-1.5 rounded-full shrink-0"
                             style={{ background: TIPO_COLORS[tappa.tipo] }}
                           />
                           <span
@@ -342,7 +342,7 @@ export default function ItinerarioMap() {
 
       {/* Crediti */}
       <div className="px-6 py-3 text-[10px] text-white/30 border-t border-[#202020]">
-        Dati itinerario © Gruppo Patrimonio 4INF3 · Mappa © CartoDB / OSM
+
       </div>
 
       {/* Stile popup Leaflet */}
@@ -415,7 +415,7 @@ function PopupContent({
   gCfg: { label: string; color: string };
 }) {
   return (
-    <div className="px-4 py-3 min-w-[220px] max-w-[280px]">
+    <div className="px-4 py-3 min-w-55 max-w-70">
       <div className="flex items-center gap-1.5 mb-1">
         <span
           className="text-[10px] px-2 py-0.5 rounded-full font-medium"
@@ -522,7 +522,7 @@ function MobileDetailCard({
         </div>
         <button
           onClick={onClose}
-          className="text-white/40 hover:text-white/80 text-lg flex-shrink-0 mt-0.5"
+          className="text-white/40 hover:text-white/80 text-lg shrink-0 mt-0.5"
         >
           <i className="bi bi-x-lg" />
         </button>
