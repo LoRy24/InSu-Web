@@ -250,8 +250,8 @@ export const FabLabsTestArray: FabLab[] = [
         "/app_data/resources/fablabs/16/banner/banner.jpeg",
         ["/app_data/resources/fablabs/16/photos/1.jpeg"],
         [new FileReference("Documentazione","/app_data/resources/fablabs/16/files/FabLab Au Lac.docx",FileType.DOCUMENT)],
-        45.5318,
-        9.0835
+        45.8885899,
+        9.1426614,
     ),
     // endregion
     // region GeLAN
@@ -288,8 +288,167 @@ export const FabLabsTestArray: FabLab[] = [
         "/app_data/resources/fablabs/19/banner/banner.jpg",
         ["/app_data/resources/fablabs/19/photos/1.jpg"],
         [new FileReference("Documentazione","/app_data/resources/fablabs/19/files/Documentazione riqualifica luogo per progetto Rotari.pdf",FileType.DOCUMENT)],
-        45.4725,
-        9.1203
+        45.790296,
+        9.200992
+    ),
+    // endregion
+    // region Bocciodromo
+    new FabLab(
+        10,
+        "Bocciodromo",
+        "Via Don sturzo",
+        "Albese con Cassano",
+        "Como (IT)",
+        22032,
+        "Un vecchio Bocciodromo abbandonato che viene riqualificato come \"centro civico\" così da ottenere uno spazio per ragazzi aperto il più tempo possibile così da ricavare un luogo di ritrovo dove svagarsi.",
+        "Il Vecchio bocciodromo di albese con cassano è in disuso da anni e i ragazzi tendono a riunirsi la sera davanti ad esso perciò nasce l'idea di una nuova ludoteca. Un nuovo centro civico dove i ragazzi possano riunirsi per stare insieme, avere riscaldamento d'inverno, un campo dove giocare a palla d'estate. Questo ridurrebbe drasticamente i rifiuti sparsi per la piazza, aumenterebbe il senso civico di unione tra cittadini.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.ART_PAINT, FabLabTag.ART_MUSIC, FabLabTag.AGRICOLTURE_VEGETABLE_GARDENS, FabLabTag.AGRICOLTURE_FLORICOLTURE],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/10/banner/banner.png",
+        ["/app_data/resources/fablabs/10/photos/1.png"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/10/files/SCHEDA DI RIQUALIFICAZIONE DEL BOCCIODROMO DI ALBESE CON CASSANO.pdf",FileType.DOCUMENT)],
+        45.796291,
+        9.166594
+    ),
+    // endregion
+    // region AtelierLab
+    new FabLab(
+        5,
+        "AtelierLab",
+        "Via Castelnuovo 11",
+        "Italia",
+        "CO",
+        22100,
+        "Laboratorio per creazione di costumi e tessuti \nArea adibita alla creazione di costumi, vestiti e tessuti attraverso il riutilizzo di materiali\n",
+        "Lo spazio si sviluppa su tre livelli ed è progettato come un luogo aperto al quartiere dove produzione, sperimentazione creativa e incontro sociale ruotano attorno al riuso tessile.\n\nIl piano terreno è dedicato all’accoglienza e alle attività collettive: comprende la reception, dove i visitatori possono informarsi sulle attività o iscriversi ai corsi, e una grande sala polifunzionale per eventi, sfilate, mostre, workshop e mercatini di scambio di abiti. Sono presenti anche aree informali con tavoli e sedute per favorire la socialità.\n\nIl primo piano rappresenta il cuore operativo del progetto e ospita i laboratori di produzione e sperimentazione. Qui si trovano spazi attrezzati per cucito, taglio dei tessuti, progettazione e modellistica, oltre ad aree dedicate a tecniche come tintura, stampa su tessuto, patchwork e ricamo. Gli ambienti sono organizzati per favorire collaborazione e scambio di competenze tra utenti.\n\nIl secondo piano è invece destinato all’infrastruttura tecnologica, con server, apparecchiature di rete e sistemi informatici che supportano le attività digitali del laboratorio e la gestione dei dati.\n\nNel complesso, l’edificio diventa un luogo multifunzionale che unisce artigianato, creatività e partecipazione sociale, trasformando il riuso tessile in un’occasione di apprendimento e incontro per la comunità.",
+        [FabLabTag.TECH_DESIGN, FabLabTag.TEXTILE_ECOPRINT, FabLabTag.TEXTILE_TAILORING, FabLabTag.TEXTILE_EMBROIDERY, FabLabTag.TEXTILE_CROCHET, FabLabTag.TEXTILE_PRINTING],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/5/banner/banner.jpg",
+        ["/app_data/resources/fablabs/5/photos/1.jpg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/5/files/BREMBILLA.pdf",FileType.DOCUMENT)],
+        45.8004,
+        9.0883
+    ),
+    // endregion
+    // region Ex Caserma
+    new FabLab(
+        15,
+        "Ex Caserma",
+        "Via Borgo Vico",
+        "Como",
+        "Como(Italia)",
+        22100,
+        "L’Ex Caserma Capitano De Cristoforis è un grande complesso militare storico situato a Como, vicino al centro cittadino e alla stazione Como Borghi. Costruita tra la fine dell’Ottocento e l’inizio del Novecento, la caserma è oggi dismessa e oggetto di un importante progetto di riqualificazione per trasformarla in una cittadella di uffici pubblici e spazi urbani aperti.",
+        "Per molti decenni la struttura ha avuto una funzione militare e amministrativa. Con la progressiva riorganizzazione delle strutture dell’esercito, il complesso è stato dismesso ed è rimasto inutilizzato per diversi anni. Data la sua posizione strategica vicino al centro urbano, l’area è stata successivamente inserita in un grande progetto di riqualificazione urbana. Oltre al valore urbanistico, la ex caserma rappresenta anche una testimonianza della storia militare e urbana di Como, inserita in un contesto cittadino in continua trasformazione. L’obiettivo è trasformare parte della struttura in un ambiente funzionale per attività formative, laboratori digitali e postazioni di lavoro condivise, dotandola di un’infrastruttura di rete moderna, sicura e facilmente espandibile.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_MOBILE, FabLabTag.TECH_DESIGN, FabLabTag.TECH_MECHANICAL],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/15/banner/banner.webp",
+        ["/app_data/resources/fablabs/15/photos/1.webp"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/15/files/camblaggio maspero.docx",FileType.DOCUMENT)],
+        45.7967965,
+        9.0941487
+    ),
+    // endregion
+    // region InnovaLab
+    new FabLab(
+        9,
+        "InnovaLab",
+        "Via Provinciale per Bulgorello 1",
+        "Vertemate Con Minoprio",
+        "Como (IT)",
+        22070,
+        "Descrizione breve\n\nL’edificio situato in Via Provinciale per Bulgorello 1 a Vertemate è progettato come un FabLab tecnologico multifunzionale, dedicato all’innovazione, alla formazione e allo sviluppo tecnologico. La struttura ospita spazi di lavoro informatico, laboratori per la prototipazione, sale riunioni e un’infrastruttura di rete professionale basata su cablaggio strutturato. L’obiettivo è creare un ambiente moderno e collaborativo in cui professionisti, studenti e aziende possano sviluppare progetti tecnologici, condividere competenze e lavorare in modo efficiente.",
+        "L’edificio situato in Via Provinciale per Bulgorello 1 a Vertemate funziona come un FabLab e hub tecnologico multifunzionale dedicato alle attività di innovazione, formazione e sviluppo tecnologico. La struttura è organizzata per offrire ambienti moderni e flessibili in cui professionisti, studenti e aziende possono collaborare, sviluppare progetti digitali e sperimentare nuove tecnologie.\n\nIl piano terra ospita un grande open space operativo destinato alle attività principali del FabLab. Qui sono presenti numerose postazioni informatiche per lo sviluppo software, la progettazione digitale e il lavoro collaborativo. Sono inoltre presenti aree dedicate alla prototipazione tecnologica, sale riunioni per il lavoro di gruppo e spazi pensati per favorire lo scambio di idee tra i membri della comunità tecnologica. All’interno di questo livello è presente anche una server room, che gestisce l’infrastruttura informatica dell’edificio attraverso una rete progettata secondo i principi del cablaggio strutturato, garantendo prestazioni elevate, sicurezza e possibilità di espansione.\n\nIl piano superiore è destinato alle attività direzionali e amministrative. Qui si trovano gli uffici per la gestione del centro, sale riunioni più riservate e spazi dedicati al coordinamento delle attività del FabLab. Questa organizzazione consente di separare le funzioni operative da quelle gestionali, mantenendo comunque un collegamento diretto tra i diversi ambienti della struttura.\n\nAnche gli spazi esterni fanno parte dell’organizzazione del centro. Il piazzale viene utilizzato come area di parcheggio per dipendenti e visitatori e può ospitare momenti di socializzazione, eventi o attività all’aperto legate alle iniziative del FabLab.\n\nNel complesso, l’edificio si presenta come un centro tecnologico moderno e funzionale, progettato per favorire la collaborazione, la sperimentazione e la crescita di competenze nel settore digitale e tecnologico.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_MOBILE, FabLabTag.TECH_WEB, FabLabTag.TECH_DESIGN, FabLabTag.TECH_MECHANICAL],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/9/banner/banner.png",
+        ["/app_data/resources/fablabs/9/photos/1.png", "/app_data/resources/fablabs/9/photos/2.jpeg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/9/files/Gelain.docx",FileType.DOCUMENT)],
+        45.72449,
+        9.08409
+    ),
+    // endregion
+    // region FabCarniti
+    new FabLab(
+        14,
+        "FabCarniti",
+        "Via per Molteno",
+        "Oggiono",
+        "LC (Lecco)",
+        23848 ,
+        "Riqualificazione dell'ex stabilimento Carniti in un FabLab di 420 m² su 4 piani, con una rete LAN a stella gerarchica per supportare progettazione CAD, robotica e prototipazione rapida.",
+        "Il progetto prevede la trasformazione dell'edificio industriale storico \"Ex Fabbrica Carniti\" di Oggiono in un moderno FabLab (Laboratorio di Fabbricazione). La struttura, di 420 m² distribuiti su 4 piani (per un volume di 3360 m³), è stata pensata per ospitare diverse attività tecnologiche: progettazione digitale CAD al piano 1, laboratorio di elettronica e robotica al piano 2, prototipazione rapida con stampanti 3D al piano 3, e assemblaggio e testing al piano 4.\nPer supportare queste attività, è stata progettata un'infrastruttura di rete LAN professionale con topologia a stella gerarchica. La connettività è garantita da un backbone in fibra ottica che collega i quattro piani a un rack centrale situato al piano terra, dove risiedono il router, lo switch core e l'UPS. Ogni piano è dotato di uno switch PoE a 24 porte che serve le postazioni fisse (36 PC e 6 stampanti, per un totale di 55 porte attive) e 13 Access Point per la copertura Wi-Fi. La rete è segmentata in 7 VLAN per separare e gestire in modo efficiente i diversi reparti, la management, gli ospiti e la videosorveglianza. Il cablaggio orizzontale è realizzato in canaline con cavo Cat.6, mentre la dorsale verticale sfrutta canaline più capienti con fibra ottica multimodale. Il progetto punta a creare uno spazio modulare, performante e facilmente espandibile, contribuendo alla riqualificazione urbana del territorio della Brianza lecchese.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_NETWORKS, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_DESIGN, FabLabTag.CRAFTSMANSHIP_WOOD, FabLabTag.CRAFTSMANSHIP_METAL, FabLabTag.CRAFTSMANSHIP_MECHANICS],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/14/banner/banner.png",
+        ["/app_data/resources/fablabs/14/photos/1.jpg"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/14/files/KIRILL MOZZHORIN - consegna cablaggio.pdf",FileType.DOCUMENT)],
+        45.78091820675948,
+        9.311666766615632
+    ),
+    // endregion
+    // region Fabtory
+    new FabLab(
+        8,
+        "Fabtory",
+        "Via Nuova Valassina, 5b",
+        "Merone",
+        "Como",
+        22046,
+        "Il progetto prevede la trasformazione di un ex-capannone industriale in un polo multifunzionale dedicato all'innovazione tecnologica, alla formazione e all'economia circolare.",
+        "Il progetto prevede la riqualificazione di un edificio in Via Roma 27 a Merone per trasformarlo in uno spazio dedicato a innovazione, tecnologia e formazione. La struttura ospiterà un FabLab per la prototipazione digitale, un’officina circolare per il riutilizzo e la riparazione dei materiali, spazi di coworking e aule STEAM per attività educative. L’edificio sarà dotato di un’infrastruttura digitale avanzata con rete in fibra ottica, server room centrale e connessioni ad alta velocità per garantire prestazioni elevate e sicurezza dei dati. L’obiettivo è creare un centro moderno dove studenti, professionisti e cittadini possano collaborare, imparare e sviluppare progetti tecnologici, contribuendo allo sviluppo innovativo della comunità locale.\n",
+        [FabLabTag.TECH_NETWORKS, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_MOBILE, FabLabTag.TECH_MECHANICAL, FabLabTag.CRAFTSMANSHIP_WOOD, FabLabTag.CRAFTSMANSHIP_METAL, FabLabTag.CRAFTSMANSHIP_MECHANICS, FabLabTag.CRAFTSMANSHIP_REPAIR],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/8/banner/banner.png",
+        ["/app_data/resources/fablabs/8/photos/1.png"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/8/files/FABTORY DOCUMENTAZIONE.pdf",FileType.DOCUMENT)],
+        45.78556381995319,
+        9.24281699069234
+    ),
+    // endregion
+    // region Hotel Tesoro
+    new FabLab(
+        11,
+        "Hotel Tesoro",
+        "Sighignola 8",
+        "Lanzo d’Intelvi ",
+        "Como, Italia",
+        22024,
+        "L’Hotel Tesoro si presenta come una grande struttura con molteplici potenzialità ",
+        "Questo hotel si trasformerà in un fablab basato sulla creatività, dove ciò che si sogna può essere realizzato, in cui saranno stabiliti molteplici stanze con diverse attrezzature di cui poter usufruire e tanto materiale da cui ispirarsi. un posto dove la noia non esiste.",
+        [FabLabTag.TECH_INFO, FabLabTag.TECH_ELECTRONICS, FabLabTag.TECH_DESIGN, FabLabTag.ART_SCULPTURE],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/11/banner/banner.png",
+        ["/app_data/resources/fablabs/11/photos/1.png"],
+        [new FileReference("Documentazione","/app_data/resources/fablabs/11/files/posti abbandonati.gdoc",FileType.DOCUMENT)],
+        45.9883,
+        9.0895
+    ),
+    // endregion
+    // region Mastro Salotti
+    new FabLab(
+        20,
+        "Mastro Salotti",
+        "Viale Brianza 12",
+        "Carugo",
+        "Como",
+        22060,
+        "Ex tappezziere ",
+        "All’interno di un Fab Lab, il lavoro del tappezziere può integrarsi con tecnologie moderne e strumenti digitali. Per esempio, è possibile utilizzare macchine da taglio computerizzate, stampanti per tessuti o software di progettazione per creare modelli personalizzati e prototipi di rivestimenti. Questo permette di sperimentare nuovi design, combinare materiali innovativi e realizzare prodotti su misura in modo più rapido ed efficiente.",
+        [
+            FabLabTag.TEXTILE_ECOPRINT,
+            FabLabTag.TEXTILE_TAILORING
+        ],
+        FabLabState.READY,
+        "/app_data/resources/fablabs/20/banner/banner.png",
+        [
+            "/app_data/resources/fablabs/20/photos/1.jpeg"
+        ],
+        [
+            new FileReference("Documentazione", "/app_data/resources/fablabs/20/files/Zemolin.luoghi_abbandonati.docx", FileType.DOCUMENT)
+        ],
+        45.7087638,
+        9.1949379
     ),
     // endregion
 ];

@@ -82,6 +82,16 @@ export default function FabLabs() {
                         </div>
                     </div>
                 </div>
+                <div className={"w-full flex flex-col items-center justify-center px-16 mb-32"}>
+                    <video
+                        className={"w-full max-w-375 rounded-2xl"}
+                        src={"/app_data/videos/video_fablab.mp4"}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                </div>
                 <FabLabsExplorer/>
                 <Footer className={"mt-16"}/>
             </div>

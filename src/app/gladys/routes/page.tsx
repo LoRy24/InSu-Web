@@ -2,8 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
-import GladysMapWrapper from "@/components/ui/gladys/GladysMapWrapper";
-import Footer from "@/components/layouts/Footer";
+import ItinerarioMapClient from "@/components/ui/gladys/newversion/ItinerarioMapWrapper";
 
 export default function GladysPage() {
     return (
@@ -12,7 +11,7 @@ export default function GladysPage() {
             <div id={"head"} className={"fixed z-10 w-full h-118.75 flex flex-col items-center justify-center"}>
                 <div className={"relative h-full z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="Mappa"
+                        text="Tour Interattivi"
                         className="text-[114px] font-black text-center select-none cursor-default mb-0 mt-18"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
@@ -39,13 +38,14 @@ export default function GladysPage() {
                     />
                 </div>
             </div>
-            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 pt-24"}>
-                <div className={"flex flex-col items-center justify-center w-full px-16"}>
-                    <div className={"w-full max-w-375 overflow-hidden rounded-2xl border border-[#303030]"}>
-                        <GladysMapWrapper/>
+            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
+                <div>
+                    <div className="w-full px-6 md:px-10 pt-20 pb-8">
+                        <div className="w-full max-w-50xl mx-auto">
+                            <ItinerarioMapClient/>
+                        </div>
                     </div>
                 </div>
-                <Footer className={"mt-24"}/>
             </div>
         </div>
     );
