@@ -122,7 +122,7 @@ export default function GladysPage() {
                         threshold={0.1}
                         delay={0}
                     >
-                        <h1 className={"font-black text-[64px]"}>Esplora la Mappa</h1>
+                        <h1 className={"font-black text-[64px]"}>Esplora la Mappa Tour</h1>
                     </AnimatedContent>
                     <AnimatedContent
                         distance={100}
@@ -137,7 +137,7 @@ export default function GladysPage() {
                         delay={0.15}
                     >
                         <p className={"font-normal text-[18px] max-w-187.5 text-center mb-5"}>
-                            Visualizza la nostra mappa per saperne di più
+                            Visualizza la nostra mappa dei Tour per saperne di più
                         </p>
                     </AnimatedContent>
                     <ExploreMapButton/>

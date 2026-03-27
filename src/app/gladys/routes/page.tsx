@@ -2,7 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
-import ItinerarioMapClient from "@/components/ui/gladys/newversion/ItinerarioMapWrapper";
+import ItinerarioMapClient from "@/components/ui/gladys/routes/ItinerarioMapWrapper";
 
 export default function GladysPage() {
     return (
@@ -40,8 +40,8 @@ export default function GladysPage() {
             </div>
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
                 <div>
-                    <div className="w-full px-6 md:px-10 pt-20 pb-8">
-                        <div className="w-full max-w-50xl mx-auto">
+                    <div className="w-full px-16 pb-8">
+                        <div className="w-full max-w-375 mx-auto">
                             <ItinerarioMapClient/>
                         </div>
                     </div>
