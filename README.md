@@ -47,7 +47,7 @@ npm run dev
 ```
 
 ## 🐳 Docker
-Dopo ulteriori aggiornamenti, per rendere il progetto facilmente eseguibile su più piattaforme, è stata aggiunta una configurazione per eseguire il progetto tramite Docker. Per eseguirlo, è sufficiente accedere alla cartella `/docker` e lanciare il comando
+Dopo ulteriori aggiornamenti, per rendere il progetto facilmente eseguibile su più piattaforme, è stata aggiunta una configurazione per eseguire il progetto tramite Docker. Per eseguirlo, è sufficiente lanciare il comando
 
 ```shell
 docker compose up
