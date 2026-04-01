@@ -1,0 +1,12 @@
+/node_modules/
+/.next/
+Dockerfile
+docker-compose.yml
+/.git/
+.gitignore
+/.idea/
+/.vscode/
+README.md
+LICENSE
+CODE_OF_CONDUCT.md
+/various/
