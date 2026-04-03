@@ -1,16 +1,13 @@
 # Usa Node
-FROM node:20-alpine
+FROM node:25-alpine
 
 WORKDIR /app
 
-# Copia package files
-COPY package.json package-lock.json* ./
+# Copia TUTTO il progetto all’inizio
+COPY . .
 
 # Installa dipendenze
-RUN npm ci
-
-# Copia tutto il progetto
-COPY . .
+RUN npm i
 
 # Build Next.js
 RUN npm run build
