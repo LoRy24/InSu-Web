@@ -83,14 +83,21 @@ export default function FabLabs() {
                     </div>
                 </div>
                 <div className={"w-full flex flex-col items-center justify-center px-16 mb-32"}>
+                    <video width="320" height="240" autoPlay loop muted preload="none" className={"w-full max-w-375 rounded-2xl"}>
+                        <source src="/app_data/videos/video_fablab.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    {/*
                     <video
                         className={"w-full max-w-375 rounded-2xl"}
                         src={"/app_data/videos/video_fablab.mp4"}
+                        type={"video/mp4"}
                         autoPlay
                         loop
                         muted
                         playsInline
                     />
+                    */}
                 </div>
                 <FabLabsExplorer/>
                 <Footer className={"mt-16"}/>
