@@ -11,7 +11,7 @@ Benvenuto nella repository per la parte Front-End del sito di **InSu Network**, 
 qualitativo e tecnologico della regione _Insubrica_.
 
 Se sei interessato a prenderne parte, avrai vari modi di contribuire, alcuni dei quali li potrai trovare e consultare sul nostro
-sito: https://insu.lory24.dev/. Sai già dove partire? Allora apri pure una PR.
+sito: https://www.insubrina.org/. Sai già dove partire? Allora apri pure una PR.
 
 ## ✅ Compilazione & Avvio - NodeJS
 Il progetto è realizzato interamente utilizzando il framework [NextJS](http://nextjs.org/). Per maggiori informazioni, dubbi,

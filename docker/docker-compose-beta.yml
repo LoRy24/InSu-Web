@@ -2,8 +2,8 @@ services:
   next_js:
     container_name: "insu_web_nextjs"
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ..
+      dockerfile: ../Dockerfile
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3001:3000"
     restart: unless-stopped
