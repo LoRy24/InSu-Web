@@ -1,0 +1,54 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - master
+      - beta
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            if [ "${{ github.ref_name }}" = "master" ]; then
+              APP_DIR="/home/ubuntu/insuweb/prod"
+              BRANCH="master"
+              PORT="3000"
+              CONTAINER_NAME="insuweb_prod"
+            else
+              APP_DIR="/home/ubuntu/insuweb/beta"
+              BRANCH="beta"
+              PORT="3001"
+              CONTAINER_NAME="insuweb_beta"
+            fi
+
+            echo "Deploying $BRANCH on port $PORT"
+
+            cd $APP_DIR
+
+            git fetch origin
+            git reset --hard origin/$BRANCH
+
+            # Build immagine
+            docker build -t $CONTAINER_NAME .
+
+            # Stop container vecchio (se esiste)
+            docker stop $CONTAINER_NAME || true
+            docker rm $CONTAINER_NAME || true
+
+            # Avvia nuovo container
+            docker run -d \
+              --name $CONTAINER_NAME \
+              -p 127.0.0.1:$PORT:3000 \
+              --restart always \
+              $CONTAINER_NAME
+
+            echo "Deploy completed 🚀"
