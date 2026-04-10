@@ -83,14 +83,14 @@ export default function FabLabs() {
                     </div>
                 </div>
                 <div className={"w-full flex flex-col items-center justify-center px-16 mb-32"}>
-                    <div className="w-full max-w-375 aspect-video rounded-2xl overflow-hidden">
-                        <iframe
-                            src="https://streamable.com/e/zluozm?autoplay=1"
-                            allow="autoplay; encrypted-media; fullscreen"
-                            allowFullScreen
-                            className="w-full max-w-375 aspect-video rounded-2xl overflow-hidden"
-                        />
-                    </div>
+                    <video
+                        className={"w-full max-w-375 rounded-2xl"}
+                        src={"/app_data/videos/video_fablab.mp4"}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
                 <FabLabsExplorer/>
                 <Footer className={"mt-16"}/>
