@@ -31,6 +31,8 @@ export default function NeighborhoodCard({
                     alt={title}
                     fill
                     className="object-cover scale-105"
+                    sizes={"(max-width: 768px) 100vw, 50vw"}
+                    loading={"eager"}
                 />
 
                 {/* gradient fade to right */}

@@ -49,8 +49,8 @@ export function LeccoEconomyGraph() {
                 <h2 className="text-2xl font-bold text-white mb-12 text-center">
                     Lecco
                 </h2>
-                <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
+                <div className="min-h-64 h-64">
+                    <ResponsiveContainer aspect={undefined}>
                         <LineChart data={data} margin={{ top: 10, right: 48, left: 0, bottom: 0 }}>
                             <CartesianGrid stroke="#1f1f1f" />
                             <XAxis

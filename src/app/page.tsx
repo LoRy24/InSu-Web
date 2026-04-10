@@ -84,7 +84,7 @@ export default function Home() {
                                     width={372}
                                     height={330}
                                     sizes="372px"
-                                    quality={80}
+                                    quality={75}
                                 />
                             </AnimatedContent>
                         </div>
@@ -163,7 +163,7 @@ export default function Home() {
                                         width={744}
                                         height={659}
                                         sizes="744px"
-                                        quality={80}
+                                        quality={75}
                                     />
                                 </AnimatedContent>
                             </div>

@@ -24,7 +24,7 @@ export default function GladysVideoPopUp() {
                 className="w-screen h-screen object-contain"
             >
                 <source
-                    src="/app_data/videos/gladys_video.mp4"
+                    src="https://s3-node1.insubrina.org/insu-videos/gladys_video.mp4"
                     type="video/mp4"
                 />
             </video>
@@ -43,8 +43,9 @@ export default function GladysVideoPopUp() {
                     alt="Gladys West"
                     width={256}
                     height={256}
-                    quality={80}
+                    quality={75}
                     className="object-cover w-full h-full group-hover:scale-105 transition"
+                    loading={"eager"}
                 />
 
                 {/* Overlay play */}

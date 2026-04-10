@@ -47,6 +47,7 @@ export default async function FabLabPage({ params } : Readonly<{ params: Promise
                         sizes="(max-width: 768px) 100vw, 800px"
                         quality={75}
                         className="object-cover object-center"
+                        loading={"eager"}
                     />
                 </div>
 

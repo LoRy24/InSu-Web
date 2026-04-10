@@ -97,6 +97,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
                     alt={resource.resourceName}
                     fill
                     className="object-cover"
+                    sizes={"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#0e0e0e]/75 to-[#0e0e0e]" />
             </div>

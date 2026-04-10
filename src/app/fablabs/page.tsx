@@ -78,19 +78,19 @@ export default function FabLabs() {
                         </div>
                         <div className={"w-1/3 flex flex-col justify-center items-end min-h-[30vh] max-[1400px]:hidden"}>
                             <Image src={"/app_data/images/fablab-image-1.png"} alt={"FabLab"} width={703/1.75}
-                                   height={603/1.75} quality={80}/>
+                                   height={603/1.75} quality={75} loading={"eager"}/>
                         </div>
                     </div>
                 </div>
                 <div className={"w-full flex flex-col items-center justify-center px-16 mb-32"}>
-                    <div className="w-full max-w-375 aspect-video rounded-2xl overflow-hidden">
-                        <iframe
-                            src="https://streamable.com/e/zluozm?autoplay=1"
-                            allow="autoplay; encrypted-media; fullscreen"
-                            allowFullScreen
-                            className="w-full max-w-375 aspect-video rounded-2xl overflow-hidden"
-                        />
-                    </div>
+                    <video
+                        className={"w-full max-w-375 rounded-2xl"}
+                        src={"https://s3-node1.insubrina.org/insu-videos/video_fablab.mp4"}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
                 </div>
                 <FabLabsExplorer/>
                 <Footer className={"mt-16"}/>

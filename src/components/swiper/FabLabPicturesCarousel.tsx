@@ -25,13 +25,13 @@ export function FabLabPicturesCarousel({ picturesUrls }: Readonly<{ picturesUrls
             >
                 {picturesUrls.map((pictureUrl) => (
                     <SwiperSlide>
-                        <div className="relative h-[825px] w-full">
+                        <div className="relative h-206.25 w-full">
                             <Image
                                 src={pictureUrl}
                                 alt="slide"
                                 fill
                                 sizes="100vw"
-                                quality={80}
+                                quality={75}
                                 className="object-cover object-center"
                             />
                         </div>
