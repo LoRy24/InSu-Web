@@ -63,6 +63,8 @@ export default function NeighborhoodCardReverse({
                     alt={title}
                     fill
                     className="object-cover scale-105"
+                    sizes={"(max-width: 768px) 100vw, 50vw"}
+                    loading={"eager"}
                 />
 
                 {/* gradient invertito */}

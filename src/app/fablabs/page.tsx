@@ -78,7 +78,7 @@ export default function FabLabs() {
                         </div>
                         <div className={"w-1/3 flex flex-col justify-center items-end min-h-[30vh] max-[1400px]:hidden"}>
                             <Image src={"/app_data/images/fablab-image-1.png"} alt={"FabLab"} width={703/1.75}
-                                   height={603/1.75} quality={80}/>
+                                   height={603/1.75} quality={75} loading={"eager"}/>
                         </div>
                     </div>
                 </div>

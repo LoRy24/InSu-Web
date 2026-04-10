@@ -131,6 +131,7 @@ export default function GladysPage() {
                                         src={img}
                                         alt={`Carousel image ${i}`}
                                         fill
+                                        sizes={"(max-width: 768px) 320px, 480px"}
                                         className="object-cover select-none"
                                     />
                                 </button>
@@ -300,7 +301,7 @@ export default function GladysPage() {
                     <Section
                         title="i Progetti principali con Insulligence"
                         description="Una panoramica dei progetti innovativi sviluppati dalla rete InSu Network e supportati da Insulligence."
-                        images={["/app_data/images/project1.png","/app_data/images/project2.png","/app_data/images/project3.png"]}
+                        images={["/app_data/images/cat.png","/app_data/images/cat.png","/app_data/images/cat.png"]}
                         labels={["Progetto 1", "Progetto 2", "Progetto 3"]}
                         extraText="Abbiamo molti progetti. Questi sono i più grandi: fatti aiutare da Insulligence a comprenderli e a scoprire tutto ciò che si nasconde dietro di essi."
                         titleClassName="text-[52px] md:text-[60px]"
