@@ -157,8 +157,8 @@ export default function GladysPage() {
                 </div>
 
                 <div className="flex gap-6 mt-14">
-                    <button onClick={prev} className="w-10 h-10 rounded-full border border-neutral-700 hover:border-[#aaffb0] transition">←</button>
-                    <button onClick={next} className="w-10 h-10 rounded-full border border-neutral-700 hover:border-[#aaffb0] transition">→</button>
+                    <button onClick={prev} className="w-10 h-10 rounded-full border border-neutral-700 hover:border-[#aaffb0] transition flex items-center justify-center cursor-pointer">←</button>
+                    <button onClick={next} className="w-10 h-10 rounded-full border border-neutral-700 hover:border-[#aaffb0] transition flex items-center justify-center cursor-pointer">→</button>
                 </div>
 
             </div>
@@ -212,9 +212,6 @@ export default function GladysPage() {
         )
     }
 
-    // noinspection JSUnusedLocalSymbols
-    //const fablabImages = FabLabsTestArray.flatMap(f => f.card_banner_url);
-
     return (
         <div>
             <Navbar page={3}/>
@@ -249,42 +246,16 @@ export default function GladysPage() {
             </div>
 
             <div id="page-content" className="relative z-50 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center">
-                <div className={"py-28 gap-36 flex flex-col items-center"}>
-                    {/* INPUT AI */}
-                    <div className="w-full max-w-2xl bg-neutral-900 border border-neutral-700 rounded-2xl px-6 py-5 flex items-end gap-3 shadow-lg">
-                    <textarea
-                        placeholder="Chiedi qualcosa a Insulligence..."
-                        rows={1}
-                        onInput={(e) => {
-                            const target = e.currentTarget;
-                            target.style.height = "auto";
-                            target.style.height = `${Math.min(target.scrollHeight, 180)}px`;
-                        }}
-                        className="flex-1 bg-transparent outline-none text-[16px] placeholder-neutral-500 text-center resize-none overflow-hidden leading-normal"
-                    />
-                        <button className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#aaffb0] text-black hover:scale-105 transition">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-
-                    {/* SEZIONI ORIGINALI */}
+                <div className={"py-28 flex flex-col items-center"}>
                     <Section
                         title="Cosa sa fare Insulligence"
                         description="Scopri come la nostra AI può assisterti nell'esplorazione del territorio, nell'accesso alle informazioni locali e nella scoperta dell'Insubria."
-                        /*                     images={["/app_data/resources/ai/fabio/1.jpeg",
-                                                "/app_data/resources/ai/fabio/2.jpeg",
-                                                "/app_data/resources/ai/fabio/3.jpeg",
-                                                "/app_data/resources/ai/fabio/4.jpeg"
-                                            ]} */
                         images={["/app_data/resources/ai/tia/1.png",
                             "/app_data/resources/ai/tia/2.png",
                             "/app_data/resources/ai/tia/3.png",
                             "/app_data/resources/ai/tia/4.png",
                             "/app_data/resources/ai/tia/5.png",
                             "/app_data/resources/ai/tia/6.png",
-                            //"/app_data/resources/ai/tia/7.png"
                         ]}
                         labels={[
                             "Conoscenza territoriale",
@@ -293,31 +264,32 @@ export default function GladysPage() {
                             "Tour guidati e personalizzati",
                             "Conoscenza di clima e colture",
                             "Gestione dei FabLab",
-                            //"Controllo del traffico"
                         ]}
-                        titleClassName="text-[52px] md:text-[60px]"
+                        titleClassName="text-[52px] md:text-[60px] mt-32"
                     />
 
-                    <Section
-                        title="i Progetti principali con Insulligence"
-                        description="Una panoramica dei progetti innovativi sviluppati dalla rete InSu Network e supportati da Insulligence."
-                        images={["/app_data/images/cat.png","/app_data/images/cat.png","/app_data/images/cat.png"]}
-                        labels={["Progetto 1", "Progetto 2", "Progetto 3"]}
-                        extraText="Abbiamo molti progetti. Questi sono i più grandi: fatti aiutare da Insulligence a comprenderli e a scoprire tutto ciò che si nasconde dietro di essi."
-                        titleClassName="text-[52px] md:text-[60px]"
-                    />
+                    <div className="flex flex-col items-center text-center gap-3 mt-32 mb-16">
+                        <h2 className={`text-[42px] font-black`}>Provala ora</h2>
+                        <p className="text-neutral-400 max-w-2xl text-[17px]">Inserisci qui sotto il tuo prompt per avviare una conversazione con il nostro LLM!</p>
+                    </div>
 
-                    {/* <Section
-                    title="FabLab"
-                    description="I nostri laboratori di innovazione dove tecnologia, creatività e territorio si incontrano."
-                    images={fablabImages}
-                />
-
-                <Section
-                    title="Tour"
-                    description="Esplora l'Insubria con percorsi intelligenti, suggerimenti personalizzati e guide interattive."
-                    images={["/app_data/images/tour1.png","/app_data/images/tour2.png","/app_data/images/tour3.png"]}
-                /> */}
+                    <div className="w-full max-w-2xl bg-neutral-900 border border-neutral-700 rounded-4xl px-8 py-4 flex items-center gap-3 shadow-lg mb-32">
+                        <textarea
+                            placeholder="Chatta con Insulligence..."
+                            rows={1}
+                            onInput={(e) => {
+                                const target = e.currentTarget;
+                                target.style.height = "auto";
+                                target.style.height = `${Math.min(target.scrollHeight, 180)}px`;
+                            }}
+                            className="flex-1 bg-transparent outline-none text-[16px] placeholder-neutral-500 text-start resize-none overflow-hidden leading-normal"
+                        />
+                        <button className="flex items-center justify-center w-10 h-10 rounded-2xl bg-[#aaffb0] text-black hover:scale-105 transition cursor-pointer">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <Footer/>
