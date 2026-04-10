@@ -20,7 +20,8 @@ export default function Footer({ className } : { className?: string }) {
                         <a onClick={() => alert("Coming soon!")} className={"text-[#c0c0c0] hover:text-white duration-150 cursor-pointer mb-2"}>Developers</a>
                         <div>
                             <p className={"text-[12px] mb-2"}>(master) Branch State:</p>
-                            <img src={"https://img.shields.io/github/checks-status/LoRy24/InSu-Web/master"} alt={"GitHub Master Status"}/>
+                            <img alt="GitHub branch check runs"
+                                 src="https://img.shields.io/github/check-runs/LoRy24/InSu-Web/master"/>
                         </div>
                     </div>
                     <div id={"contacts-social-info"} className={"flex flex-col gap-y-1"}>

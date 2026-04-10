@@ -1,5 +1,9 @@
 name: Deploy to VPS
 
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
   push:
     branches:
