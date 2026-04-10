@@ -85,7 +85,7 @@ export default function FabLabs() {
                 <div className={"w-full flex flex-col items-center justify-center px-16 mb-32"}>
                     <video
                         className={"w-full max-w-375 rounded-2xl"}
-                        src={"/app_data/videos/video_fablab.mp4"}
+                        src={"https://s3-node1.insubrina.org/insu-videos/video_fablab.mp4"}
                         autoPlay
                         loop
                         muted

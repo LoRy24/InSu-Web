@@ -3,6 +3,7 @@ import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
+import NeighborhoodVideoPlayer from "@/components/ui/neighborhoods/NeighborhoodVideoPlayer";
 
 export default function NeighbourhoodResourcePage() {
     return (
@@ -41,6 +42,12 @@ export default function NeighbourhoodResourcePage() {
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center justify-center"}>
                 <div className={"w-full px-16 flex flex-col items-center"}>
                     <div className={"w-full py-24 max-w-375 grid grid-cols-1"}>
+                        <h1 className={"text-[32px] mb-2 font-bold"}>Video Introduttivo</h1>
+                        <p className={"mb-2"}>Ecco un video dimostrativo del progetto, buona visione!</p>
+                        <div className={"my-8"}>
+                            <NeighborhoodVideoPlayer src={"https://s3-node1.insubrina.org/insu-videos/quartieri/giardini.mp4"} controls/>
+                        </div>
+
                         <h1 className={"text-[32px] mb-2 font-bold"}>Descrizione</h1>
                         <p className={"mb-6"}>
                             L’intervento consiste in una riqualificazione urbana e ambientale realizzata attraverso la creazione di spazi verdi collettivi completamente condivisi, pensati non come orti suddivisi in lotti privati ma come un unico giardino comunitario aperto alla collaborazione dei residenti. L’obiettivo è generare un luogo multifunzionale capace di integrare dimensione ambientale, sociale ed educativa, rafforzando il senso di appartenenza al quartiere e promuovendo comportamenti sostenibili. Il progetto è inoltre direttamente collegato al centro di compostaggio di quartiere, dal quale proviene il compost naturale utilizzato per arricchire il terreno, creando un ciclo virtuoso tra gestione dei rifiuti organici e produzione agricola urbana.

@@ -23,10 +23,10 @@ const NeighborhoodVideoPlayer: React.FC<NeighborhoodVideoPlayerProps> = ({
                                                  }) => {
     return (
         <div
-            className={`w-full max-h-160 bg-black flex items-center justify-center ${className} rounded-3xl overflow-hidden border border-[#303030]`}
+            className={`w-full h-220 bg-black flex items-center justify-center ${className} rounded-3xl overflow-hidden border border-[#303030]`}
         >
             <video
-                className="w-full h-full max-h-160 object-contain"
+                className="w-full h-full max-h-220 object-contain"
                 src={src}
                 poster={poster}
                 autoPlay={autoPlay}

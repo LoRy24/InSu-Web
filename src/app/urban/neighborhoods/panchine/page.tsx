@@ -45,7 +45,7 @@ export default function NeighbourhoodResourcePage() {
                         <h1 className={"text-[32px] mb-2 font-bold"}>Video Introduttivo</h1>
                         <p className={"mb-2"}>Ecco un video dimostrativo del progetto, buona visione!</p>
                         <div className={"my-8"}>
-                            <NeighborhoodVideoPlayer src={"/app_data/resources/neighbourhoods/panchine/compostaggio.mp4"} controls/>
+                            <NeighborhoodVideoPlayer src={"https://s3-node1.insubrina.org/insu-videos/quartieri/Inseguitori.mp4"} controls/>
                         </div>
                         <h1 className={"text-[32px] mb-2 font-bold"}>Inseguitore Solare x Panchine</h1>
                         <p className={"mb-6"}>

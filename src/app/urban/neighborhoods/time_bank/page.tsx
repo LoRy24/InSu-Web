@@ -3,6 +3,7 @@ import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
+import NeighborhoodVideoPlayer from "@/components/ui/neighborhoods/NeighborhoodVideoPlayer";
 
 export default function NeighbourhoodResourcePage() {
     return (
@@ -41,6 +42,12 @@ export default function NeighbourhoodResourcePage() {
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center justify-center"}>
                 <div className={"w-full px-16 flex flex-col items-center"}>
                     <div className={"w-full py-24 max-w-375 grid grid-cols-1"}>
+                        <h1 className={"text-[32px] mb-2 font-bold"}>Video Introduttivo</h1>
+                        <p className={"mb-2"}>Ecco un video dimostrativo del progetto, buona visione!</p>
+                        <div className={"my-8"}>
+                            <NeighborhoodVideoPlayer src={"https://s3-node1.insubrina.org/insu-videos/quartieri/bancatempo.mp4"} controls/>
+                        </div>
+
                         <h1 className={"text-[32px] mb-2 font-bold"}>Descrizione</h1>
                         <p className={"mb-6"}>
                             La banca del tempo di quartiere rappresenta un’infrastruttura sociale innovativa nei quartieri intelligenti, fondata sul principio dello scambio non monetario di competenze e disponibilità. Si configura come uno spazio – fisico e digitale – in cui i cittadini mettono a disposizione il proprio tempo per offrire supporto ad altri membri della comunità, ricevendo in cambio crediti-tempo spendibili per servizi analoghi.
