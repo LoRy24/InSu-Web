@@ -3,6 +3,7 @@ import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
+import NeighborhoodVideoPlayer from "@/components/ui/neighborhoods/NeighborhoodVideoPlayer";
 
 export default function NeighbourhoodResourcePage() {
     return (
@@ -41,6 +42,12 @@ export default function NeighbourhoodResourcePage() {
             <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 flex flex-col items-center justify-center"}>
                 <div className={"w-full px-16 flex flex-col items-center"}>
                     <div className={"w-full py-24 max-w-375 grid grid-cols-1"}>
+                        <h1 className={"text-[32px] mb-2 font-bold"}>Video Introduttivo</h1>
+                        <p className={"mb-2"}>Ecco un video dimostrativo del progetto, buona visione!</p>
+                        <div className={"my-8"}>
+                            <NeighborhoodVideoPlayer src={"http://s3-node1.insubrina.org/insu-videos/quartieri/vespasiani.mp4"} controls/>
+                        </div>
+
                         <h1 className={"text-[32px] mb-2 font-bold"}>Descrizione</h1>
                         <p className={"mb-3"}>
                             I servizi igienici pubblici autonomi rappresentano una soluzione innovativa per spazi urbani e quartieri intelligenti, progettata per garantire igiene elevata, autosufficienza energetica e ridotta manutenzione. La loro funzione principale è offrire un servizio accessibile, sicuro e sempre operativo, minimizzando i costi di gestione e l’impatto ambientale.

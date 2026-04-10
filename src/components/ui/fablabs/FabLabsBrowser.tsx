@@ -45,7 +45,7 @@ export default function FabLabsBrowser() {
     return (
         <div id={"browser"} className={"w-full flex flex-row items-start justify-center pr-16 pl-16 pt-24 pb-24"}>
             <div id={"browser-block"} className={"w-full max-w-375 flex flex-row items-start justify-start h-min-[72vh]"}>
-                <div id={"filters-block"} className={"w-68.75 flex flex-col pr-8 h-[72vh] overflow-y-scroll gap-y-10"}>
+                <div id={"filters-block"} className={"w-68.75 flex flex-col pr-8 h-[75vh] overflow-y-scroll gap-y-10"}>
                     <div id={"filters-state"} className={"flex flex-col w-full"}>
                         <h1 className={"mb-6 text-[14px] font-black"}>STATO</h1>
                         <div className={"flex flex-col space-y-4"}>
@@ -176,7 +176,7 @@ export default function FabLabsBrowser() {
                         </div>
                     </div>
                 </div>
-                <div id={"fab-labs-browser-content"} className={"ml-10 max-h-300"}>
+                <div id={"fab-labs-browser-content"} className={"ml-10 h-[75vh] overflow-y-scroll"}>
                     <BrowserContent filters={{state: stateFilter, tags: tagsFilter}} defaultItemsPerPage={9} />
                 </div>
             </div>

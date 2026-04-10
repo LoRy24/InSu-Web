@@ -24,7 +24,7 @@ export default function GladysVideoPopUp() {
                 className="w-screen h-screen object-contain"
             >
                 <source
-                    src="/app_data/videos/gladys_video.mp4"
+                    src="https://github.com/LoRy24/InSu-Web/raw/refs/heads/master/public/app_data/videos/gladys_video.mp4"
                     type="video/mp4"
                 />
             </video>
