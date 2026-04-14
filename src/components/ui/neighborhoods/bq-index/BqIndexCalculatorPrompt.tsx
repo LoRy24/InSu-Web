@@ -176,12 +176,12 @@ function QuestionScreen(props: any) {
 // ---------------- RESULT ----------------
 
 const resultStyles: Record<ResultType, any> = {
-    [ResultType.CRITIC]: { title: "Critico", description: "Serve intervenire.", color: "rgba(220,38,38,0.6)" },
-    [ResultType.LOW]: { title: "Basso", description: "Puoi migliorare.", color: "rgba(249,115,22,0.6)" },
-    [ResultType.AVERAGE]: { title: "Nella media", description: "Buona base.", color: "rgba(234,179,8,0.6)" },
-    [ResultType.GOOD]: { title: "Buono", description: "Ottimo lavoro.", color: "rgba(34,197,94,0.6)" },
-    [ResultType.EXCELLENT]: { title: "Eccellente", description: "Livello alto.", color: "rgba(59,130,246,0.6)" },
-    [ResultType.PERFECT]: { title: "Perfetto", description: "Top assoluto.", color: "rgba(139,92,246,0.6)" },
+    [ResultType.CRITIC]: { title: "Invivibile", description: "Agire immediatamente per migliorare sicurezza, qualità dei servizi e sostenibilità dei quartieri.", color: "rgba(220,38,38,0.6)" },
+    [ResultType.LOW]: { title: "Pessimo", description: " Consolidare le basi per quartieri più sicuri e sostenibili.", color: "rgba(249,115,22,0.6)" },
+    [ResultType.AVERAGE]: { title: "Discreto", description: "Raggiunge e mantiene gli standard minimi richiesti, offrendo al contempo condizioni affidabili e coerenti con le aspettative.", color: "rgba(234,179,8,0.6)" },
+    [ResultType.GOOD]: { title: "Buono", description: "Costituisce una buona base di partenza, ma presenta ancora margini di miglioramento significativi", color: "rgba(34,197,94,0.6)" },
+    [ResultType.EXCELLENT]: { title: "Eccellente", description: "Mantiene un livello alto e costante, assicurando risultati di qualità superiore.", color: "rgba(59,130,246,0.6)" },
+    [ResultType.PERFECT]: { title: "Perfetto", description: "Rappresenta il massimo livello possibile, senza compromessi in termini di qualità e prestazioni.", color: "rgba(139,92,246,0.6)" },
 };
 
 function BqIndexResult({ result, onRestart }: { result: Result; onRestart: () => void }) {
