@@ -51,7 +51,7 @@ export default function FabLabOverallMap() {
     const center: [number, number] = [45.8153535, 9.0701202];
 
     return (
-        <div className="overflow-hidden rounded-2xl h-[600px] w-full max-w-[1500px]">
+        <div className="overflow-hidden rounded-2xl h-150 w-full max-w-375">
             <MapContainer center={center} zoom={5} className="h-full w-full">
                 <TileLayer
                     attribution="&copy; OpenStreetMap"

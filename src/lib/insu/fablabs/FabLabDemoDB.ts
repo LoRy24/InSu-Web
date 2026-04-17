@@ -99,6 +99,8 @@ export const FabLabsTestArray: FabLab[] = [
             "/app_data/resources/fablabs/2/photos/1.jpeg",
             "/app_data/resources/fablabs/2/photos/2.jpeg",
             "/app_data/resources/fablabs/2/photos/3.jpeg",
+            "/app_data/resources/fablabs/2/photos/4.jpg",
+            "/app_data/resources/fablabs/2/photos/5.png",
         ],
         [
             new FileReference(
