@@ -24,8 +24,8 @@ export default function Home() {
             <div id={"head"} className={"fixed z-0 w-full h-screen overflow-hidden flex items-center justify-center"}>
                 <div id={"home-page-head-content"} className={"relative z-1 flex flex-col items-center justify-center"}>
                     <SplitText
-                        text="InSu Network"
-                        className="text-[114px] font-black text-center select-none cursor-default"
+                        text="Insubrina"
+                        className="text-[124px] font-black text-center select-none cursor-default"
                         ease="elastic.out(1, 0.3)"
                         splitType="chars"
                         from={{ opacity: 0, y: 40 }}
