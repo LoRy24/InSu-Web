@@ -189,6 +189,7 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys"}>Informazioni</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/routes"}>Tour</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/people"}>Personaggi</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/gladys/timeline"}>InsubriLine</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Organizzatori</h1>
