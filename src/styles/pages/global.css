@@ -36,6 +36,41 @@ body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
     }
 }
 
+/* Wrapper popup */
+.custom-popup .leaflet-popup-content-wrapper {
+    background: #0A0A0A;
+    color: white;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+}
+
+/* Contenuto */
+.custom-popup .leaflet-popup-content {
+    margin: 0;
+    padding: 24px 32px;
+    font-family: inherit;
+}
+
+/* Punta sotto */
+.custom-popup .leaflet-popup-tip {
+    background: #0A0A0A;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Bottone chiusura */
+.custom-popup .leaflet-popup-close-button {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.custom-popup .leaflet-popup-close-button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
 /* CODICE TEMA SHADCN */
 
 /*

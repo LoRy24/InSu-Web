@@ -387,29 +387,36 @@ export default function CentralineMapSectionInner() {
                                         position={[site.lat, site.lng]}
                                         icon={createEnergyIcon(site.type)}
                                     >
-                                        <Popup>
-                                            <div className="min-w-50">
+                                        <Popup className="custom-popup bg-[#0a0a0a]" offset={[0, -8]}>
+                                            <div className="min-w-55">
                                                 <h3
-                                                    className="mb-2 text-base font-semibold"
+                                                    className="mb-3 text-base font-semibold"
                                                     style={{ color: energyTypeColors[site.type] }}
                                                 >
                                                     {site.name}
                                                 </h3>
 
-                                                <p className="my-1 text-sm text-white/80">
-                                                    <span className="text-[#888]">Provincia:</span>{" "}
-                                                    {site.province}
-                                                </p>
+                                                <div className="flex flex-col gap-0 text-sm text-white/80">
+                                                    <p className={"mb-0"}>
+                                                        <span className="text-white/40">Provincia</span>
+                                                        <br />
+                                                        <span className="font-medium text-white">{site.province}</span>
+                                                    </p>
 
-                                                <p className="my-1 text-sm text-white/80">
-                                                    <span className="text-[#888]">Tipo:</span>{" "}
-                                                    {site.type}
-                                                </p>
+                                                    <p className={"mb-0"}>
+                                                        <span className="text-white/40">Tipo</span>
+                                                        <br />
+                                                        <span className="font-medium text-white">{site.type}</span>
+                                                    </p>
 
-                                                <p className="my-1 text-sm text-white/80">
-                                                    <span className="text-[#888]">Produzione:</span>{" "}
-                                                    {formatEnergy(site.energy)}
-                                                </p>
+                                                    <p className={"mb-0"}>
+                                                        <span className="text-white/40">Produzione</span>
+                                                        <br />
+                                                        <span className="font-medium text-[#4aa3ff]">
+                                                            {formatEnergy(site.energy)}
+                                                        </span>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </Popup>
                                     </Marker>
