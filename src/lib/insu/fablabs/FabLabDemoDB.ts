@@ -80,7 +80,7 @@ export const FabLabsTestArray: FabLab[] = [
         "Vertemate con Minoprio",
         "Como (IT)",
         12345, // ZIPCODE
-        "Recupero dell’Abbazia di San Giovanni a Vertemate con Minoprio, oggi privata e in parte degradata.\n\nPulizia, messa in sicurezza e impianti sostenibili per riaprirla a usi culturali.",
+        "Recupero dell’Abbazia di San Giovanni a Vertemate con Minoprio, oggi privata e in parte degradata.\n\nPulizia, messa in sicurezza e centraline sostenibili per riaprirla a usi culturali.",
         "Il progetto punta a riqualificare l’Abbazia di San Giovanni (XI secolo) rimuovendo vegetazione e degrado e consolidando le strutture.\n\n Sono previsti fotovoltaico e illuminazione a basso impatto per rendere il complesso più sostenibile.\nL’area verrebbe usata per attività culturali e didattiche, come visite guidate e spazi formativi.\nIn più, si prevedono aree per artigiani e un rilancio turistico per il territorio.",
         [
             FabLabTag.ART_PAINT,
