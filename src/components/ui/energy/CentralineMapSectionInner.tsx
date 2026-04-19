@@ -25,7 +25,8 @@ type BaseMapMode = "default" | "topo";
 
 type AreaConfig = {
     id: string;
-    query: string;
+    label: string;
+    path: string;
     color: string;
     weight: number;
     fillOpacity: number;
@@ -42,7 +43,8 @@ type LoadedArea = {
 const AREAS: AreaConfig[] = [
     {
         id: "vb",
-        query: "Provincia del Verbano-Cusio-Ossola, Italy",
+        label: "Provincia del Verbano-Cusio-Ossola, Italy",
+        path: "/app_data/geo/centraline/verbano-cusio-ossola.geojson",
         color: "#666",
         weight: 1.5,
         fillOpacity: 0.05,
@@ -50,7 +52,8 @@ const AREAS: AreaConfig[] = [
     },
     {
         id: "va",
-        query: "Provincia di Varese, Italy",
+        label: "Provincia di Varese, Italy",
+        path: "/app_data/geo/centraline/varese.geojson",
         color: "#4aa3ff",
         weight: 2.5,
         fillOpacity: 0.08,
@@ -58,7 +61,8 @@ const AREAS: AreaConfig[] = [
     },
     {
         id: "co",
-        query: "Provincia di Como, Italy",
+        label: "Provincia di Como, Italy",
+        path: "/app_data/geo/centraline/como.geojson",
         color: "#4aa3ff",
         weight: 2.5,
         fillOpacity: 0.08,
@@ -66,7 +70,8 @@ const AREAS: AreaConfig[] = [
     },
     {
         id: "tic",
-        query: "Canton Ticino, Switzerland",
+        label: "Canton Ticino, Switzerland",
+        path: "/app_data/geo/centraline/ticino.geojson",
         color: "#4aa3ff",
         weight: 2.5,
         fillOpacity: 0.08,
@@ -107,12 +112,11 @@ function createEnergyIcon(type: EnergySite["type"]): DivIcon {
     });
 }
 
-async function fetchGeoJson(query: string): Promise<GeoJSON.GeoJsonObject> {
-    const url = `https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&q=${encodeURIComponent(query)}`;
-    const response = await fetch(url);
+async function fetchLocalGeoJson(path: string): Promise<GeoJSON.GeoJsonObject> {
+    const response = await fetch(path);
 
     if (!response.ok) {
-        throw new Error(`Errore Nominatim: ${response.status}`);
+        throw new Error(`Errore caricamento ${path}: ${response.status}`);
     }
 
     return response.json();
@@ -210,20 +214,16 @@ export default function CentralineMapSectionInner() {
 
             for (const area of AREAS) {
                 try {
-                    const geojson = await fetchGeoJson(area.query);
-
-                    if (!active) return;
+                    const geojson = await fetchLocalGeoJson(area.path);
 
                     loaded.push({
                         id: area.id,
-                        query: area.query,
+                        query: area.label,
                         highlight: area.highlight,
                         geojson,
                     });
-
-                    await new Promise((resolve) => setTimeout(resolve, 200));
                 } catch (error) {
-                    console.warn(`Errore caricamento area ${area.query}`, error);
+                    console.warn(`Errore caricamento area ${area.label}`, error);
                 }
             }
 
