@@ -39,10 +39,21 @@ export default function GladysPage() {
                     />
                 </div>
             </div>
-            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 pt-24"}>
-                <div className={"flex flex-col items-center justify-center w-full px-16"}>
-                    <div className={"w-full max-w-375 overflow-hidden rounded-2xl border border-[#303030]"}>
-                        <GladysMapWrapper/>
+            <div id={"page-content"} className={"flex flex-col items-center justify-center relative z-20 w-full bg-[#0a0a0a] top-118.75"}>
+                <div className={"w-full flex flex-col items-center justify-center px-16 py-24"}>
+                    <div className={"flex flex-col items-center justify-center w-full max-w-375"}>
+                        <video
+                            className="w-full h-192 rounded-2xl mb-16 border border-[#303030]"
+                            controls
+                            preload="metadata"
+                            playsInline
+                        >
+                            <source src="https://s3-node1.insubrina.org/insu-videos/federico.mp4" type="video/mp4"/>
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                        <div className={"w-full max-w-375 overflow-hidden rounded-2xl border border-[#303030]"}>
+                            <GladysMapWrapper/>
+                        </div>
                     </div>
                 </div>
                 <Footer className={"mt-24"}/>
