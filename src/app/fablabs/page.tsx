@@ -43,42 +43,73 @@ export default function FabLabs() {
             </div>
             <div id={"fablabs-page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 pt-24"}>
                 <div className={"w-full flex flex-col items-center justify-center px-16"}>
-                    <div className={"w-full flex flex-row items-center mt-16 mb-32 max-w-375"}>
-                        <div className={"w-2/3 flex flex-col justify-center min-h-[30vh] max-[1400px]:w-full max-[1400px]:items-center"}>
+                    <div className="w-full flex flex-row items-center mt-24 mb-48 max-w-[1500px] mx-auto">
+                        {/* TESTO */}
+                        <div className="w-2/3 flex flex-col justify-center min-h-[30vh] max-[1400px]:w-full max-[1400px]:items-center">
                             <AnimatedContent
                                 distance={100}
                                 direction="vertical"
-                                reverse={false}
                                 duration={0.8}
                                 ease="power3.out"
                                 initialOpacity={0}
                                 animateOpacity
-                                scale={1}
                                 threshold={0.1}
-                                delay={0}
                             >
-                                <h1 className={"font-black text-[64px] max-[1400px]:text-center"}>Cosa sono i &#34;FabLabs&#34;?</h1>
+                                <h1 className="font-black text-[48px] xl:text-[64px] leading-tight max-[1400px]:text-center">
+                                    Cosa sono i &#34;FabLabs&#34;?
+                                </h1>
                             </AnimatedContent>
+
                             <AnimatedContent
                                 distance={100}
                                 direction="vertical"
-                                reverse={false}
                                 duration={0.8}
                                 ease="power3.out"
                                 initialOpacity={0}
                                 animateOpacity
-                                scale={1}
                                 threshold={0.1}
                                 delay={0.25}
                             >
-                                <p className={"font-normal text-[20px] max-w-187.5 max-[1400px]:text-center"}>
+                                <p className="font-normal text-[18px] xl:text-[20px] max-w-[750px] text-white/80 leading-relaxed mt-6 max-[1400px]:text-center">
                                     L’insieme dei FabLab può essere visto come una rete di laboratori diffusi sul territorio che lavorano insieme, ognuno con una propria specializzazione. Non sono realtà isolate, ma spazi che collaborano in modo coordinato, seguendo un modello di economia circolare e di sviluppo locale sostenibile. Ogni laboratorio contribuisce con competenze diverse, creando un sistema integrato in cui le funzioni si completano a vicenda.
                                 </p>
                             </AnimatedContent>
                         </div>
-                        <div className={"w-1/3 flex flex-col justify-center items-end min-h-[30vh] max-[1400px]:hidden"}>
-                            <Image src={"/app_data/images/fablab-image-1.png"} alt={"FabLab"} width={703/1.75}
-                                   height={603/1.75} quality={75} loading={"eager"}/>
+
+                        {/* IMMAGINI */}
+                        <div className="w-1/3 relative flex justify-end min-h-[30vh] max-[1400px]:hidden">
+                            <div className="relative h-[420px] w-full max-w-[480px]">
+
+                                {/* IMMAGINE GRANDE */}
+                                <div className="group absolute right-0 top-0 z-20 h-[320px] w-[85%] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-[1.5deg]">
+                                    <Image
+                                        src="/app_data/images/ecoprinting1.png"
+                                        alt="FabLab principale"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        quality={75}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
+                                    <div className="absolute inset-0 ring-0 ring-white/20 group-hover:ring-1 transition duration-500" />
+                                </div>
+
+                                {/* IMMAGINE PICCOLA */}
+                                <div className="group absolute bottom-0 left-0 z-30 h-[220px] w-[65%] overflow-hidden rounded-[24px] border border-white/10 bg-white/5 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:-rotate-[2deg]">
+                                    <Image
+                                        src="/app_data/images/ecoprinting2.png"
+                                        alt="FabLab secondario"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        quality={75}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
+                                    <div className="absolute inset-0 ring-0 ring-white/20 group-hover:ring-1 transition duration-500" />
+                                </div>
+
+                                {/* GLOW BACKGROUND (opzionale ma consigliato) */}
+                                <div className="absolute -z-10 right-[10%] top-[10%] h-[200px] w-[200px] rounded-full bg-emerald-400/10 blur-3xl" />
+                                <div className="absolute -z-10 left-[5%] bottom-[5%] h-[160px] w-[160px] rounded-full bg-cyan-400/10 blur-3xl" />
+                            </div>
                         </div>
                     </div>
                 </div>
