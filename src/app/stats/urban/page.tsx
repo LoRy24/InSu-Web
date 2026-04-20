@@ -7,6 +7,7 @@ import {ComoUrbanGraph} from "@/components/ui/stats/urban/sub/ComoUrbanGraph";
 import {LeccoUrbanGraph} from "@/components/ui/stats/urban/sub/LeccoUrbanGraph";
 import {TicinoUrbanGraph} from "@/components/ui/stats/urban/sub/TicinoUrbanGraph";
 import {VareseUrbanGraph} from "@/components/ui/stats/urban/sub/VareseUrbanGraph";
+import Footer from "@/components/layouts/Footer";
 
 export default function GladysPage() {
     return (
@@ -42,8 +43,11 @@ export default function GladysPage() {
                     />
                 </div>
             </div>
-            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75 py-16"}>
-                <InsubricaCharts/>
+            <div id={"page-content"} className={"relative z-20 w-full bg-[#0a0a0a] top-118.75"}>
+                <div className={"w-full flex flex-col items-center justify-center px-16 py-24"}>
+                    <InsubricaCharts/>
+                </div>
+                <Footer/>
             </div>
         </div>
     );
@@ -51,7 +55,7 @@ export default function GladysPage() {
 
 function InsubricaCharts() {
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white p-6 px-16">
+        <div className="min-h-screen bg-[#0a0a0a] text-white w-full">
             <div className="max-w-375 mx-auto space-y-8">
                 {/* Titolo */}
                 <div>
