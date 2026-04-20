@@ -176,7 +176,7 @@ export default function FabLabsBrowser() {
                         </div>
                     </div>
                 </div>
-                <div id={"fab-labs-browser-content"} className={"ml-10 h-[75vh] overflow-y-scroll"}>
+                <div id={"fab-labs-browser-content"} className={"ml-10 h-[75vh] overflow-y-scroll pr-10"}>
                     <BrowserContent filters={{state: stateFilter, tags: tagsFilter}} defaultItemsPerPage={9} />
                 </div>
             </div>
