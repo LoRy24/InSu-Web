@@ -235,22 +235,19 @@ function DesktopNavbarExpandedContent({ page } : Readonly<{ page: DesktopNavBarE
             ) : (
                 <div className={"grid grid-cols-3 items-start justify-start"}>
                     <div className={"w-full flex flex-col items-start justify-start space-y-0.5"}>
-                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Ambiente</h1>
-                        {/*<a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/environment/tecnocolt"}>TecnoColt</a>*/}
-                        {/*<a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/environment/weather"}>Meteo</a>*/}
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/environment/stats"}>Statistiche</a>
+                        <h1 className={"font-medium text-[20px] mb-3 select-none"}>Statistiche</h1>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/stats/"}>Generali</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/stats/economy"}>Economia</a>
+                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/stats/urban"}>Urbanizzazione</a>
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Energia</h1>
-                        {/*<a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/cluster"}>Cluster</a>*/}
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/centraline"}>Centraline</a>
-                        {/*<a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/energy/stats"}>Statistiche</a>*/}
                     </div>
                     <div className={"w-full flex flex-col items-start justify-start"}>
                         <h1 className={"font-medium text-[20px] mb-3 select-none"}>Urban</h1>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/neighborhoods"}>Quartieri</a>
                         <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/bq-index"}>Indice BQ</a>
-                        <a className={"cursor-pointer select-none hover:text-[#cfffd2]"} href={"/urban/stats"}>Statistiche</a>
                     </div>
                 </div>
             )
