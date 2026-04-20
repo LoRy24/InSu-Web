@@ -102,192 +102,194 @@ export default function TimelinePage() {
 
             <div
                 id="page-content"
-                className="relative top-118.75 z-20 w-full bg-[#0a0a0a] pt-24 px-16"
+                className="relative top-118.75 z-20 w-full bg-[#0a0a0a]"
             >
-                <div className="mx-auto w-full max-w-375">
-                    <section className="mb-24 text-center">
-                        <h1 className="mb-3 flex flex-wrap items-center justify-center gap-2 text-4xl font-semibold tracking-tight md:text-5xl">
+                <div className={"w-full py-24 px-16 flex flex-col items-center justify-center"}>
+                    <div className="mx-auto w-full max-w-375">
+                        <section className="mb-24 text-center">
+                            <h1 className="mb-3 flex flex-wrap items-center justify-center gap-2 text-4xl font-semibold tracking-tight md:text-5xl">
                             <span className="text-[64px]">
                                 Timeline Interattiva
                             </span>
-                        </h1>
+                            </h1>
 
-                        <p className="mx-auto max-w-162.5 text-base text-neutral-400">
-                            Un viaggio attraverso millenni di storia, dalla preistoria ai
-                            giorni nostri
-                        </p>
+                            <p className="mx-auto max-w-162.5 text-base text-neutral-400">
+                                Un viaggio attraverso millenni di storia, dalla preistoria ai
+                                giorni nostri
+                            </p>
 
-                        <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#2E7D5E4D] bg-[#1A1A1A] px-5 py-2 text-xs font-medium tracking-wide text-[#3A9B75]">
-                            <span>🏛️ 5 epoche</span>
-                            <span>|</span>
-                            <span>🗺️ 3 territori</span>
-                            <span>|</span>
-                            <span>📜 45+ eventi verificati</span>
-                        </div>
-                    </section>
+                            <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#2E7D5E4D] bg-[#1A1A1A] px-5 py-2 text-xs font-medium tracking-wide text-[#3A9B75]">
+                                <span>🏛️ 5 epoche</span>
+                                <span>|</span>
+                                <span>🗺️ 3 territori</span>
+                                <span>|</span>
+                                <span>📜 45+ eventi verificati</span>
+                            </div>
+                        </section>
 
-                    <section className="mb-8 flex flex-col gap-4 rounded-4xl border border-white/10 bg-[#1A1A1A] px-10 py-6 shadow-md xl:flex-row xl:items-center xl:justify-between">
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-wrap items-center gap-3 rounded-full bg-[#111111] px-4 py-2">
+                        <section className="mb-8 flex flex-col gap-4 rounded-4xl border border-white/10 bg-[#1A1A1A] px-10 py-6 shadow-md xl:flex-row xl:items-center xl:justify-between">
+                            <div className="flex flex-col gap-3">
+                                <div className="flex flex-wrap items-center gap-3 rounded-full bg-[#111111] px-4 py-2">
                                 <span className="text-sm font-semibold text-neutral-400">
                                     📅 Era storica:
                                 </span>
-                                <div className="flex flex-wrap gap-2">
-                                    <button
-                                        onClick={() => setActiveEra("all")}
-                                        className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium transition ${
-                                            activeEra === "all"
-                                                ? "bg-[#2E7D5E] text-white"
-                                                : "bg-[#222222] text-neutral-400 hover:bg-[#1E5E45] hover:text-white"
-                                        }`}
-                                    >
-                                        Tutte
-                                    </button>
-
-                                    {(Object.keys(eraLabels) as Era[]).map((era) => (
+                                    <div className="flex flex-wrap gap-2">
                                         <button
-                                            key={era}
-                                            onClick={() => setActiveEra(era)}
+                                            onClick={() => setActiveEra("all")}
                                             className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium transition ${
-                                                activeEra === era
+                                                activeEra === "all"
                                                     ? "bg-[#2E7D5E] text-white"
                                                     : "bg-[#222222] text-neutral-400 hover:bg-[#1E5E45] hover:text-white"
                                             }`}
                                         >
-                                            {eraLabels[era]}
+                                            Tutte
                                         </button>
-                                    ))}
-                                </div>
-                            </div>
 
-                            <div className="flex flex-wrap items-center gap-3 rounded-full bg-[#111111] px-4 py-2">
-                                <span className="text-sm font-semibold text-neutral-400">
-                                    🗺️ Territorio:
-                                </span>
-                                <div className="flex flex-wrap gap-2">
-                                    <button
-                                        onClick={() => setActiveTerritory("all")}
-                                        className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium transition ${
-                                            activeTerritory === "all"
-                                                ? "bg-[#2E7D5E] text-white"
-                                                : "bg-[#222222] text-neutral-400 hover:bg-[#1E5E45] hover:text-white"
-                                        }`}
-                                    >
-                                        Tutti
-                                    </button>
-
-                                    {(Object.keys(territoryLabels) as Territory[]).map(
-                                        (territory) => (
+                                        {(Object.keys(eraLabels) as Era[]).map((era) => (
                                             <button
-                                                key={territory}
-                                                onClick={() =>
-                                                    setActiveTerritory(territory)
-                                                }
+                                                key={era}
+                                                onClick={() => setActiveEra(era)}
                                                 className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium transition ${
-                                                    activeTerritory === territory
+                                                    activeEra === era
                                                         ? "bg-[#2E7D5E] text-white"
                                                         : "bg-[#222222] text-neutral-400 hover:bg-[#1E5E45] hover:text-white"
                                                 }`}
                                             >
-                                                {territoryLabels[territory]}
+                                                {eraLabels[era]}
                                             </button>
-                                        )
-                                    )}
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-wrap items-center gap-3 rounded-full bg-[#111111] px-4 py-2">
+                                <span className="text-sm font-semibold text-neutral-400">
+                                    🗺️ Territorio:
+                                </span>
+                                    <div className="flex flex-wrap gap-2">
+                                        <button
+                                            onClick={() => setActiveTerritory("all")}
+                                            className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium transition ${
+                                                activeTerritory === "all"
+                                                    ? "bg-[#2E7D5E] text-white"
+                                                    : "bg-[#222222] text-neutral-400 hover:bg-[#1E5E45] hover:text-white"
+                                            }`}
+                                        >
+                                            Tutti
+                                        </button>
+
+                                        {(Object.keys(territoryLabels) as Territory[]).map(
+                                            (territory) => (
+                                                <button
+                                                    key={territory}
+                                                    onClick={() =>
+                                                        setActiveTerritory(territory)
+                                                    }
+                                                    className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium transition ${
+                                                        activeTerritory === territory
+                                                            ? "bg-[#2E7D5E] text-white"
+                                                            : "bg-[#222222] text-neutral-400 hover:bg-[#1E5E45] hover:text-white"
+                                                    }`}
+                                                >
+                                                    {territoryLabels[territory]}
+                                                </button>
+                                            )
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="w-fit rounded-full border border-[#2E7D5E4D] bg-[#111111] px-5 py-2 text-xs font-semibold tracking-wide text-[#3A9B75]">
-                            📌 Eventi visibili: <span>{filteredEvents.length}</span>
-                        </div>
-                    </section>
+                            <div className="w-fit rounded-full border border-[#2E7D5E4D] bg-[#111111] px-5 py-2 text-xs font-semibold tracking-wide text-[#3A9B75]">
+                                📌 Eventi visibili: <span>{filteredEvents.length}</span>
+                            </div>
+                        </section>
 
-                    <section className="mb-24 grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        <div className="rounded-4xl border border-white/10 bg-[#1A1A1A] py-6 px-10 shadow-md">
-                            <h3 className="mb-4 border-l-[3px] border-[#C47A4A] pl-3 text-[15px] font-semibold">
-                                📅 Ere storiche
-                            </h3>
+                        <section className="mb-24 grid grid-cols-1 gap-6 lg:grid-cols-2">
+                            <div className="rounded-4xl border border-white/10 bg-[#1A1A1A] py-6 px-10 shadow-md">
+                                <h3 className="mb-4 border-l-[3px] border-[#C47A4A] pl-3 text-[15px] font-semibold">
+                                    📅 Ere storiche
+                                </h3>
 
-                            <div className="flex flex-wrap gap-3">
-                                {[
-                                    ["Preistoria", "#C47A4A"],
-                                    ["Età antica", "#D4A84B"],
-                                    ["Medioevo", "#4A8B9B"],
-                                    ["Età moderna", "#2E7D5E"],
-                                    ["Contemporanea", "#9B6B8A"],
-                                ].map(([label, color]) => (
-                                    <span
-                                        key={label}
-                                        className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-3 py-1 text-[11px] text-neutral-400"
-                                    >
+                                <div className="flex flex-wrap gap-3">
+                                    {[
+                                        ["Preistoria", "#C47A4A"],
+                                        ["Età antica", "#D4A84B"],
+                                        ["Medioevo", "#4A8B9B"],
+                                        ["Età moderna", "#2E7D5E"],
+                                        ["Contemporanea", "#9B6B8A"],
+                                    ].map(([label, color]) => (
+                                        <span
+                                            key={label}
+                                            className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-3 py-1 text-[11px] text-neutral-400"
+                                        >
                                         <span
                                             className="h-4 w-4 rounded-lg border border-white/10"
                                             style={{ backgroundColor: color }}
                                         />
-                                        {label}
+                                            {label}
                                     </span>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                        <div className="rounded-4xl border border-white/10 bg-[#1A1A1A] py-6 px-10 shadow-md">
-                            <h3 className="mb-4 border-l-[3px] border-[#E8925C] pl-3 text-[15px] font-semibold">
-                                🗺️ Territori
-                            </h3>
+                            <div className="rounded-4xl border border-white/10 bg-[#1A1A1A] py-6 px-10 shadow-md">
+                                <h3 className="mb-4 border-l-[3px] border-[#E8925C] pl-3 text-[15px] font-semibold">
+                                    🗺️ Territori
+                                </h3>
 
-                            <div className="flex flex-wrap gap-3">
-                                {[
-                                    ["Provincia di Como", "#E8925C"],
-                                    ["Provincia di Varese", "#6BA85A"],
-                                    ["Canton Ticino", "#5A9BA8"],
-                                ].map(([label, color]) => (
-                                    <span
-                                        key={label}
-                                        className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-3 py-1 text-[11px] text-neutral-400"
-                                    >
+                                <div className="flex flex-wrap gap-3">
+                                    {[
+                                        ["Provincia di Como", "#E8925C"],
+                                        ["Provincia di Varese", "#6BA85A"],
+                                        ["Canton Ticino", "#5A9BA8"],
+                                    ].map(([label, color]) => (
+                                        <span
+                                            key={label}
+                                            className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-3 py-1 text-[11px] text-neutral-400"
+                                        >
                                         <span
                                             className="h-4 w-4 rounded-lg border border-white/10"
                                             style={{ backgroundColor: color }}
                                         />
-                                        {label}
+                                            {label}
                                     </span>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
 
-                    <section className="mx-auto max-w-245">
-                        {filteredEvents.map((event) => (
-                            <article
-                                key={`${event.year}-${event.title}`}
-                                onClick={() => setSelectedEvent(event)}
-                                className={`relative my-7 cursor-pointer overflow-visible rounded-2xl border border-white/10 border-l-4 bg-[#1A1A1A] transition duration-200 hover:-translate-y-1 hover:border-[#2E7D5E] hover:bg-[#222222] hover:shadow-2xl ${territoryBorderClasses[event.territory]}`}
-                            >
+                        <section className="mx-auto max-w-245">
+                            {filteredEvents.map((event) => (
+                                <article
+                                    key={`${event.year}-${event.title}`}
+                                    onClick={() => setSelectedEvent(event)}
+                                    className={`relative my-7 cursor-pointer overflow-visible rounded-2xl border border-white/10 border-l-4 bg-[#1A1A1A] transition duration-200 hover:-translate-y-1 hover:border-[#2E7D5E] hover:bg-[#222222] hover:shadow-2xl ${territoryBorderClasses[event.territory]}`}
+                                >
                                 <span
                                     className="absolute -left-7.75 top-5 z-10 h-3 w-3 rounded-full border-2 shadow-[0_0_0_3px_#0a0a0a] md:-left-8.5"
                                     style={{ backgroundColor: dotColors[event.era], borderColor: dotColors[event.era] }}
                                 />
 
-                                <div className="flex flex-col gap-3 p-5 md:flex-row md:flex-wrap md:items-center">
+                                    <div className="flex flex-col gap-3 p-5 md:flex-row md:flex-wrap md:items-center">
                                     <span
                                         className={`w-fit rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.5px] ${eraBadgeClasses[event.era]}`}
                                     >
                                         {eraLabels[event.era]}
                                     </span>
 
-                                    <div className="flex-1 text-[15px] font-medium text-white">
-                                        {formatYear(event.year)} — {event.title}
-                                    </div>
+                                        <div className="flex-1 text-[15px] font-medium text-white">
+                                            {formatYear(event.year)} — {event.title}
+                                        </div>
 
-                                    <span className="w-fit rounded-full bg-[#111111] px-3 py-1 text-[11px] font-medium text-neutral-400">
+                                        <span className="w-fit rounded-full bg-[#111111] px-3 py-1 text-[11px] font-medium text-neutral-400">
                                         {territoryLabels[event.territory]}
                                     </span>
-                                </div>
-                            </article>
-                        ))}
-                    </section>
+                                    </div>
+                                </article>
+                            ))}
+                        </section>
+                    </div>
                 </div>
 
-                <Footer className="mt-24" />
+                <Footer/>
             </div>
 
             {selectedEvent && (
