@@ -2,7 +2,6 @@ name: Deploy to VPS
 
 permissions:
   contents: read
-  pull-requests: write
 
 on:
   push:
@@ -10,49 +9,83 @@ on:
       - master
       - beta
 
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  deploy-production:
+    name: Deploy Production
+    if: github.ref_name == 'master'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy via SSH
+      - name: Deploy production via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ubuntu
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            if [ "${{ github.ref_name }}" = "master" ]; then
-              APP_DIR="/home/ubuntu/insuweb/prod"
-              BRANCH="master"
-              PORT="3000"
-              CONTAINER_NAME="insuweb_prod"
-            else
-              APP_DIR="/home/ubuntu/insuweb/beta"
-              BRANCH="beta"
-              PORT="3001"
-              CONTAINER_NAME="insuweb_beta"
-            fi
+            set -e
 
-            echo "Deploying $BRANCH on port $PORT"
+            APP_DIR="/home/ubuntu/insuweb/prod"
+            PORT="3000"
+            CONTAINER_NAME="insuweb_prod"
+            COMMIT_SHA="${{ github.sha }}"
+
+            echo "Deploying PRODUCTION commit $COMMIT_SHA"
 
             cd $APP_DIR
-
             git fetch origin
-            git reset --hard origin/$BRANCH
+            git checkout --force $COMMIT_SHA
 
-            # Build immagine
             docker build -t $CONTAINER_NAME .
-
-            # Stop container vecchio (se esiste)
             docker stop $CONTAINER_NAME || true
             docker rm $CONTAINER_NAME || true
 
-            # Avvia nuovo container
             docker run -d \
               --name $CONTAINER_NAME \
               -p 127.0.0.1:$PORT:3000 \
               --restart always \
               $CONTAINER_NAME
 
-            echo "Deploy completed 🚀"
+            echo "Production deploy completed"
+
+  deploy-beta:
+    name: Deploy Beta
+    if: github.ref_name == 'beta'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy beta via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            set -e
+
+            APP_DIR="/home/ubuntu/insuweb/beta"
+            PORT="3001"
+            CONTAINER_NAME="insuweb_beta"
+            COMMIT_SHA="${{ github.sha }}"
+
+            echo "Deploying BETA commit $COMMIT_SHA"
+
+            cd $APP_DIR
+            git fetch origin
+            git checkout --force $COMMIT_SHA
+
+            docker build -t $CONTAINER_NAME .
+            docker stop $CONTAINER_NAME || true
+            docker rm $CONTAINER_NAME || true
+
+            docker run -d \
+              --name $CONTAINER_NAME \
+              -p 127.0.0.1:$PORT:3000 \
+              --restart always \
+              $CONTAINER_NAME
+
+            echo "Beta deploy completed"

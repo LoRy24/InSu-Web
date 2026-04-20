@@ -268,27 +268,47 @@ export default function GladysPage() {
                         titleClassName="text-[52px] md:text-[60px] mt-32"
                     />
 
-                    <div className="flex flex-col items-center text-center gap-3 mt-32 mb-16">
+                    <div className="flex flex-col items-center text-center gap-3 mt-32 mb-8">
                         <h2 className={`text-[42px] font-black`}>Provala ora</h2>
                         <p className="text-neutral-400 max-w-2xl text-[17px]">Inserisci qui sotto il tuo prompt per avviare una conversazione con il nostro LLM!</p>
                     </div>
 
-                    <div className="w-full max-w-2xl bg-neutral-900 border border-neutral-700 rounded-4xl px-8 py-4 flex items-center gap-3 shadow-lg mb-32">
-                        <textarea
-                            placeholder="Chatta con Insulligence..."
-                            rows={1}
-                            onInput={(e) => {
-                                const target = e.currentTarget;
-                                target.style.height = "auto";
-                                target.style.height = `${Math.min(target.scrollHeight, 180)}px`;
-                            }}
-                            className="flex-1 bg-transparent outline-none text-[16px] placeholder-neutral-500 text-start resize-none overflow-hidden leading-normal"
-                        />
-                        <button className="flex items-center justify-center w-10 h-10 rounded-2xl bg-[#aaffb0] text-black hover:scale-105 transition cursor-pointer">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </button>
+                    <div className="w-full max-w-2xl mb-32">
+                        <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-linear-to-r from-[#1f3b2b] via-[#2d5a3d] to-[#3d7a52] px-6 py-5 shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
+                            {/* Glow leggero */}
+                            <div className="pointer-events-none absolute inset-0 bg-white/5" />
+
+                            {/* Contenuto */}
+                            <div className="relative flex items-center justify-center text-white">
+                                <div className="flex h-8 w-10 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm">
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M9 12L11 14L15 10"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                        <path
+                                            d="M12 3L4 7V12C4 17 7.5 20 12 21C16.5 20 20 17 20 12V7L12 3Z"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+
+                                <p className="text-[15px] md:text-[16px] font-medium tracking-[0.01em] text-center">
+                                    Attualmente disponibile solo ai developer
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
