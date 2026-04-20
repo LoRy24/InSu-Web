@@ -4,7 +4,7 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 
-export default function GladysPage() {
+export default function ResourcesPage() {
     return (
         <div>
             <Navbar page={4}/>
