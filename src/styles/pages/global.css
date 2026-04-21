@@ -71,6 +71,18 @@ body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
     transform: scale(1.1);
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(6px);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
 /* CODICE TEMA SHADCN */
 
 /*
