@@ -14,8 +14,8 @@ import {
 import Image from "next/image";
 import {HomeExploreButton} from "@/components/ui/home/HomeExploreButton";
 import {HomeTryInsulligenceButton} from "@/components/ui/home/HomeTryInsulligenceButton";
-
-// Icons
+import {PressReviewSection} from "@/components/ui/home/PressReviewSection";
+import {pressReviewRow1, pressReviewRow2} from "@/lib/insu/press/PressReviewData";
 
 export default function Home() {
     return (
@@ -169,6 +169,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id={"rassegna-stampa"}>
+                    <PressReviewSection rows={[pressReviewRow1, pressReviewRow2]} />
                 </div>
                 <div id={"launch-page"} className={"w-full flex flex-col items-center py-30 pl-16 pr-16"}>
                     <div className={"flex flex-col items-center"}>
