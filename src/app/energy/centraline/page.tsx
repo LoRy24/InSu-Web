@@ -4,6 +4,12 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 import CentralineMapSection from "@/components/ui/energy/CentralineMapSection";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Centraline",
+    description: "Esplora le statistiche sulle centraline energetiche prototipo rinnovabili della regione, con dati aggiornati e visualizzazioni interattive. Scopri la distribuzione, la capacità e le performance degli impianti energetici rinnovabili nella nostra regione.",
+};
 
 export default function CentralinePage() {
     return (

@@ -5,6 +5,12 @@ import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 import {ExploreMapButton} from "@/components/ui/gladys/GladysExploreMapButton";
 import GladysVideoPopUp from "@/components/ui/gladys/GladysVideoPopUp";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Gladys",
+    description: "Sistema di tour innovativo che utilizza tecnologie avanzate per offrire esperienze di esplorazione del territorio uniche e coinvolgenti. Scopri di più su Gladys, il nostro sistema di tour all'avanguardia, e come può trasformare il modo in cui esplori il mondo intorno a te.",
+};
 
 export default function GladysPage() {
     return (

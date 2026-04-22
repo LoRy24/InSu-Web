@@ -15,6 +15,11 @@ import {FileDownloadButton} from "@/components/ui/commons/FileDownloadButton";
 import {FabLabPicturesCarousel} from "@/components/swiper/FabLabPicturesCarousel";
 import Footer from "@/components/layouts/Footer";
 import Markdown from "react-markdown";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Vista FabLab"
+};
 
 export default async function FabLabPage({ params } : Readonly<{ params: Promise<{ id: number }> }>) {
     const { id } = await params;
