@@ -5,6 +5,13 @@ import DotGrid from "@/components/reactbits/DotGrid";
 import BqIndexCalculatorPrompt from "@/components/ui/neighborhoods/bq-index/BqIndexCalculatorPrompt";
 import Footer from "@/components/layouts/Footer";
 
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Indice BQ",
+    description: "Calcola l'indice di benessere del tuo quartiere con il nostro servizio intelligente. Scopri come il tuo quartiere si posiziona in termini di benessere e quali aree possono essere migliorate."
+};
+
 export default function BQIndexPage() {
     return (
         <div>

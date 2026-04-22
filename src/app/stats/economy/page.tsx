@@ -8,6 +8,12 @@ import {TicinoEconomyGraph} from "@/components/ui/stats/economy/sub/TicinoEconom
 import {VareseEconomyGraph} from "@/components/ui/stats/economy/sub/VareseEconomyGraph";
 import {LeccoEconomyGraph} from "@/components/ui/stats/economy/sub/LeccoEconomyGraph";
 import Footer from "@/components/layouts/Footer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Statistiche Economia",
+    description: "Esplora le statistiche sull'economia dell'area Insubrica, con dati reali e approfondimenti sui settori economici principali."
+};
 
 export default function GladysPage() {
     return (
@@ -31,7 +37,7 @@ export default function GladysPage() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Approfondisci le statistiche per l'economia dell'area Insubrica</p>
+                        <p className={"max-w-180 text-center mt-0"}>Approfondisci le statistiche per l'economia dell'area Insubrica</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>

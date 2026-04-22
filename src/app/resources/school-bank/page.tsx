@@ -5,6 +5,12 @@ import DotGrid from "@/components/reactbits/DotGrid";
 import ResourcesBrowser from "@/components/ui/resources/ResourcesBrowser";
 import {ResourceType} from "@/lib/insu/resources/Resource";
 import Footer from "@/components/layouts/Footer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "School Bank",
+    description: "Scopri la nostra School Bank, una raccolta di progetti, video e materiali pronti all'uso da studenti per studenti, ricercatori e aziende. Esplora le risorse disponibili e trova ciò che ti serve per i tuoi progetti.",
+};
 
 export default function SchoolBankPage() {
     return (

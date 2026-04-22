@@ -1,30 +1,272 @@
-/* Wrapper invisibile */
-.custom-marker-wrapper {
-    background: transparent;
-    border: none;
+.leaflet-container {
+    background: #071014;
 }
 
-/* Base dot */
-.custom-marker {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+/* =========================
+   POPUP MODERNI TEMA SCURO
+   ========================= */
+
+.modern-dark-popup .leaflet-popup-content-wrapper {
+    background:
+            linear-gradient(180deg, rgba(16, 24, 28, 0.98), rgba(10, 15, 18, 0.98));
+    color: #e6f4f1;
+    border: 1px solid rgba(94, 234, 212, 0.18);
+    border-radius: 24px;
+    box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.45),
+            0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+            0 0 24px rgba(45, 212, 191, 0.08);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
-/* Stati */
-.custom-marker.active {
-    background-color: #22c55e; /* verde */
+.modern-dark-popup .leaflet-popup-content {
+    margin: 0;
+    min-width: 260px;
 }
 
-.custom-marker.closed {
-    background-color: #ef4444; /* rosso */
+.modern-dark-popup .leaflet-popup-tip {
+    background: #0d1518;
+    border: 1px solid rgba(94, 234, 212, 0.16);
 }
 
-.custom-marker.idea {
-    background-color: #a855f7; /* viola */
+.modern-dark-popup .leaflet-popup-close-button {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 18px;
+    padding: 10px 12px 0 0;
+    transition: color 0.18s ease, transform 0.18s ease;
 }
 
-.custom-marker.ready {
-    background-color: #facc15; /* giallo */
+.modern-dark-popup .leaflet-popup-close-button:hover {
+    color: #ffffff;
+    transform: scale(1.06);
+}
+
+/* card interna popup */
+
+.popup-card {
+    padding: 18px;
+}
+
+.popup-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.popup-card__eyebrow {
+    margin: 0 0 6px 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(165, 243, 252, 0.72);
+}
+
+.popup-card__title {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #f3fffd;
+}
+
+.popup-card__badge {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 7px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.popup-card__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.popup-card__item {
+    padding: 11px 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.popup-card__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(170, 196, 201, 0.72);
+}
+
+.popup-card__value {
+    display: block;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #e7f3f1;
+}
+
+.popup-card__description {
+    border-top: 1px solid rgba(94, 234, 212, 0.12);
+    padding-top: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(212, 233, 229, 0.82);
+}
+
+.popup-card__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4px;
+    border-radius: 16px;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #071014;
+    background: linear-gradient(135deg, #7be4d8, #48cae4);
+    box-shadow:
+            0 10px 24px rgba(72, 202, 228, 0.18),
+            0 0 24px rgba(123, 228, 216, 0.16);
+    transition:
+            transform 0.18s ease,
+            box-shadow 0.18s ease,
+            filter 0.18s ease;
+}
+
+.popup-card__cta:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+    box-shadow:
+            0 14px 28px rgba(72, 202, 228, 0.24),
+            0 0 30px rgba(123, 228, 216, 0.2);
+}
+
+.map-area-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 2px 2px 0;
+}
+
+.map-area-popup strong {
+    font-size: 14px;
+    color: #eafffb;
+}
+
+.map-area-popup span {
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(227, 244, 241, 0.8);
+}
+
+/* =========================
+   CLUSTER CUSTOM
+   ========================= */
+
+.insu-cluster-wrapper {
+    background: transparent !important;
+    border: none !important;
+}
+
+.insu-cluster {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insu-cluster__outer,
+.insu-cluster__middle,
+.insu-cluster__inner {
+    position: absolute;
+    border-radius: 999px;
+    inset: 0;
+}
+
+.insu-cluster__outer {
+    background: radial-gradient(
+            circle,
+            rgba(45, 212, 191, 0.18) 0%,
+            rgba(45, 212, 191, 0.08) 45%,
+            rgba(45, 212, 191, 0) 75%
+    );
+    transform: scale(1.18);
+    filter: blur(3px);
+}
+
+.insu-cluster__middle {
+    inset: 4px;
+    border: 1px solid rgba(125, 228, 216, 0.34);
+    background: linear-gradient(
+            180deg,
+            rgba(14, 33, 38, 0.92),
+            rgba(8, 18, 22, 0.92)
+    );
+    box-shadow:
+            0 0 18px rgba(45, 212, 191, 0.18),
+            inset 0 0 20px rgba(45, 212, 191, 0.08);
+}
+
+.insu-cluster__inner {
+    inset: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2dd4bf, #48cae4);
+    border: 2px solid rgba(255, 255, 255, 0.88);
+    box-shadow:
+            0 0 18px rgba(72, 202, 228, 0.35),
+            0 0 28px rgba(45, 212, 191, 0.26);
+}
+
+.insu-cluster__inner span {
+    color: #031014;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.cluster-sm {
+    transform: scale(0.94);
+}
+
+.cluster-md {
+    transform: scale(1);
+}
+
+.cluster-lg {
+    transform: scale(1.08);
+}
+
+/* =========================
+   SAGOME / CONFINI
+   ========================= */
+
+.leaflet-interactive {
+    transition:
+            stroke 0.18s ease,
+            fill-opacity 0.18s ease,
+            opacity 0.18s ease;
+}
+
+.leaflet-overlay-pane path:hover {
+    stroke: #7be4d8;
+    opacity: 1 !important;
+    fill-opacity: 0.14 !important;
+    filter: drop-shadow(0 0 6px rgba(43, 217, 187, 0.22));
 }

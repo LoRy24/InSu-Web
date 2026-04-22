@@ -8,6 +8,12 @@ import {LeccoUrbanGraph} from "@/components/ui/stats/urban/sub/LeccoUrbanGraph";
 import {TicinoUrbanGraph} from "@/components/ui/stats/urban/sub/TicinoUrbanGraph";
 import {VareseUrbanGraph} from "@/components/ui/stats/urban/sub/VareseUrbanGraph";
 import Footer from "@/components/layouts/Footer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Statistiche Urbanizzazione",
+    description: "Esplora le statistiche sull'urbanizzazione dell'area Insubrica, con dati reali e approfondimenti."
+};
 
 export default function GladysPage() {
     return (

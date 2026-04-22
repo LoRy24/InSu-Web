@@ -22,7 +22,7 @@ export default function FabLabsExplorer() {
                 navigatorPage == 0 ? (
                     <FabLabsBrowser/>
                 ) : (
-                    <div className={"text-[#ffffff] h-[600px] w-full flex flex-col items-center justify-center text-3xl pl-16 pr-16 mt-12 mb-32"}>
+                    <div className={"text-[#ffffff] min-h-150 w-full flex flex-col items-center justify-center text-3xl pl-16 pr-16 mt-12 mb-32"}>
                         <FabLabOverallMapClient/>
                     </div>
                 )
@@ -33,7 +33,7 @@ export default function FabLabsExplorer() {
 
 function FabLabExplorerPageSelector({ page, navigatorPage, setNavigatorPageFunction, children } : { page: number, navigatorPage: number, setNavigatorPageFunction: (value: (((prevState: number) => number) | number)) => void, children: React.ReactNode }) {
     return (
-        <button disabled={page == navigatorPage} onClick={() => setNavigatorPageFunction(page)} className={`h-[32px] border-b-2 ${page == navigatorPage ? "border-b-[#ffffff] text-[#ffffff]" : "border-b-[#0a0a0a] text-[#c0c0c0] hover:border-b-[#c0c0c0] cursor-pointer"} duration-150`}>
+        <button disabled={page == navigatorPage} onClick={() => setNavigatorPageFunction(page)} className={`h-8 border-b-2 ${page == navigatorPage ? "border-b-[#ffffff] text-[#ffffff]" : "border-b-[#0a0a0a] text-[#c0c0c0] hover:border-b-[#c0c0c0] cursor-pointer"} duration-150`}>
             {children}
         </button>
     );

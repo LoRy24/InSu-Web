@@ -3,6 +3,12 @@ import SplitText from "@/components/reactbits/SplitText";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Risorse",
+    description: "Esplora progetti, video e materiali raccolti in questa sezione del sito per studenti, ricercatori e aziende. Scopri la nostra school bank e i progetti dei quartieri.",
+};
 
 export default function ResourcesPage() {
     return (
