@@ -22,7 +22,7 @@ export default function FabLabsExplorer() {
                 navigatorPage == 0 ? (
                     <FabLabsBrowser/>
                 ) : (
-                    <div className={"text-[#ffffff] h-[600px] w-full flex flex-col items-center justify-center text-3xl pl-16 pr-16 mt-12 mb-32"}>
+                    <div className={"text-[#ffffff] min-h-150 w-full flex flex-col items-center justify-center text-3xl pl-16 pr-16 mt-12 mb-32"}>
                         <FabLabOverallMapClient/>
                     </div>
                 )
