@@ -31,7 +31,7 @@ export default function GladysPage() {
                         className={"mb-10"}
                         delay={0.6}
                     >
-                        <p className={"max-w-100 text-center mt-0"}>Approfondisci le statistiche per l'economia dell'area Insubrica</p>
+                        <p className={"max-w-180 text-center mt-0"}>Approfondisci le statistiche per l'economia dell'area Insubrica</p>
                     </AnimatedContent>
                 </div>
                 <div id={"home-page-head-background"} className={"absolute -z-100 w-full h-[50vh]"}>

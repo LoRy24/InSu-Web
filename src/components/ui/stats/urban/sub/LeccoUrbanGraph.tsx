@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { URBAN_GRAPH_COLORS } from "@/lib/insu/stats/GraphsColors";
 import {
     LineChart,
     Line,
@@ -9,74 +10,138 @@ import {
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
-    Legend
 } from "recharts";
 
 const data = [
-    { year: 2000, popolazione: 311000},
-    { year: 2001, popolazione: 311452},
-    { year: 2002, popolazione: 315183},
-    { year: 2003, popolazione: 318824},
-    { year: 2004, popolazione: 322150},
-    { year: 2005, popolazione: 325039},
-    { year: 2006, popolazione: 327510},
-    { year: 2007, popolazione: 331607},
-    { year: 2008, popolazione: 335420},
-    { year: 2009, popolazione: 337912},
-    { year: 2010, popolazione: 340167},
-    { year: 2011, popolazione: 341322},
-    { year: 2012, popolazione: 338425},
-    { year: 2013, popolazione: 340814},
-    { year: 2014, popolazione: 340251},
-    { year: 2015, popolazione: 339254},
-    { year: 2016, popolazione: 339238},
-    { year: 2017, popolazione: 339384},
-    { year: 2018, popolazione: 339384},
-    { year: 2019, popolazione: 335554},
-    { year: 2020, popolazione: 334961},
-    { year: 2021, popolazione: 333569},
-    { year: 2022, popolazione: 332457},
-    { year: 2023, popolazione: 333270},
-    { year: 2024, popolazione: 334650},
-    { year: 2025, popolazione: 353000},
-
+    { year: 2000, popolazione: 311000 },
+    { year: 2001, popolazione: 311452 },
+    { year: 2002, popolazione: 315183 },
+    { year: 2003, popolazione: 318824 },
+    { year: 2004, popolazione: 322150 },
+    { year: 2005, popolazione: 325039 },
+    { year: 2006, popolazione: 327510 },
+    { year: 2007, popolazione: 331607 },
+    { year: 2008, popolazione: 335420 },
+    { year: 2009, popolazione: 337912 },
+    { year: 2010, popolazione: 340167 },
+    { year: 2011, popolazione: 341322 },
+    { year: 2012, popolazione: 338425 },
+    { year: 2013, popolazione: 340814 },
+    { year: 2014, popolazione: 340251 },
+    { year: 2015, popolazione: 339254 },
+    { year: 2016, popolazione: 339238 },
+    { year: 2017, popolazione: 339384 },
+    { year: 2018, popolazione: 339384 },
+    { year: 2019, popolazione: 335554 },
+    { year: 2020, popolazione: 334961 },
+    { year: 2021, popolazione: 333569 },
+    { year: 2022, popolazione: 332457 },
+    { year: 2023, popolazione: 333270 },
+    { year: 2024, popolazione: 334650 },
+    { year: 2025, popolazione: 353000 },
 ];
+
+const formatPopulation = (value: number) => value.toLocaleString("it-IT");
+
+const CustomTooltip = ({ active, payload, label }: any) => {
+    if (!active || !payload || !payload.length) return null;
+
+    const value = payload[0]?.value ?? 0;
+
+    return (
+        <div
+            className="rounded-xl px-4 py-3 shadow-2xl backdrop-blur-sm"
+            style={{
+                backgroundColor: URBAN_GRAPH_COLORS.tooltipBg,
+                border: `1px solid ${URBAN_GRAPH_COLORS.tooltipBorder}`,
+            }}
+        >
+            <p className="mb-2 text-sm font-semibold text-white">{label}</p>
+            <div className="flex items-center justify-between gap-5">
+                <span className="text-sm text-neutral-300">Popolazione</span>
+                <span className="text-sm font-semibold text-white">
+                    {formatPopulation(value)}
+                </span>
+            </div>
+        </div>
+    );
+};
+
+const CustomLegend = () => {
+    return (
+        <div className="flex items-center justify-center">
+            <div
+                className={`flex items-center gap-2 rounded-full border px-3 py-1.5 transition-all duration-200 ${URBAN_GRAPH_COLORS.legendBg} ${URBAN_GRAPH_COLORS.legendBorder} ${URBAN_GRAPH_COLORS.legendHoverBg} ${URBAN_GRAPH_COLORS.legendHoverBorder}`}
+            >
+                <span
+                    className="h-2.5 w-2.5 rounded-full"
+                    style={{ backgroundColor: URBAN_GRAPH_COLORS.line }}
+                />
+                <span className="text-sm font-medium text-neutral-200">
+                    Popolazione
+                </span>
+            </div>
+        </div>
+    );
+};
 
 export function LeccoUrbanGraph() {
     return (
-        <Card className="bg-[#111111] border border-lime-500/20 rounded-2xl shadow-xl">
+        <Card className={`bg-[#111111] border rounded-2xl shadow-xl ${URBAN_GRAPH_COLORS.cardBorder}`}>
             <CardContent className="p-6">
-                <h2 className="text-2xl font-bold text-white mb-12 text-center">
+                <h2 className="mb-4 text-center text-2xl font-bold text-white">
                     Popolazione di Lecco
                 </h2>
+
+                <div className="mb-6">
+                    <CustomLegend />
+                </div>
+
                 <div className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={data} margin={{ top: 10, right: 48, left: 0, bottom: 0 }}>
-                            <CartesianGrid stroke="#1f1f1f" />
+                        <LineChart data={data} margin={{ top: 10, right: 28, left: 12, bottom: 0 }}>
+                            <CartesianGrid
+                                stroke={URBAN_GRAPH_COLORS.grid}
+                                strokeDasharray="4 4"
+                                vertical={false}
+                            />
+
                             <XAxis
                                 dataKey="year"
-                                stroke="#84cc16"
-                                tick={{ fill: "#84cc16" }}
+                                stroke={URBAN_GRAPH_COLORS.axis}
+                                tick={{ fill: URBAN_GRAPH_COLORS.axis, fontSize: 12 }}
+                                axisLine={{ stroke: URBAN_GRAPH_COLORS.axisLine }}
+                                tickLine={{ stroke: URBAN_GRAPH_COLORS.axisLine }}
                             />
+
                             <YAxis
-                                stroke="#84cc16"
-                                tick={{ fill: "#84cc16" }}
+                                stroke={URBAN_GRAPH_COLORS.axis}
+                                tick={{ fill: URBAN_GRAPH_COLORS.axis, fontSize: 12 }}
+                                axisLine={{ stroke: URBAN_GRAPH_COLORS.axisLine }}
+                                tickLine={{ stroke: URBAN_GRAPH_COLORS.axisLine }}
+                                tickFormatter={formatPopulation}
+                                width={80}
                             />
-                            <Tooltip
-                                contentStyle={{
-                                    backgroundColor: "#0a0a0a",
-                                    border: "1px solid #84cc16",
-                                }}
-                                labelStyle={{ color: "#84cc16" }}
-                            />
-                            <Legend verticalAlign="bottom" align="center"/>
+
+                            <Tooltip content={<CustomTooltip />} />
+
                             <Line
                                 type="monotone"
                                 dataKey="popolazione"
-                                stroke="#84cc16"
-                                strokeWidth={2}
-                                dot={{ r: 4 }}
                                 name="Popolazione"
+                                stroke={URBAN_GRAPH_COLORS.line}
+                                strokeWidth={3}
+                                dot={{
+                                    r: 3,
+                                    fill: URBAN_GRAPH_COLORS.dot,
+                                    strokeWidth: 0,
+                                }}
+                                activeDot={{
+                                    r: 6,
+                                    fill: URBAN_GRAPH_COLORS.lineHover,
+                                    stroke: URBAN_GRAPH_COLORS.activeDotStroke,
+                                    strokeWidth: 2,
+                                }}
                             />
                         </LineChart>
                     </ResponsiveContainer>
