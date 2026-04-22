@@ -5,6 +5,11 @@ import Footer from "@/components/layouts/Footer";
 import Markdown from "react-markdown";
 import {ResourcesDB} from "@/lib/insu/resources/ResourcesDemoDB";
 import {Resource} from "@/lib/insu/resources/Resource";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Risorsa"
+};
 
 export default async function ResourcePage({ params } : Readonly<{ params: Promise<{ id: number }> }>) {
     const { id } = await params;

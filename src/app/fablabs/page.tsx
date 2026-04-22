@@ -6,6 +6,12 @@ import DotGrid from "@/components/reactbits/DotGrid";
 import FabLabsExplorer from "@/components/ui/fablabs/FabLabsExplorer";
 import Footer from "@/components/layouts/Footer";
 import Image from "next/image";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "FabLabs",
+    description: "Esplora la nostra raccolta di FabLabs, dei laboratori di fabbricazione digitale, e non, che promuovono l'innovazione, la creatività e la collaborazione. Scopri i nostri partner e le loro specializzazioni.",
+};
 
 export default function FabLabs() {
     return (

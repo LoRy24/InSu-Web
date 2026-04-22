@@ -4,6 +4,12 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import GladysMapWrapper from "@/components/ui/gladys/GladysMapWrapper";
 import Footer from "@/components/layouts/Footer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Personaggi",
+    description: "Scopri i personaggi storici più importanti che hanno influenzato la storia e la cultura dell'area Insubrica. Esplora le loro storie, contributi e impatti attraverso video, mappe interattive e approfondimenti dettagliati.",
+};
 
 export default function GladysPage() {
     return (

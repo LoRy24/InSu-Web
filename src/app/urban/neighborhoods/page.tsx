@@ -5,6 +5,12 @@ import DotGrid from "@/components/reactbits/DotGrid";
 import NeighborhoodCard from "@/components/ui/neighborhoods/NeighborhoodCard";
 import NeighborhoodCardReverse from "@/components/ui/neighborhoods/NeighborhoodCardReverse";
 import Footer from "@/components/layouts/Footer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Quartieri",
+    description: "Raccolta di tutti i progetti per la modernizzazione dei quartieri urbani, con soluzioni per migliorare la qualità della vita e la sostenibilità ambientale.",
+};
 
 export default function GladysPage() {
     return (

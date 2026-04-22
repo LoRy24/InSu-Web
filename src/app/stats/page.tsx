@@ -7,6 +7,12 @@ import {ExploreMoreButton} from "@/components/ui/stats/general/GeneralStatsCompo
 import FeaturedStatsContainer from "@/components/ui/stats/general/FeaturedStatsContainer";
 import SimpleStatsContainer from "@/components/ui/stats/general/SimpleStatsContainer";
 import {simpleStats} from "@/lib/insu/stats/GeneralDataset";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Statistiche",
+    description: "Esplora le statistiche dell'area Insubrica, con dati reali e approfondimenti sui quartieri. Scopri di più sulla nostra area attraverso numeri e grafici dettagliati e le risorse che abbiamo raccolto per te."
+};
 
 export default function StatistichePage() {
     return (

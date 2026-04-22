@@ -4,6 +4,11 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 import NeighborhoodVideoPlayer from "@/components/ui/neighborhoods/NeighborhoodVideoPlayer";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Bee Bricks"
+};
 
 export default function NeighbourhoodResourcePage() {
     return (

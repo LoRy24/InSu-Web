@@ -4,6 +4,12 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import DotGrid from "@/components/reactbits/DotGrid";
 import Footer from "@/components/layouts/Footer";
 import GlareHover from "@/components/reactbits/GlareHover";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Suggerisci",
+    description: "Contribuisci alla realizzazione di tour culturali suggerendo i tuoi itinerari preferiti. Invia le tue proposte tramite la nostra email ufficiale o su GitHub e aiutaci a creare esperienze uniche per tutti gli amanti della cultura.",
+};
 
 export default function GladysPage() {
     return (
