@@ -33,7 +33,7 @@ export default function FabLabsExplorer() {
 
 function FabLabExplorerPageSelector({ page, navigatorPage, setNavigatorPageFunction, children } : { page: number, navigatorPage: number, setNavigatorPageFunction: (value: (((prevState: number) => number) | number)) => void, children: React.ReactNode }) {
     return (
-        <button disabled={page == navigatorPage} onClick={() => setNavigatorPageFunction(page)} className={`h-[32px] border-b-2 ${page == navigatorPage ? "border-b-[#ffffff] text-[#ffffff]" : "border-b-[#0a0a0a] text-[#c0c0c0] hover:border-b-[#c0c0c0] cursor-pointer"} duration-150`}>
+        <button disabled={page == navigatorPage} onClick={() => setNavigatorPageFunction(page)} className={`h-8 border-b-2 ${page == navigatorPage ? "border-b-[#ffffff] text-[#ffffff]" : "border-b-[#0a0a0a] text-[#c0c0c0] hover:border-b-[#c0c0c0] cursor-pointer"} duration-150`}>
             {children}
         </button>
     );
