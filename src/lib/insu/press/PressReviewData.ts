@@ -33,29 +33,29 @@ export const pressReviewRow1: PressReviewCard[] = [
 export const pressReviewRow2: PressReviewCard[] = [
     {
         id: "press-4",
-        title: "Borghi in Abbandono e potenzialità turistica",
+        title: "Artigianato in Ticino",
         source: "Google Drive",
-        url: "https://drive.google.com/file/d/1drV26pPxbIXK5jffO7RM04Bq_8HCJwb_/view?usp=drive_link",
-        imageUrl: "/app_data/press/img1.png",
-        tag: "Territorio",
-        date: "2021/2022"
+        url: "https://drive.google.com/file/d/1rArqpG06SSn4AmF8UDAzaicohGfX-IyJ/view?usp=drive_link",
+        imageUrl: "/app_data/press/img6.png",
+        tag: "Artigianato",
+        date: "02/2025"
     },
     {
         id: "press-5",
-        title: "A un passo da Como non solo iper turismo, i mestieri antichi resistono nel piccolo paese",
-        source: "ComoZero",
-        url: "https://comozero.it/attualita/a-un-passo-da-como-non-solo-iper-turismo-gli-antichi-mestieri-resistono-nel-piccolo-paese-ma-arriva-questa-roba-cinese-pericolosa/",
-        imageUrl: "/app_data/press/img2.png",
-        tag: "Mestieri Como",
-        date: "15/07/2025"
+        title: "L'Antico rito della transumanza in 12 scatti degli anni '80",
+        source: "Lake Addicted",
+        url: "https://lakeaddicted.com/transumanza-lago-di-como/",
+        imageUrl: "/app_data/press/img5.png",
+        tag: "Blog",
+        date: "26/04/2021"
     },
     {
         id: "press-6",
-        title: "Como torna su Rai1: l'artigianato lariano è protagonista della puntata di Linea Verde Life",
+        title: "Le forme del legno: arte, montagna e sport per i 41 anni della Riserva Pian di Spagna–Lago di Mezzola",
         source: "QuiComo",
-        url: "https://www.quicomo.it/economia/como-rai1-artigianato-protagonista-puntata-linea-verde-start-quando-.html",
-        imageUrl: "/app_data/press/img3.png",
-        tag: "Artigianato",
-        date: "17/11/2022"
+        url: "https://www.quicomo.it/eventi/mostre/forme-legno-arte-montagna-sport-riserva-pian-spagna-lago-mezzola.html",
+        imageUrl: "/app_data/press/img4.png",
+        tag: "Eventi",
+        date: "07/02/2026"
     },
 ];
