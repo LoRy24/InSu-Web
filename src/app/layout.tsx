@@ -14,6 +14,10 @@ export const metadata: Metadata = {
         default: "InSu",
         template: "%s • InSu",
     },
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico"
+    },
     description: "Sito web ufficiale del progetto InSu, un progetto orientato alla proposta e alla raccolta di progetti per il recupero e il miglioramento della regione Insubrica.",
 };
 
