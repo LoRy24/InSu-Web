@@ -124,11 +124,19 @@ export default function Home() {
                                     threshold={0.1}
                                     delay={0.25}
                                 >
-                                    <p className={"font-normal text-[20px] max-w-187.5 max-[1300px]:text-center"}>
-                                        Siamo un progetto nato con l&#39;obiettivo di portare, tramite le più moderne tecnologie, un radicale cambiamento all&#39;interno
-                                        della regione <b>Insubrica</b>, in particolare fornendo servizi in ambito turistico, urbanistico, ed educativo con l&#39;integrazione
-                                        dell&#39;intelligenza artificiale.
-                                    </p>
+                                    <div className={"font-normal text-[20px] max-w-187.5 max-[1300px]:text-center text-white/90"}>
+                                        <p className={"mb-4"}>
+                                            Argonauti, con la mission di trasformare il territorio dell’Insubria attraverso l’uso intelligente delle
+                                            tecnologie più avanzate. Su <b>insubrina.org</b> diamo vita a un modello innovativo che unisce
+                                            intelligenza artificiale, visione strategica e conoscenza locale per generare valore concreto.
+                                        </p>
+
+                                        <p>
+                                            Operiamo nei settori turistico, urbanistico, ambientale e sociale con un obiettivo chiaro: rendere la
+                                            regione insubrica più connessa, sostenibile e pronta alle sfide del futuro. Qui le idee diventano
+                                            progetti, e i progetti diventano opportunità reali per il territorio e per chi lo vive ogni giorno.
+                                        </p>
+                                    </div>
                                 </AnimatedContent>
                                 <AnimatedContent
                                     distance={100}
