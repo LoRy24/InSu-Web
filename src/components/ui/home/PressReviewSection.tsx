@@ -340,7 +340,7 @@ export function PressReviewSection({ rows, className }: PressReviewSectionProps)
                         Ci raccontano
                     </h2>
 
-                    <p className="mt-4 mb-6 max-w-190 text-center text-[18px] text-white/65 max-[900px]:text-[16px]">
+                    <p className="mt-4 mb-6 max-w-190 text-center text-[18px] text-white/90 max-[900px]:text-[16px]">
                         Una selezione di articoli, approfondimenti e pubblicazioni che provano della necessità e della veridicità del nostro progetto.
                     </p>
                 </div>

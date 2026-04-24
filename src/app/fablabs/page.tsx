@@ -76,8 +76,19 @@ export default function FabLabs() {
                                 threshold={0.1}
                                 delay={0.25}
                             >
-                                <p className="font-normal text-[18px] xl:text-[20px] max-w-187.5 text-white/80 leading-relaxed mt-6 max-[1400px]:text-center">
-                                    L’insieme dei FabLab può essere visto come una rete di laboratori diffusi sul territorio che lavorano insieme, ognuno con una propria specializzazione. Non sono realtà isolate, ma spazi che collaborano in modo coordinato, seguendo un modello di economia circolare e di sviluppo locale sostenibile. Ogni laboratorio contribuisce con competenze diverse, creando un sistema integrato in cui le funzioni si completano a vicenda.
+                                <p className="font-normal text-[18px] xl:text-[20px] max-w-187.5 text-white/90 leading-relaxed mt-6 max-[1400px]:text-center">
+                                    <p className={"mb-4"}>
+                                        L’insieme dei FabLab si configura come una rete diffusa di laboratori sul territorio, connessi tra loro
+                                        e ciascuno caratterizzato da specifiche competenze. Non sono spazi isolati, ma ambienti
+                                        collaborativi che operano in modo coordinato, promuovendo un modello di economia circolare e di
+                                        sviluppo locale sostenibile.
+                                    </p>
+                                    <p>
+                                        All’interno di questa rete, ogni laboratorio contribuisce con il proprio sapere, dando vita a un
+                                        sistema integrato in cui le competenze si completano e si rafforzano a vicenda. È qui che prende
+                                        forma anche il valore del fare: la possibilità per chiunque di progettare e costruire con le proprie
+                                        mani, trasformando idee in oggetti concreti e innovazione condivisa.
+                                    </p>
                                 </p>
                             </AnimatedContent>
                         </div>

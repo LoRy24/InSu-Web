@@ -89,10 +89,9 @@ export default function GladysPage() {
                         delay={0.15}
                     >
                         <p className={"font-normal text-[18px] max-w-187.5 text-center"}>
-                            Non è un caso se il nostro innovativo sistema di Tour si intitoli proprio &#34;Gladys&#34;: proporre un cambiamento
-                            nelle tecnologie attuali è il nostro principale obiettivo, come lo era per <b>Gladys West</b>, una donna statunitense
-                            che, con le sue competenze in ambito matematico, collaborò significativamente per la realizzazione del
-                            sistema <b>GPS</b>, senza il quale moltissime delle nostre tecnologie non avrebbero modo di funzionare.
+                            In memoria di Gladys West, il cui straordinario contributo scientifico ha reso possibile lo sviluppo
+                            delle tecnologie su cui oggi costruiamo i nostri progetti. Il suo lavoro continua a guidarci ogni
+                            giorno.
                         </p>
                     </AnimatedContent>
                     <AnimatedContent
