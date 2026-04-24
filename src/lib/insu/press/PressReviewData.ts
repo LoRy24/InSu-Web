@@ -28,6 +28,24 @@ export const pressReviewRow1: PressReviewCard[] = [
         tag: "Artigianato",
         date: "17/11/2022"
     },
+    {
+        id: "press-7",
+        title: "La nostra Stonehenge riemerge dal passato: diventerà un museo",
+        source: "La Provincia",
+        url: "https://www.laprovinciadicomo.it/stories/premium/como-cintura/la-nostra-stonehenge-riemerge-dal-passato-diventera-museo-o_3277817_11/",
+        imageUrl: "/app_data/press/img7.png",
+        tag: "Storia",
+        date: "30/08/2025"
+    },
+    {
+        id: "press-9",
+        title: "Le diverse facce della montagna in declino: un’esperienza lombarda",
+        source: "Open Edition Journals",
+        url: "https://journals.openedition.org/rga/5315",
+        imageUrl: "/app_data/press/img9.png",
+        tag: "Montagna",
+        date: "2019"
+    },
 ];
 
 export const pressReviewRow2: PressReviewCard[] = [
@@ -57,5 +75,14 @@ export const pressReviewRow2: PressReviewCard[] = [
         imageUrl: "/app_data/press/img4.png",
         tag: "Eventi",
         date: "07/02/2026"
+    },
+    {
+        id: "press-8",
+        title: "Didattica del territorio. Breve storia della Provincia di Como",
+        source: "Rete Italiana Cultura Popolare",
+        url: "https://www.reteitalianaculturapopolare.org/es/archivio-partecipato/item/1309-didattica-del-territorio-breve-storia-della-provincia-di-como.html",
+        imageUrl: "/app_data/press/img8.png",
+        tag: "Archeologia",
+        date: "2024/2025"
     },
 ];
