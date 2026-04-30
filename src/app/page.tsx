@@ -12,6 +12,7 @@ import {
     TourShowMoreCard
 } from "@/components/ui/home/HomeButtons";
 import Image from "next/image";
+import Link from "next/link";
 import {HomeExploreButton} from "@/components/ui/home/HomeExploreButton";
 import {HomeTryInsulligenceButton} from "@/components/ui/home/HomeTryInsulligenceButton";
 import {PressReviewSection} from "@/components/ui/home/PressReviewSection";
@@ -150,12 +151,12 @@ export default function Home() {
                                     threshold={0.1}
                                     delay={0.5}
                                 >
-                                    <button className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-7.5 p-0"}>
+                                    <Link href="/crediti" className={"mt-6 cursor-pointer flex flex-row items-center justify-center h-7.5 p-0"}>
                                         <svg className={"mt-0"} width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                         <p className={"mt-0 ml-2.5 text-[16px]"}>Crediti</p>
-                                    </button>
+                                    </Link>
                                 </AnimatedContent>
                             </div>
                             <div className={"max-[1300px]:hidden w-187.5 h-137.5 flex flex-col items-end justify-center"}>
