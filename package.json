@@ -23,7 +23,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "leaflet-search": "^4.0.0",
     "leaflet.markercluster": "^1.5.3",
-    "lucide-react": "^1.8.0",
+    "lucide-react": "^1.14.0",
     "motion": "^12.38.0",
     "next": "^16.2.3",
     "npm": "^11.12.1",
